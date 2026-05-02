@@ -82,7 +82,7 @@ export default function Header() {
           </nav>
 
           <div className="headerActions">
-            <a className="callLink" href="tel:+919000012345">
+            <a className="callLink" href="tel:+917801853061">
               <RiPhoneFill aria-hidden="true" />
               Call Us
             </a>
@@ -138,7 +138,7 @@ export default function Header() {
                 </li>
               ))}
               <li className="mobileNavActions">
-                <a href="tel:+919000012345">
+                <a href="tel:+917801853061">
                   <RiPhoneFill aria-hidden="true" />
                   Call Us
                 </a>
