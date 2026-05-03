@@ -44,7 +44,7 @@ export default function HeroSection() {
     >
       <div className="container">
         <div className="row g-4 align-items-start">
-          <div className="col-lg-8">
+          <div className="col-lg-7">
             <p className="eyebrow reveal">
               Software Engineering for Business Growth
             </p>
@@ -73,7 +73,8 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
-            <ul className=" executionFocusList" role="list">
+          <div className="col-lg-4">
+            <ul className="executionFocusList" role="list">
               <li className="executionFocusCard">
                 <RiCheckboxCircleLine aria-hidden="true" />
                 <span>Product-led teams with domain specialists</span>
@@ -86,7 +87,12 @@ export default function HeroSection() {
                 <RiCheckboxCircleLine aria-hidden="true" />
                 <span>Security-first architecture and QA automation</span>
               </li>
+              <li className="executionFocusCard">
+                <RiCheckboxCircleLine aria-hidden="true" />
+                <span>Dedicated support and proactive optimization</span>
+              </li>
             </ul>
+          </div>
         </div>
 
         <div className="row g-3 statsRow">

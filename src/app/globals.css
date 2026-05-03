@@ -125,7 +125,10 @@ a {
   border-radius: 9999px;
   color: var(--color-ink);
   box-shadow: 0 6px 14px rgba(2, 12, 27, 0.28);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, color 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    color 0.12s ease;
 }
 
 .socialLink svg {
@@ -170,7 +173,9 @@ a {
   border-radius: 10px;
   font-weight: 600;
   color: var(--color-ink);
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .navChevron {
@@ -196,7 +201,10 @@ a {
   opacity: 0;
   pointer-events: none;
   transform: translateY(8px);
-  transition: opacity 0.28s ease, transform 0.28s ease, visibility 0s linear 0.28s;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    visibility 0s linear 0.28s;
 }
 
 .dropdownMega {
@@ -313,7 +321,9 @@ a {
   max-height: 0;
   overflow: hidden;
   border-top: 1px solid transparent;
-  transition: max-height 0.35s ease, border-color 0.35s ease;
+  transition:
+    max-height 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .mobileNavWrap.isOpen {
@@ -395,7 +405,7 @@ a {
 .heroSection {
   padding: 72px 0 58px;
   background-image:
-    /* linear-gradient(90deg, rgba(244, 251, 255, 0.74) 0%, rgba(244, 251, 255, 0.48) 25%, rgba(244, 251, 255, 0.12) 100%), */
+    /* linear-gradient(90deg, rgba(244, 251, 255, 0.74) 0%, rgba(244, 251, 255, 0.48) 25%, rgba(244, 251, 255, 0.12) 100%), */ 
     var(--hero-bg-image);
   background-size: cover;
   background-position: center;
@@ -503,21 +513,37 @@ a {
 
 /* Execution Focus Card - Full Width Below Stats */
 .executionFocusCard {
-  background: linear-gradient(135deg, rgba(15, 157, 154, 0.08) 0%, rgba(255, 179, 71, 0.06) 100%);
-  border: 1px solid rgba(15, 157, 154, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(8, 25, 45, 0.85) 0%,
+    rgba(12, 45, 75, 0.75) 80%,
+    rgba(15, 90, 120, 0.65) 100%
+  );
+
+  border: 1px solid rgba(80, 160, 255, 0.25);
   border-radius: 20px;
-  padding: 30px;
-  backdrop-filter: blur(10px);
+  padding: 8px;
+  color: #ffffff;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    inset 0 0 0.5px rgba(255, 255, 255, 0.1);
+
   transform: translateY(0);
-  box-shadow: 0 8px 22px rgba(10, 30, 52, 0.1);
-  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+  transition: all 240ms ease;
 }
 
-.executionFocusCard:hover,
-.executionFocusCard:focus-within {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 34px rgba(10, 30, 52, 0.18);
-  border-color: rgba(15, 157, 154, 0.35);
+.executionFocusCard:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(120, 190, 255, 0.45);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(80, 160, 255, 0.25);
 }
 
 .executionFocusHeader {
@@ -534,14 +560,13 @@ a {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 12px;
 }
 
 .executionFocusList li {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-  color: var(--color-muted);
   font-size: 1.1rem;
   line-height: 1.2;
 }
@@ -569,8 +594,13 @@ a {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .heroImg {
@@ -585,7 +615,7 @@ a {
 }
 
 .statsRow {
-  margin-top: 10px;
+  margin-top: 8rem;
 }
 
 .statTile {
@@ -600,7 +630,10 @@ a {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
+  transition:
+    transform 320ms ease,
+    box-shadow 320ms ease,
+    border-color 320ms ease;
 }
 
 .statTile::before {
@@ -608,7 +641,11 @@ a {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, var(--stat-accent-soft) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--stat-accent-soft) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 420ms ease;
@@ -648,7 +685,10 @@ a {
   font-weight: 600;
   opacity: 0.95;
   margin-top: 0px;
-  transition: color 240ms ease, opacity 240ms ease, transform 240ms ease;
+  transition:
+    color 240ms ease,
+    opacity 240ms ease,
+    transform 240ms ease;
 }
 
 .sectionPad {
@@ -919,7 +959,7 @@ a {
   }
 
   .executionFocusCard {
-    padding: 28px;
+    padding: 30px;
   }
 
   .executionFocusTitle {
@@ -1088,7 +1128,9 @@ a {
   padding: 10px 12px;
   font-size: 0.95rem;
   font-family: var(--font-body);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .stayWithUsForm input:focus,
@@ -1116,7 +1158,9 @@ a {
   padding: 12px 24px;
   border-radius: 50px;
   font-size: 0.95rem;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
   margin-top: 8px;
   width: 100%;
 }
