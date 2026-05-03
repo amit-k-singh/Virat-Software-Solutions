@@ -621,19 +621,26 @@ a {
 .statTile {
   --stat-accent: var(--color-highlight-strong);
   --stat-accent-soft: rgba(15, 157, 154, 0.18);
-  background-color: var(--color-panel);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--stat-accent);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(240, 248, 255, 0.5) 100%
+  );
+  border: 1.5px solid var(--color-border);
+  border-bottom: 3px solid var(--stat-accent);
+  border-left: 3px solid var(--stat-accent);
   border-radius: 14px;
-  padding: 18px;
+  padding: 20px;
   height: 100%;
   position: relative;
   overflow: hidden;
   isolation: isolate;
   transition:
-    transform 320ms ease,
+    transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 320ms ease,
-    border-color 320ms ease;
+    border-color 320ms ease,
+    background 320ms ease;
+  box-shadow: 0 4px 15px rgba(15, 157, 154, 0.08);
 }
 
 .statTile::before {
@@ -642,25 +649,56 @@ a {
   inset: 0;
   z-index: -1;
   background: linear-gradient(
-    90deg,
-    var(--stat-accent-soft) 50%,
+    135deg,
+    var(--stat-accent-soft) 0%,
     rgba(255, 255, 255, 0) 100%
   );
   background-size: 0% 100%;
   background-repeat: no-repeat;
-  transition: background-size 420ms ease;
+  transition: background-size 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.statTile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    var(--stat-accent-soft) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  opacity: 0;
+  transition: opacity 320ms ease;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .statTile:hover,
 .statTile:focus-within {
-  transform: translateY(-6px);
-  border-color: color-mix(in srgb, var(--stat-accent) 75%, #d8e8f3);
-  box-shadow: 0 16px 30px rgba(10, 30, 52, 0.14);
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--stat-accent);
+  border-bottom-color: color-mix(in srgb, var(--stat-accent) 100%, #ff6b6b);
+  border-left-color: color-mix(in srgb, var(--stat-accent) 100%, #ffd700);
+  box-shadow: 0 20px 40px rgba(15, 157, 154, 0.2),
+    0 0 30px rgba(15, 157, 154, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 248, 255, 0.8) 100%
+  );
 }
 
 .statTile:hover::before,
 .statTile:focus-within::before {
   background-size: 100% 100%;
+}
+
+.statTile:hover::after,
+.statTile:focus-within::after {
+  opacity: 1;
 }
 
 .statValue {
@@ -675,20 +713,35 @@ a {
 }
 
 .statIcon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--stat-accent);
+  transition: all 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 2px 8px var(--stat-accent-soft));
+  display: inline-block;
+}
+
+.statTile:hover .statIcon,
+.statTile:focus-within .statIcon {
+  transform: translateY(-4px) scale(1.15);
+  filter: drop-shadow(0 4px 12px rgba(15, 157, 154, 0.3));
 }
 
 .statLabel {
   font-size: 0.95rem;
   color: var(--color-ink);
   font-weight: 600;
-  opacity: 0.95;
-  margin-top: 0px;
+  opacity: 0.85;
+  margin-top: 6px;
   transition:
     color 240ms ease,
     opacity 240ms ease,
     transform 240ms ease;
+}
+
+.statTile:hover .statLabel,
+.statTile:focus-within .statLabel {
+  opacity: 1;
+  color: var(--stat-accent);
 }
 
 .sectionPad {
