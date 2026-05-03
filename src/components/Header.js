@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import {
   RiArrowDownSLine,
@@ -9,6 +10,7 @@ import {
   RiPhoneFill,
 } from "react-icons/ri";
 import { navigationItems } from "../data/siteContent";
+import viratLogo from "../assets/images/virat_logo.png";
 
 function DropdownPanel({ panel }) {
   return (
@@ -47,10 +49,12 @@ export default function Header() {
       <div className="container">
         <div className="headerShell">
           <a className="brandMark" href="#home" aria-label="Virat Software Solutions Home">
-            <span className="brandPrimary">
-              Virat
-            </span>
-            <span className="brandSecondary">Software Solutions</span>
+            <Image
+              src={viratLogo}
+              alt="Virat Software Solutions"
+              className="brandLogo"
+              priority
+            />
           </a>
 
           <button

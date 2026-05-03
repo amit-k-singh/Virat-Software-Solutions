@@ -80,31 +80,14 @@ a {
 
 .brandMark {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
   line-height: 1;
 }
 
-.brandPrimary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-ink);
-}
-
-.brandIcon {
-  font-size: 1.3rem;
-  color: var(--color-highlight-strong);
-}
-
-.brandSecondary {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-highlight-strong);
-  margin-top: 4px;
+.brandLogo {
+  width: auto;
+  height: 75px;
+  display: block;
 }
 
 /* Social icon-only buttons in header */
@@ -150,6 +133,8 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 .navItem {
