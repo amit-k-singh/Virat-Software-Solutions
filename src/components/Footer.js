@@ -1,4 +1,5 @@
 import { footerContent } from "../data/siteContent";
+import ContactForm from "./ContactForm";
 import {
   RiArrowRightSLine,
   RiFacebookCircleFill,
@@ -53,7 +54,9 @@ function FooterList({ title, items }) {
 
 export default function Footer() {
   return (
-    <footer className="siteFooter" id="contact">
+    <>
+      <ContactForm />
+      <footer className="siteFooter" id="contact">
       <div className="container">
         <div className="row g-4 footerMain">
           <div className="col-12 col-lg-4">
@@ -142,6 +145,7 @@ export default function Footer() {
           <p className="copyright">{footerContent.copyright}</p>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 }
