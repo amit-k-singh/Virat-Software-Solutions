@@ -17,7 +17,7 @@ export default function StayWithUsModal() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 6000); // 5 minutes
+    }, 6000); // 6 seconds for faster visibility during browsing
 
     return () => clearTimeout(timer);
   }, []);
@@ -46,7 +46,7 @@ export default function StayWithUsModal() {
       <ModalBody className="stayWithUsBody">
         <div className="stayWithUsHeader">
           <h2 className="stayWithUsTitle">Stay With Us</h2>
-          <RiCloseLine style={{ cursor: "pointer" }} onClick={toggle} />
+          <RiCloseLine className="stayWithUsClose" onClick={toggle} />
         </div>
         
         <div className="stayWithUsContent">
@@ -58,7 +58,9 @@ export default function StayWithUsModal() {
               <span className="checkmark">✓</span>
               <div>
                 <strong>IP Rights, Security & NDA</strong>
-                <p>Full ownership and confidentiality with robust security guaranteed.</p>
+                <p className="benefitCopy">
+                  Full ownership and confidentiality with robust security guaranteed.
+                </p>
               </div>
             </div>
 
@@ -66,7 +68,7 @@ export default function StayWithUsModal() {
               <span className="checkmark">✓</span>
               <div>
                 <strong>Flexible Contracts & Transparency</strong>
-                <p>Tailored contracts with clear and flexible processes.</p>
+                <p className="benefitCopy">Tailored contracts with clear and flexible processes.</p>
               </div>
             </div>
 
@@ -74,7 +76,7 @@ export default function StayWithUsModal() {
               <span className="checkmark">✓</span>
               <div>
                 <strong>Free Trial & Quick Setup</strong>
-                <p>No-risk trial and swift onboarding process.</p>
+                <p className="benefitCopy">No-risk trial and swift onboarding process.</p>
               </div>
             </div>
           </div>

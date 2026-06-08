@@ -1,29 +1,496 @@
+import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import IndustriesSection from "../components/IndustriesSection";
-import InsightsSection from "../components/InsightsSection";
-import ProcessSection from "../components/ProcessSection";
-import ServicesSection from "../components/ServicesSection";
-import StayWithUsModal from "../components/StayWithUsModal";
+import TechStackShowcase from "../components/TechStackShowcase";
+import "../assets/css/industries.css";
+import { IndustryCards } from "../components/industries";
+import {
+  aboutContent,
+  architectureContent,
+  blogContent,
+  contactContent,
+  faqContent,
+  finalCtaContent,
+  heroContent,
+  industriesContent,
+  portfolioContent,
+  privacyContent,
+  ctaContent,
+  processContent,
+  servicesContent,
+  solutionsContent,
+  techStackContent,
+  testimonialsContent,
+  trustContent,
+  termsContent,
+} from "../data/siteContent";
+import {
+  RiArrowRightLine,
+  RiArrowRightUpLine,
+  RiArrowDownSLine,
+  RiCheckboxCircleLine,
+  RiMapPin2Line,
+  RiMailLine,
+  RiPhoneLine,
+  RiRobot2Line,
+  RiReactjsLine,
+  RiNodejsLine,
+  RiCodeBoxLine,
+  RiCloudLine,
+} from "react-icons/ri";
 
 export const metadata = {
-  title: "Home",
+  title: "Custom Software Development Company | AI, Web, Mobile & SaaS Development",
   description:
-    "Virat Software Solutions delivers custom web, mobile, SaaS, AI, and automation solutions for growth-focused businesses.",
+    "Virat Software Solutions is a custom software development company delivering web, mobile, SaaS, AI, cloud, and automation solutions built for scalable business growth. Talk to our engineering team today.",
 };
+
+function SectionHeader({ eyebrow, title, description, id }) {
+  return (
+    <div className="sectionIntro" id={id}>
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+      <h2>{title}</h2>
+      {description ? <p>{description}</p> : null}
+    </div>
+  );
+}
+
+function FormField({ label, children, className = "" }) {
+  return (
+    <label className={`fieldGroup ${className}`.trim()}>
+      <span>{label}</span>
+      {children}
+    </label>
+  );
+}
+
+function FormShell({ title, description, buttonLabel, fieldLabels, compact = false }) {
+  return (
+    <form className={`leadForm ${compact ? "leadFormCompact" : ""}`}>
+      <div className="leadFormHeading">
+        <p className="leadFormTag">Project Brief</p>
+        {title ? <h3>{title}</h3> : null}
+        {description ? <p>{description}</p> : null}
+      </div>
+      <div className="leadFormGrid">
+        <FormField label={fieldLabels.name}>
+          <input type="text" name="name" placeholder="Your full name" autoComplete="name" required />
+        </FormField>
+        <FormField label={fieldLabels.email}>
+          <input type="email" name="email" placeholder="you@company.com" autoComplete="email" required />
+        </FormField>
+        <FormField label={fieldLabels.phone}>
+          <input type="tel" name="phone" placeholder="+1 555 555 5555" autoComplete="tel" />
+        </FormField>
+        <FormField label={fieldLabels.project}>
+          <select name="project" defaultValue="" required>
+            <option value="" disabled>
+              Select an option
+            </option>
+            {finalCtaContent.options.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </FormField>
+        <FormField label={fieldLabels.message} className="fieldWide">
+          <textarea name="message" rows="5" placeholder="Tell us about your project goals, timeline, and budget range" required />
+        </FormField>
+      </div>
+      <div className="leadFormActions">
+        <button className="primaryButton" type="submit">
+          {buttonLabel}
+          <RiArrowRightLine aria-hidden="true" />
+        </button>
+      </div>
+    </form>
+  );
+}
+
+function ValuePills({ items }) {
+  return (
+    <div className="valuePills" role="list">
+      {items.map((item) => (
+        <span key={item} className="valuePill" role="listitem">
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <>
       <Header />
-      <StayWithUsModal />
       <main>
-        <HeroSection />
-        <ServicesSection />
-        <IndustriesSection />
-        <ProcessSection />
-        <InsightsSection />
+        <section className="heroSection" id="home">
+          <div className="container">
+            <div className="heroCenter">
+    
+              {/* eyebrow */}
+              <p className="eyebrow">{heroContent.eyebrow}</p>
+    
+              {/* headline */}
+              <h1 className="heroTitle">{heroContent.title}</h1>
+    
+              {/* supporting text */}
+              <p className="heroText">{heroContent.description}</p>
+    
+              {/* ── CTA buttons ── */}
+              <div className="heroActions">
+                <a className="primaryButton" href="#final-cta">
+                  <RiArrowRightLine aria-hidden="true" />
+                  {heroContent.primaryCta}
+                </a>
+    
+                <a className="secondaryButton" href="#portfolio">
+                  <RiArrowRightUpLine aria-hidden="true" />
+                  {heroContent.secondaryCta}
+                </a>
+              </div>
+
+              {/* ── Value pills — AFTER highlight ── */}
+              <div className="valuePills">
+                <span className="valuePill">
+                  <RiRobot2Line aria-hidden="true" />
+                  AI / ML
+                </span>
+                <span className="valuePill">
+                  <RiReactjsLine aria-hidden="true" />
+                  React
+                </span>
+                <span className="valuePill">
+                  <RiNodejsLine aria-hidden="true" />
+                  Node.js
+                </span>
+                <span className="valuePill">
+                  <RiCodeBoxLine aria-hidden="true" />
+                  API Integrations
+                </span>
+                <span className="valuePill">
+                  <RiCloudLine aria-hidden="true" />
+                  AWS • Azure • GCP
+                </span>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad sectionTrust" aria-labelledby="trust-heading">
+          <div className="container">
+            <SectionHeader title={trustContent.title} description={trustContent.subtitle} id="trust-heading" />
+            <div className="logoRail">
+              <div className="logoRailTrack">
+                {[0, 1].map((groupIndex) => (
+                  <div className="logoRailGroup" key={groupIndex} aria-hidden={groupIndex === 1}>
+                    {trustContent.logos.map((logo) => (
+                      <div className="logoChip" key={`${groupIndex}-${logo.alt}`}>
+                        <Image
+                          src={logo.src}
+                          alt={logo.alt}
+                          fill
+                          sizes="(max-width: 767px) 180px, 220px"
+                          className="logoImage"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad" id="solutions-architecture" aria-labelledby="architecture-heading">
+          <div className="container">
+            <SectionHeader title={architectureContent.title} description={architectureContent.description} id="architecture-heading" />
+          </div>
+        </section>
+
+        <section className="sectionPad sectionAlt" id="solutions" aria-labelledby="solutions-heading">
+          <div className="container">
+            <SectionHeader title={solutionsContent.title} description={solutionsContent.description} id="solutions-heading" />
+            <div className="row g-4">
+              {solutionsContent.cards.map((card) => (
+                <div className="col-12 col-md-6 col-xl-4" key={card.title}>
+                  <article className="contentCard h-100">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                    <a href="#final-cta" className="inlineAction">
+                      {card.button}
+                      <RiArrowRightUpLine aria-hidden="true" />
+                    </a>
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad" id="portfolio" aria-labelledby="portfolio-heading">
+          <div className="container">
+            <SectionHeader title={portfolioContent.title} description={portfolioContent.description} id="portfolio-heading" />
+            <div className="row g-4">
+              {portfolioContent.cards.map((card) => (
+                <div className="col-12 col-lg-6" key={card.title}>
+                  <article className="portfolioCard h-100">
+                    <p className="cardLabel">{card.name}</p>
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                    <p className="techLine">{card.tech}</p>
+                    <a href={card.link} className="inlineAction" target="_blank" rel="noreferrer">
+                      View Project
+                      <RiArrowRightUpLine aria-hidden="true" />
+                    </a>
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad sectionAlt" id="services" aria-labelledby="services-heading">
+          <div className="container">
+            <SectionHeader title={servicesContent.title} description={servicesContent.description} id="services-heading" />
+            <div className="row g-4">
+              {servicesContent.cards.map((card) => (
+                <div className="col-12 col-md-6 col-xl-4" key={card.title}>
+                  <article className="contentCard serviceCard h-100">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                    <a href="#final-cta" className="inlineAction">
+                      {card.button}
+                      <RiArrowRightUpLine aria-hidden="true" />
+                    </a>
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad" aria-labelledby="cta-heading">
+          <div className="container">
+            <div className="ctaBanner">
+              <div className="ctaCopy">
+                <h2 id="cta-heading" className="ctaBannerTitle">{ctaContent.title}</h2>
+              </div>
+              <div className="ctaActions">
+                <a className="secondaryButton" href="#process">
+                  Start Your Digital Transformation
+                  <RiArrowRightLine aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad sectionAlt" id="process" aria-labelledby="process-heading">
+          <div className="container">
+            <SectionHeader title={processContent.title} description={processContent.description} id="process-heading" />
+            <div className="timelineGrid">
+              {processContent.steps.map((step, index) => (
+                <article className="timelineCard h-100" key={step.title}>
+                  <p className="stepIndex">0{index + 1}</p>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad" id="industries" aria-labelledby="industries-heading">
+          <div className="container">
+            <SectionHeader title={industriesContent.title} description={industriesContent.description} id="industries-heading" />
+            <IndustryCards />
+            <div className="industryFooterCallout">
+              <a href="#final-cta" className="primaryButton">
+                {industriesContent.cta}
+              </a>
+              <p>{industriesContent.supportingText}</p>
+            </div>
+          </div>
+        </section>
+
+        <TechStackShowcase content={techStackContent} />
+
+        <section className="sectionPad" id="testimonials" aria-labelledby="testimonials-heading">
+          <div className="container">
+            <SectionHeader title={testimonialsContent.title} id="testimonials-heading" />
+            <div className="row g-4">
+              {testimonialsContent.quotes.map((quote) => (
+                <div className="col-12 col-md-6" key={quote}>
+                  <article className="quoteCard h-100">
+                    <p>{quote}</p>
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* <section className="sectionPad sectionAlt" id="blog" aria-labelledby="blog-heading">
+          <div className="container">
+            <SectionHeader title={blogContent.title} id="blog-heading" />
+          </div>
+        </section> */}
+
+        <section className="sectionPad" id="faq" aria-labelledby="faq-heading">
+          <div className="container">
+            <SectionHeader title={faqContent.title} id="faq-heading" />
+            <div className="faqList">
+              {faqContent.items.map((item) => (
+                <details className="faqItem" key={item.question}>
+                  <summary>
+                    <span>{item.question}</span>
+                    <RiArrowDownSLine className="faqChevron" aria-hidden="true" />
+                  </summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad sectionAlt" id="final-cta" aria-labelledby="final-cta-heading">
+          <div className="container">
+            <div className="finalCtaGrid">
+              <div className="finalCtaCopy">
+                <SectionHeader title={finalCtaContent.title} description={finalCtaContent.description} id="final-cta-heading" />
+              </div>
+              <FormShell
+                title=""
+                description=""
+                buttonLabel={finalCtaContent.button}
+                fieldLabels={finalCtaContent.fields}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* <section className="sectionPad" id="about" aria-labelledby="about-heading">
+          <div className="container">
+            <SectionHeader title={aboutContent.title} description={aboutContent.description} id="about-heading" />
+            <p className="bodyCopyLarge">{aboutContent.supporting}</p>
+            <p className="highlightsLine">{aboutContent.highlights}</p>
+            <div className="traitRow">
+              {aboutContent.traits.map((trait) => (
+                <span key={trait} className="traitChip">
+                  {trait}
+                </span>
+              ))}
+            </div>
+            <div className="row g-4 mt-1">
+              <div className="col-12 col-lg-6">
+                <article className="contentCard h-100">
+                  <h3>{aboutContent.whoWeAreTitle}</h3>
+                  <p>{aboutContent.whoWeAre}</p>
+                </article>
+              </div>
+              <div className="col-12 col-lg-6">
+                <article className="contentCard h-100">
+                  <h3>{aboutContent.whatWeBuildTitle}</h3>
+                  <p>{aboutContent.whatWeBuild}</p>
+                  <ul className="checkList" role="list">
+                    {aboutContent.whatWeBuildList.map((item) => (
+                      <li key={item}>
+                        <RiCheckboxCircleLine aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </div>
+            </div>
+            <article className="contentCard mt-4">
+              <h3>{aboutContent.approachTitle}</h3>
+              <p>{aboutContent.approach}</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="sectionPad sectionAlt" id="contact" aria-labelledby="contact-heading">
+          <div className="container">
+            <SectionHeader title={contactContent.title} description={contactContent.description} id="contact-heading" />
+            <div className="contactGrid">
+              <article className="contactPanel">
+                <h3>{contactContent.contactTitle}</h3>
+                <p>{contactContent.contactDescription}</p>
+                <div className="contactDetail">
+                  <RiMailLine aria-hidden="true" />
+                  <span>Email</span>
+                </div>
+                <div className="contactDetail">
+                  <RiPhoneLine aria-hidden="true" />
+                  <span>Phone</span>
+                </div>
+                <div className="contactDetail">
+                  <RiMapPin2Line aria-hidden="true" />
+                  <span>{contactContent.location}</span>
+                </div>
+              </article>
+              <FormShell
+                title=""
+                description={contactContent.formTitle}
+                buttonLabel={contactContent.button}
+                fieldLabels={contactContent.fields}
+                compact
+              />
+            </div>
+            <div className="faqList mt-5">
+              <SectionHeader title={contactContent.faqsTitle} />
+              {contactContent.faqs.map((item) => (
+                <details className="faqItem" key={item.question}>
+                  <summary>
+                    <span>{item.question}</span>
+                    <RiArrowDownSLine className="faqChevron" aria-hidden="true" />
+                  </summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="sectionPad" id="privacy-policy" aria-labelledby="privacy-heading">
+          <div className="container legalContent">
+            <SectionHeader title={privacyContent.title} id="privacy-heading" />
+            <p>{privacyContent.intro}</p>
+            {privacyContent.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            {privacyContent.sections.map((section) => (
+              <article key={section.title} className="legalBlock">
+                <h3>{section.title}</h3>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="sectionPad sectionAlt" id="terms-conditions" aria-labelledby="terms-heading">
+          <div className="container legalContent">
+            <SectionHeader title={termsContent.title} id="terms-heading" />
+            <p>{termsContent.intro}</p>
+            {termsContent.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            {termsContent.sections.map((section) => (
+              <article key={section.title} className="legalBlock">
+                <h3>{section.title}</h3>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </article>
+            ))}
+          </div>
+        </section> */}
       </main>
       <Footer />
     </>
