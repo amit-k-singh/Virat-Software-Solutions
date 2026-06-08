@@ -1,30 +1,19 @@
+import Image from "next/image";
+import Link from "next/link";
 import { footerContent } from "../data/siteContent";
-import ContactForm from "./ContactForm";
 import {
   RiArrowRightSLine,
-  RiFacebookCircleFill,
-  RiInstagramLine,
+  RiGithubFill,
   RiLinkedinBoxFill,
-  RiMailLine,
-  RiMapPin2Line,
-  RiPhoneLine,
   RiShieldCheckLine,
-  RiTwitterXFill,
   RiWhatsappLine,
 } from "react-icons/ri";
-
-const contactIcons = {
-  Email: RiMailLine,
-  Phone: RiPhoneLine,
-  "WhatsApp Chat": RiWhatsappLine,
-  Location: RiMapPin2Line,
-};
+import viratLogo from "../assets/images/virat_logo.png";
 
 const socialIcons = {
-  LinkedIn: RiLinkedinBoxFill,
-  Instagram: RiInstagramLine,
-  "Twitter (X)": RiTwitterXFill,
-  Facebook: RiFacebookCircleFill,
+  Whatsapp: RiWhatsappLine,
+  Linkedin: RiLinkedinBoxFill,
+  Github: RiGithubFill,
 };
 
 function FooterList({ title, items }) {
@@ -33,18 +22,8 @@ function FooterList({ title, items }) {
       <h3>{title}</h3>
       <ul role="list">
         {items.map((item) => (
-          <li key={item.label || item}>
-            {item.href ? (
-              <a href={item.href}>
-                <RiArrowRightSLine className="footerIcon" aria-hidden="true" />
-                {item.label}
-              </a>
-            ) : (
-              <span className="footerListItem">
-                <i className="ri-checkbox-blank-circle-line footerItemRi" aria-hidden="true" />
-                {item}
-              </span>
-            )}
+          <li key={item}>
+            <span className="footerListItem">{item}</span>
           </li>
         ))}
       </ul>
@@ -52,85 +31,124 @@ function FooterList({ title, items }) {
   );
 }
 
+function FooterLinks({ items }) {
+  return (
+    <ul role="list" className="footerLinkList">
+      {items.map((item) => (
+        <li key={item}>
+          <a href="#contact">{item}</a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function Footer() {
   return (
-    <>
-      <ContactForm />
-      <footer className="siteFooter" id="contact">
+    <footer className="siteFooter">
       <div className="container">
         <div className="row g-4 footerMain">
-          <div className="col-12 col-lg-4">
-            <article className="footerCol">
-              <h2>{footerContent.companyName}</h2>
+          <div className="col-12 col-lg-3">
+            <article className="footerCol footerBrand">
+              <Link
+                className="footerBrandLogoLink"
+                href="/"
+                aria-label="Virat Software Solutions Home"
+              >
+                <div className="footerBrandLogoWrap">
+                  <Image
+                    src={viratLogo}
+                    alt="Virat Software Solutions"
+                    className="footerBrandLogo"
+                  />
+                </div>
+              </Link>
               <p>{footerContent.companySummary}</p>
-              <ul className="quickLinks" role="list">
-                {footerContent.companyLinks.map((link) => (
-                  <li key={link.label}>
-                    <a href={link.href}>
-                      <RiArrowRightSLine className="footerIcon" aria-hidden="true" />
-                      {link.label}
+
+              <div
+                className="footerClutchShell"
+                aria-label="Clutch review widget"
+              >
+                <iframe
+                  src="https://widget.clutch.co/widgets/get/2?ref_domain=www.appgambit.com&uid=2604123&rel_nofollow=false&ref_path=/"
+                  title="Clutch Review Widget"
+                  loading="lazy"
+                  scrolling="no"
+                  className="footerClutchFrame"
+                />
+              </div>
+            </article>
+          </div>
+          <div className="col-12 col-md-6 col-lg-2">
+            <FooterList title="TECH" items={footerContent.tech} />
+          </div>
+          <div className="col-12 col-md-6 col-lg-2">
+            <FooterList
+              title="Hire Resources"
+              items={footerContent.hireResources}
+            />
+          </div>
+          <div className="col-12 col-md-6 col-lg-2 footerStack">
+            <article className="footerCol">
+              <h3>Company</h3>
+              <FooterLinks items={footerContent.companyLinks} />
+            </article>
+          </div>
+          <div className="col-12 col-md-6 col-lg-2">
+            <article className="footerCol">
+              <h3>{footerContent.stayConnected}</h3>
+              <ul role="list" className="contactList">
+                {footerContent.contacts.map((contact) => (
+                  <li key={contact.label}>
+                    <a
+                      href={contact.href}
+                      target={
+                        contact.href.startsWith("http") ? "_blank" : undefined
+                      }
+                      rel={
+                        contact.href.startsWith("http")
+                          ? "noreferrer"
+                          : undefined
+                      }
+                    >
+                      <span className="contactLabel">{contact.label}:</span>
+                      <span>{contact.value}</span>
                     </a>
                   </li>
                 ))}
               </ul>
             </article>
-          </div>
-          <div className="col-6 col-lg-2">
-            <FooterList title="Services" items={footerContent.services} />
-          </div>
-          <div className="col-6 col-lg-2">
-            <FooterList title="Industries" items={footerContent.industries} />
-          </div>
-          <div className="col-6 col-lg-2">
-            <FooterList title="Resources" items={footerContent.resources} />
-          </div>
-          <div className="col-6 col-lg-2">
-            <article className="footerCol">
-              <h3>Contact</h3>
-              <ul role="list">
-                {footerContent.contacts.map((contact) => {
-                  const Icon = contactIcons[contact.label] || RiArrowRightSLine;
-                  return (
-                    <li key={contact.label} className="contactItem">
-                      <a
-                        href={contact.href}
-                        target={contact.href.startsWith("https") ? "_blank" : undefined}
-                        rel={contact.href.startsWith("https") ? "noreferrer" : undefined}
-                      >
-                        <Icon className="footerIcon" aria-hidden="true" />
-                        <span className="contactLabel">{contact.label}:</span>
-                        <span>{contact.value}</span>
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </article>
+            <div className="footerBottom">
+              <div className="socialGroup">
+                <ul
+                  className="socialList"
+                  role="list"
+                  aria-label="Social media links"
+                >
+                  {footerContent.social.map((social) => {
+                    const Icon = socialIcons[social] || RiArrowRightSLine;
+                    return (
+                      <li key={social}>
+                        <a
+                          href="#contact"
+                          className="socialLink"
+                          aria-label={social}
+                        >
+                          <Icon aria-hidden="true" />
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="footerDivider" />
 
-        <div className="footerBottom">
-          <ul className="socialList" role="list" aria-label="Social media links">
-            {footerContent.social.map((social) => {
-              const Icon = socialIcons[social.label] || RiArrowRightSLine;
-              return (
-                <li key={social.label}>
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="socialLink"
-                    aria-label={social.label}
-                  >
-                    <Icon aria-hidden="true" />
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-
+        <div className="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+          <p className="copyright">{footerContent.copyright}</p>
           <ul className="legalList" role="list" aria-label="Legal links">
             {footerContent.legal.map((legal) => (
               <li key={legal.label}>
@@ -141,11 +159,8 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-
-          <p className="copyright">{footerContent.copyright}</p>
         </div>
       </div>
-      </footer>
-    </>
+    </footer>
   );
 }

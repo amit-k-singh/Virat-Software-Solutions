@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import {
-  RiArrowDownSLine,
-  RiArrowRightUpLine,
-  RiCalendarLine,
-  RiMenu3Line,
-  RiPhoneFill,
-} from "react-icons/ri";
+import { RiArrowDownSLine, RiArrowRightUpLine, RiMenu3Line } from "react-icons/ri";
 import { navigationItems } from "../data/siteContent";
 import viratLogo from "../assets/images/virat_logo.png";
 
@@ -21,7 +15,6 @@ function DropdownPanel({ panel }) {
           <div className="panelGroupGrid">
             {section.groups.map((group, index) => (
               <article className="panelGroup" key={`${section.heading}-${index}`}>
-                {group.title ? <h4 className="panelTitle">{group.title}</h4> : null}
                 <ul className="panelLinks" role="list">
                   {group.links.map((link) => (
                     <li key={link.label}>
@@ -49,12 +42,7 @@ export default function Header() {
       <div className="container">
         <div className="headerShell">
           <a className="brandMark" href="#home" aria-label="Virat Software Solutions Home">
-            <Image
-              src={viratLogo}
-              alt="Virat Software Solutions"
-              className="brandLogo"
-              priority
-            />
+            <Image src={viratLogo} alt="Virat Software Solutions" className="brandLogo" priority />
           </a>
 
           <button
@@ -71,10 +59,7 @@ export default function Header() {
           <nav className="desktopNav" aria-label="Primary">
             <ul className="desktopNavList" role="list">
               {navigationItems.map((item) => (
-                <li
-                  key={item.label}
-                  className={`navItem ${item.panel ? "navItemWithPanel" : ""}`}
-                >
+                <li key={item.label} className={`navItem ${item.panel ? "navItemWithPanel" : ""}`}>
                   <a className="navLink" href={item.href}>
                     {item.label}
                     {item.panel ? <RiArrowDownSLine className="navChevron" aria-hidden="true" /> : null}
@@ -86,22 +71,18 @@ export default function Header() {
           </nav>
 
           <div className="headerActions">
-            <a className="callLink" href="tel:+917801853061">
-              <RiPhoneFill aria-hidden="true" />
-              Call Us
+            <a className="headerGhost" href="#contact">
+              Contact
             </a>
-            <a className="headerCta" href="#contact">
-              <RiCalendarLine aria-hidden="true" />
-              Book a Strategy Call
+            <a className="headerCta" href="#final-cta">
+              <RiArrowRightUpLine aria-hidden="true" />
+              Talk Business
             </a>
           </div>
         </div>
       </div>
 
-      <div
-        className={`mobileNavWrap ${isMobileOpen ? "isOpen" : ""}`}
-        id="mobile-navigation"
-      >
+      <div className={`mobileNavWrap ${isMobileOpen ? "isOpen" : ""}`} id="mobile-navigation">
         <div className="container">
           <nav aria-label="Mobile Primary">
             <ul className="mobileNavList" role="list">
@@ -142,13 +123,11 @@ export default function Header() {
                 </li>
               ))}
               <li className="mobileNavActions">
-                <a href="tel:+917801853061">
-                  <RiPhoneFill aria-hidden="true" />
-                  Call Us
-                </a>
                 <a href="#contact" onClick={() => setIsMobileOpen(false)}>
-                  <RiArrowRightUpLine aria-hidden="true" />
-                  Book a Strategy Call
+                  Contact
+                </a>
+                <a href="#final-cta" onClick={() => setIsMobileOpen(false)}>
+                  Talk Business
                 </a>
               </li>
             </ul>

@@ -1,0 +1,751 @@
+.industryShowcaseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.industryShowcaseCard {
+  --logo-bg: #eef2ff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  min-height: clamp(210px, 20vw, 210px);
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background-color: #dfe8f7;
+  box-shadow: 0 12px 30px rgba(50, 67, 120, 0.16);
+}
+
+.industryShowcaseCard.toneHealthcare {
+  --logo-bg: #c4d9ff;
+}
+
+.industryShowcaseCard.toneFintech {
+  --logo-bg: #c3edd8;
+}
+
+.industryShowcaseCard.toneRetail {
+  --logo-bg: #ffd9c0;
+}
+
+.industryShowcaseCard.toneEducation {
+  --logo-bg: #cdc6ff;
+}
+
+.industryShowcaseCard.toneLogistics {
+  --logo-bg: #ffdca8;
+}
+
+.industryShowcaseCard.toneRealEstate {
+  --logo-bg: #e0cde9;
+}
+
+.industryShowcaseCard.toneManufacturing {
+  --logo-bg: #f7d7a7;
+}
+
+.industryShowcaseCard.toneInsurance {
+  --logo-bg: #c4e0ff;
+}
+
+.industryShowcaseCard.hasIndustryBg {
+  background-image: var(--industry-bg-image);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.industryShowcaseCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(246, 251, 255, 0.72) 0%, rgba(225, 236, 248, 0.54) 44%, rgba(20, 28, 48, 0.42) 100%),
+    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.34), transparent 34%);
+}
+
+.industryShowcaseInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: start;
+  gap: 11px;
+  padding: 10px;
+}
+
+.industryShowcaseHead {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.industryShowcaseLogo {
+  position: relative;
+  isolation: isolate;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--logo-bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #0f3d67;
+  font-size: 1.35rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.industryShowcaseLogo::before,
+.industryShowcaseLogo::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  z-index: -1;
+}
+
+.industryShowcaseLogo::before {
+  inset: -12px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0) 74%);
+}
+
+.industryShowcaseLogo::after {
+  inset: 8px;
+  background: var(--logo-bg);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.industryShowcaseLogo svg {
+  position: relative;
+  z-index: 1;
+}
+
+.industryShowcaseTitle {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: #0f172a;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.industryMock {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.36);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 2px;
+}
+
+
+.metricBox {
+  grid-column: span 3;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.36);
+  background: rgba(255, 255, 255, 0.64);
+  padding: 6px 7px;
+  display: grid;
+  gap: 2px;
+}
+
+.metricBox.span2 {
+  grid-column: span 6;
+}
+
+.metricBox.isGhost {
+  border-style: dashed;
+  border-color: rgba(148, 163, 184, 0.5);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.metricBox.isGhost .metricLabel,
+.metricBox.isGhost .metricValue {
+  color: transparent;
+}
+
+.metricBox.isGhost::before,
+.metricBox.isGhost::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.2), rgba(148, 163, 184, 0.45), rgba(148, 163, 184, 0.2));
+}
+
+.metricBox.isGhost::before {
+  top: 10px;
+  width: 52%;
+  height: 7px;
+}
+
+.metricBox.isGhost::after {
+  top: 23px;
+  width: 38%;
+  height: 10px;
+}
+
+.metricLabel {
+  font-size: 0.6rem;
+  color: rgba(20, 28, 56, 0.72);
+  line-height: 1.2;
+}
+
+.metricValue {
+  font-size: 0.82rem;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.metricNote {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: rgba(20, 28, 56, 0.82);
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.industryVizRow {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 8px;
+}
+
+.industryVizRow > * {
+  min-height: 34px;
+}
+
+.industryProgressTrack {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.35);
+  overflow: hidden;
+}
+
+.industryProgressFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.industryBarChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 44px;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(24, 31, 60, 0.16);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.industryBar {
+  flex: 1;
+  border-radius: 6px 6px 3px 3px;
+}
+
+.industryLineChart {
+  position: relative;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(24, 31, 60, 0.16);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.18));
+}
+
+.industryLineChart::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(70, 123, 255, 0.25), rgba(47, 195, 160, 0.35));
+}
+
+.linePointRow {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.linePointRow span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.industryNavPoints {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.industryNavDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(24, 31, 60, 0.24);
+}
+
+.industryNavDot.active {
+  width: 24px;
+}
+
+.industryNavTabs {
+  --tab1-start: #16a34a;
+  --tab1-end: #22c55e;
+  --tab2-start: #2563eb;
+  --tab2-end: #0ea5e9;
+  --tab3-start: #f97316;
+  --tab3-end: #f59e0b;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.industryNavTab {
+  --tab-icon-start: var(--tab1-start);
+  --tab-icon-end: var(--tab1-end);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 12px;
+  border: 1px solid rgba(24, 31, 60, 0.2);
+  background: transparent;
+  font-size: 0.64rem;
+  color: rgba(15, 23, 42, 0.92);
+  font-weight: 600;
+  text-align: center;
+  padding: 6px 5px;
+  line-height: 1.1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.industryNavTabIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--tab-icon-start);
+  background: transparent;
+  box-shadow: none;
+  font-size: 1.06rem;
+}
+
+.industryNavTab.active {
+  border-color: rgba(24, 31, 60, 0.24);
+}
+
+.industryNavTab.active .industryNavTabIcon {
+  color: var(--tab-icon-end);
+}
+
+.industryNavTabs .industryNavTab:nth-child(1) {
+  --tab-icon-start: var(--tab1-start);
+  --tab-icon-end: var(--tab1-end);
+}
+
+.industryNavTabs .industryNavTab:nth-child(2) {
+  --tab-icon-start: var(--tab2-start);
+  --tab-icon-end: var(--tab2-end);
+}
+
+.industryNavTabs .industryNavTab:nth-child(3) {
+  --tab-icon-start: var(--tab3-start);
+  --tab-icon-end: var(--tab3-end);
+}
+
+.industryNavTab.active .industryNavTabIcon {
+  filter: saturate(1.2) brightness(1.06);
+}
+
+.industryNavTabLabel {
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.industryNavTab.active {
+  transform: translateY(-1px);
+  border-color: rgba(59, 130, 246, 0.42);
+  background: transparent;
+  box-shadow: none;
+  color: rgba(24, 31, 60, 0.98);
+}
+
+.industryNavTabsInline {
+  align-content: stretch;
+  border-radius: 10px;
+  border: 1px solid rgba(24, 31, 60, 0.16);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 6px;
+}
+
+.industryNavTabsInline .industryNavTab {
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  min-height: 48px;
+}
+
+.industryNavTabsInline .industryNavTabLabel {
+  line-height: 1;
+}
+
+.industrySeverityMix,
+.industryCohortMix,
+.industryLeadSourceTable,
+.industryLineSplit,
+.industryClaimMix {
+  border-radius: 12px;
+  border: 1px solid rgba(24, 31, 60, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.severityRow,
+.leadRow,
+.splitItem,
+.cohortRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.62rem;
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.severityRow {
+  border-radius: 8px;
+  padding: 3px 5px;
+  border: 1px solid rgba(148, 163, 184, 0.34);
+}
+
+.severityLow {
+  background: rgba(134, 239, 172, 0.38);
+}
+
+.severityMid {
+  background: rgba(253, 224, 71, 0.34);
+}
+
+.severityHigh {
+  background: rgba(251, 113, 133, 0.3);
+}
+
+.leadRow {
+  padding-bottom: 4px;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.36);
+}
+
+.leadRow:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cohortLabel,
+.splitItem span {
+  min-width: 64px;
+}
+
+.cohortTrack,
+.splitTrack {
+  position: relative;
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.28);
+  overflow: hidden;
+}
+
+.cohortFill,
+.splitFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.industryMockEducation .cohortFill {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+}
+
+.industryMockManufacturing .splitFill {
+  background: linear-gradient(90deg, #f97316, #f59e0b);
+}
+
+.industryMockInsurance .splitFill {
+  background: linear-gradient(90deg, #0ea5e9, #2563eb);
+}
+
+.industryMockFintech .industryNavTabs {
+  --tab1-start: #16a34a;
+  --tab1-end: #22c55e;
+  --tab2-start: #1d4ed8;
+  --tab2-end: #0ea5e9;
+  --tab3-start: #059669;
+  --tab3-end: #14b8a6;
+}
+
+.industryMockFintech .industryVizRow {
+  align-items: stretch;
+}
+
+.industryMockFintech .industryBarChart,
+.industryMockFintech .industryNavTabsInline {
+  min-height: 44px;
+}
+
+.industryMockRetail .industryVizRow,
+.industryMockLogistics .industryVizRow {
+  align-items: stretch;
+}
+
+.industryMockRetail .industryNavTabsInline,
+.industryMockRetail .industryNavPoints,
+.industryMockLogistics .industryNavTabsInline,
+.industryMockLogistics .routePoints {
+  min-height: 44px;
+}
+
+.industryMockRetail .industryNavPoints,
+.industryMockLogistics .routePoints {
+  display: flex;
+  align-items: center;
+}
+
+.industryMockHealthcare .industryNavTabs {
+  --tab1-start: #0ea5e9;
+  --tab1-end: #38bdf8;
+  --tab2-start: #4f46e5;
+  --tab2-end: #6366f1;
+  --tab3-start: #0284c7;
+  --tab3-end: #22d3ee;
+}
+
+.industryMockRetail .industryNavTabs,
+.industryMockLogistics .industryNavTabs,
+.industryMockManufacturing .industryNavTabs {
+  --tab1-start: #ea580c;
+  --tab1-end: #f59e0b;
+  --tab2-start: #f97316;
+  --tab2-end: #fb7185;
+  --tab3-start: #f59e0b;
+  --tab3-end: #facc15;
+}
+
+.industryMockEducation .industryNavTabs {
+  --tab1-start: #6366f1;
+  --tab1-end: #8b5cf6;
+  --tab2-start: #4f46e5;
+  --tab2-end: #6366f1;
+  --tab3-start: #7c3aed;
+  --tab3-end: #a855f7;
+}
+
+.industryMockRealEstate .industryNavTabs {
+  --tab1-start: #a855f7;
+  --tab1-end: #c084fc;
+  --tab2-start: #7c3aed;
+  --tab2-end: #a855f7;
+  --tab3-start: #6366f1;
+  --tab3-end: #60a5fa;
+}
+
+.industryMockInsurance .industryNavTabs {
+  --tab1-start: #0284c7;
+  --tab1-end: #0ea5e9;
+  --tab2-start: #1d4ed8;
+  --tab2-end: #3b82f6;
+  --tab3-start: #0f766e;
+  --tab3-end: #14b8a6;
+}
+
+.routePoints {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.routePoints::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  height: 2px;
+  background: rgba(100, 116, 139, 0.45);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.routePoints span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.navPoints {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.navPoints span {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  line-height: 1;
+  border: 1px solid rgba(148, 163, 184, 0.46);
+  color: #1e293b;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.navPoints span.active {
+  color: #ffffff;
+}
+
+.industryDonut {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  position: relative;
+  display: inline-block;
+}
+
+.industryDonut::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.w38 { width: 38%; }
+.w52 { width: 52%; }
+.w61 { width: 61%; }
+.w67 { width: 67%; }
+.w72 { width: 72%; }
+.w78 { width: 78%; }
+.w84 { width: 84%; }
+
+.h35 { height: 35%; }
+.h48 { height: 48%; }
+.h62 { height: 62%; }
+.h76 { height: 76%; }
+
+.industryMockHealthcare { background: rgba(219, 236, 255, 0.58); }
+.industryMockHealthcare .metricValue { color: #1f5ec8; }
+.industryMockHealthcare .industryProgressFill,
+.industryMockHealthcare .linePointRow span,
+.industryMockHealthcare .industryNavDot.active,
+.industryMockHealthcare .navPoints span.active { background: #38bdf8; }
+
+.industryMockFintech { background: rgba(214, 245, 225, 0.6); }
+.industryMockFintech .metricValue { color: #238557; }
+.industryMockFintech .industryProgressFill,
+.industryMockFintech .industryBar,
+.industryMockFintech .industryNavDot.active,
+.industryMockFintech .navPoints span.active { background: #22c55e; }
+
+.industryMockRetail,
+.industryMockLogistics,
+.industryMockManufacturing { background: rgba(255, 236, 210, 0.6); }
+
+.industryMockRetail .metricValue,
+.industryMockLogistics .metricValue,
+.industryMockManufacturing .metricValue { color: #a56517; }
+
+.industryMockRetail .industryProgressFill,
+.industryMockRetail .industryBar,
+.industryMockRetail .industryNavDot.active,
+.industryMockRetail .navPoints span.active,
+.industryMockLogistics .industryProgressFill,
+.industryMockLogistics .routePoints span,
+.industryMockLogistics .industryNavDot.active,
+.industryMockLogistics .navPoints span.active,
+.industryMockManufacturing .industryProgressFill,
+.industryMockManufacturing .industryBar,
+.industryMockManufacturing .industryNavDot.active,
+.industryMockManufacturing .navPoints span.active { background: #f59e0b; }
+
+.industryMockLogistics .routePoints span { border-color: #f59e0b; }
+
+.industryMockEducation { background: rgba(228, 221, 255, 0.62); }
+.industryMockEducation .metricValue { color: #6350c8; }
+.industryMockEducation .industryProgressFill,
+.industryMockEducation .industryBar,
+.industryMockEducation .industryNavDot.active,
+.industryMockEducation .navPoints span.active { background: #6366f1; }
+
+.industryMockRealEstate { background: rgba(239, 224, 245, 0.6); }
+.industryMockRealEstate .metricValue { color: #7f4b92; }
+.industryMockRealEstate .industryProgressFill,
+.industryMockRealEstate .industryBar,
+.industryMockRealEstate .industryNavDot.active,
+.industryMockRealEstate .navPoints span.active { background: #c084fc; }
+
+.industryMockInsurance { background: rgba(215, 234, 255, 0.62); }
+.industryMockInsurance .metricValue { color: #2a6db6; }
+.industryMockInsurance .industryProgressFill,
+.industryMockInsurance .industryBar,
+.industryMockInsurance .industryNavDot.active,
+.industryMockInsurance .navPoints span.active { background: #0ea5e9; }
+
+.industryMockRetail .industryDonut {
+  background: conic-gradient(#f59e0b 0 62%, rgba(148, 163, 184, 0.35) 62% 100%);
+}
+
+.industryMockInsurance .industryDonut {
+  background: conic-gradient(#0ea5e9 0 74%, rgba(148, 163, 184, 0.35) 74% 100%);
+}
+
+@media (max-width: 1199.98px) {
+  .industryShowcaseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .industryShowcaseGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .industryShowcaseCard {
+    min-height: 190px;
+  }
+
+  .metricValue {
+    font-size: 0.8rem;
+  }
+
+  .industryVizRow {
+    grid-template-columns: 1fr;
+  }
+}
