@@ -36,7 +36,7 @@ function FooterLinks({ items }) {
     <ul role="list" className="footerLinkList">
       {items.map((item) => (
         <li key={item}>
-          <a href="#contact">{item}</a>
+          <Link href="/#contact">{item}</Link>
         </li>
       ))}
     </ul>
@@ -65,7 +65,7 @@ export default function Footer() {
               </Link>
               <p>{footerContent.companySummary}</p>
 
-              <div
+              {/* <div
                 className="footerClutchShell"
                 aria-label="Clutch review widget"
               >
@@ -76,7 +76,7 @@ export default function Footer() {
                   scrolling="no"
                   className="footerClutchFrame"
                 />
-              </div>
+              </div> */}
             </article>
           </div>
           <div className="col-12 col-md-6 col-lg-2">
@@ -129,13 +129,13 @@ export default function Footer() {
                     const Icon = socialIcons[social] || RiArrowRightSLine;
                     return (
                       <li key={social}>
-                        <a
-                          href="#contact"
+                        <Link
+                          href="/#contact"
                           className="socialLink"
                           aria-label={social}
                         >
                           <Icon aria-hidden="true" />
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}
@@ -152,7 +152,7 @@ export default function Footer() {
           <ul className="legalList" role="list" aria-label="Legal links">
             {footerContent.legal.map((legal) => (
               <li key={legal.label}>
-                <a href={legal.href}>
+                <a href={legal.href} className="d-flex align-items-center gap-1">
                   <RiShieldCheckLine aria-hidden="true" />
                   {legal.label}
                 </a>
