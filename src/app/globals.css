@@ -81,6 +81,137 @@ img {
   display: block;
 }
 
+.policyRawText {
+  margin-top: 0;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(1, 31, 138, 0.14);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-1);
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.policyFormattedContent {
+  margin-top: 0;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(1, 31, 138, 0.14);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-1);
+}
+
+.policyFormattedContent h2,
+.policyFormattedContent h3 {
+  color: var(--color-navy);
+  margin-bottom: 12px;
+}
+
+.policyFormattedContent h2 {
+  margin-top: 20px;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+}
+
+.policyFormattedContent h3 {
+  margin-top: 14px;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.policyFormattedContent p {
+  margin-bottom: 14px;
+  color: var(--color-ink);
+  line-height: 1.78;
+}
+
+.policyFormattedContent ul {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.policyFormattedContent li {
+  margin-bottom: 8px;
+  color: var(--color-ink);
+  line-height: 1.72;
+}
+
+.policyPage {
+  position: relative;
+}
+
+.policyPage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(111, 212, 212, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 6%, rgba(1, 31, 138, 0.12), transparent 26%);
+}
+
+.policyShell {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 34px);
+  border-radius: 28px;
+  border: 1px solid rgba(1, 31, 138, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 251, 255, 0.96));
+  box-shadow: 0 30px 70px rgba(1, 31, 138, 0.12);
+}
+
+.policyLead {
+  margin-bottom: 18px;
+}
+
+.policyBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 31, 138, 0.14);
+  background: rgba(111, 212, 212, 0.2);
+  color: var(--color-navy);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.policyLead h1 {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  font-size: clamp(1.9rem, 3.1vw, 2.7rem);
+}
+
+.policySubhead {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .policyShell {
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .policyRawText {
+    padding: 14px;
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
+
+  .policyFormattedContent {
+    padding: 14px;
+  }
+}
+
 button,
 input,
 select,

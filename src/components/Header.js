@@ -41,7 +41,7 @@ export default function Header() {
     <header className="siteHeader">
       <div className="container">
         <div className="headerShell">
-          <a className="brandMark" href="#home" aria-label="Virat Software Solutions Home">
+          <a className="brandMark" href="/#home" aria-label="Virat Software Solutions Home">
             <Image src={viratLogo} alt="Virat Software Solutions" className="brandLogo" priority />
           </a>
 
@@ -71,10 +71,10 @@ export default function Header() {
           </nav>
 
           <div className="headerActions">
-            <a className="headerGhost" href="#contact">
+            <a className="headerGhost" href="/#contact">
               Contact
             </a>
-            <a className="headerCta" href="#final-cta">
+            <a className="headerCta" href="/#final-cta">
               <RiArrowRightUpLine aria-hidden="true" />
               Talk Business
             </a>
@@ -123,10 +123,10 @@ export default function Header() {
                 </li>
               ))}
               <li className="mobileNavActions">
-                <a href="#contact" onClick={() => setIsMobileOpen(false)}>
+                <a href="/#contact" onClick={() => setIsMobileOpen(false)}>
                   Contact
                 </a>
-                <a href="#final-cta" onClick={() => setIsMobileOpen(false)}>
+                <a href="/#final-cta" onClick={() => setIsMobileOpen(false)}>
                   Talk Business
                 </a>
               </li>

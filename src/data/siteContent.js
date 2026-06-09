@@ -10,10 +10,10 @@ import UCLogo from "../assets/images/TrustedClient/logo4_New.jpg";
 import PatilKakiLogo from "../assets/images/TrustedClient/Patil-kaki.png";
 
 export const navigationItems = [
-  { label: "Work", href: "#portfolio" },
+  { label: "Work", href: "/#portfolio" },
   {
     label: "Solutions",
-    href: "#solutions",
+    href: "/#solutions",
     panel: {
       variant: "mega",
       sections: [
@@ -22,12 +22,12 @@ export const navigationItems = [
           groups: [
             {
               links: [
-                { label: "MVP Development", href: "#solutions" },
-                { label: "SaaS Product Development", href: "#solutions" },
-                { label: "Digital Transformation", href: "#solutions" },
-                { label: "AI & Automation Solutions", href: "#solutions" },
-                { label: "Data & Analytics Solutions", href: "#solutions" },
-                { label: "Cloud & DevOps Transformation", href: "#solutions" },
+                { label: "MVP Development", href: "/#solutions" },
+                { label: "SaaS Product Development", href: "/#solutions" },
+                { label: "Digital Transformation", href: "/#solutions" },
+                { label: "AI & Automation Solutions", href: "/#solutions" },
+                { label: "Data & Analytics Solutions", href: "/#solutions" },
+                { label: "Cloud & DevOps Transformation", href: "/#solutions" },
               ],
             },
           ],
@@ -37,7 +37,7 @@ export const navigationItems = [
   },
   {
     label: "Services",
-    href: "#services",
+    href: "/#services",
     panel: {
       variant: "mega",
       sections: [
@@ -46,15 +46,15 @@ export const navigationItems = [
           groups: [
             {
               links: [
-                { label: "AI & Automation", href: "#services" },
-                { label: "Software Development", href: "#services" },
-                { label: "Web Development", href: "#services" },
-                { label: "Mobile App Development", href: "#services" },
-                { label: "Cloud & DevOps", href: "#services" },
-                { label: "API & System Integration", href: "#services" },
-                { label: "UI/UX & Product Design", href: "#services" },
-                { label: "QA & Testing", href: "#services" },
-                { label: "Data Engineering", href: "#services" },
+                { label: "AI & Automation", href: "/#services" },
+                { label: "Software Development", href: "/#services" },
+                { label: "Web Development", href: "/#services" },
+                { label: "Mobile App Development", href: "/#services" },
+                { label: "Cloud & DevOps", href: "/#services" },
+                { label: "API & System Integration", href: "/#services" },
+                { label: "UI/UX & Product Design", href: "/#services" },
+                { label: "QA & Testing", href: "/#services" },
+                { label: "Data Engineering", href: "/#services" },
               ],
             },
           ],
@@ -64,7 +64,7 @@ export const navigationItems = [
   },
   {
     label: "Industries",
-    href: "#industries",
+    href: "/#industries",
     panel: {
       variant: "compact",
       sections: [
@@ -73,12 +73,12 @@ export const navigationItems = [
           groups: [
             {
               links: [
-                { label: "Healthcare", href: "#industries" },
-                { label: "FinTech & Banking", href: "#industries" },
-                { label: "E-Commerce & Retail", href: "#industries" },
-                { label: "Education & EdTech", href: "#industries" },
-                { label: "Logistics & Supply Chain", href: "#industries" },
-                { label: "Real Estate & PropTech", href: "#industries" },
+                { label: "Healthcare", href: "/#industries" },
+                { label: "FinTech & Banking", href: "/#industries" },
+                { label: "E-Commerce & Retail", href: "/#industries" },
+                { label: "Education & EdTech", href: "/#industries" },
+                { label: "Logistics & Supply Chain", href: "/#industries" },
+                { label: "Real Estate & PropTech", href: "/#industries" },
               ],
             },
           ],
@@ -88,7 +88,7 @@ export const navigationItems = [
   },
   {
     label: "Company",
-    href: "#company",
+    href: "/#company",
     panel: {
       variant: "compact",
       sections: [
@@ -97,10 +97,10 @@ export const navigationItems = [
           groups: [
             {
               links: [
-                { label: "About Us", href: "#about" },
-                { label: "Our Team", href: "#about" },
-                { label: "Our Process", href: "#process" },
-                { label: "Career", href: "#contact" },
+                { label: "About Us", href: "/#about" },
+                { label: "Our Team", href: "/#about" },
+                { label: "Our Process", href: "/#process" },
+                { label: "Career", href: "/#contact" },
               ],
             },
           ],
@@ -873,7 +873,7 @@ export const footerContent = {
   social: ["Whatsapp", "Linkedin", "Github"],
   copyright: "© 2026 Virat Software Solutions. All Rights Reserved.",
   legal: [
-    { label: "Privacy Policy", href: "#privacy-policy" },
-    { label: "Terms & Conditions", href: "#terms-conditions" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms & Conditions", href: "/terms-conditions" },
   ],
 };
