@@ -152,10 +152,10 @@ export default function Footer() {
           <ul className="legalList" role="list" aria-label="Legal links">
             {footerContent.legal.map((legal) => (
               <li key={legal.label}>
-                <a href={legal.href} className="d-flex align-items-center gap-1">
+                <Link href={legal.href} className="d-flex align-items-center gap-1">
                   <RiShieldCheckLine aria-hidden="true" />
                   {legal.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -36,6 +36,11 @@ export const metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "any" }],
+    shortcut: ["/icon.png"],
+    apple: [{ url: "/icon.png", type: "image/png", sizes: "180x180" }],
+  },
   openGraph: {
     title: "Virat Software Solutions",
     description:
