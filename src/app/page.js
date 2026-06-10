@@ -2,6 +2,7 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import TechStackShowcase from "../components/TechStackShowcase";
+import TestimonialsSection from "../components/TestimonialsSection";
 import "../assets/css/industries.css";
 import { IndustryCards } from "../components/industries";
 import {
@@ -38,7 +39,30 @@ import {
   RiCodeBoxLine,
   RiCloudLine,
 } from "react-icons/ri";
+import {
+  RiStore2Line,
+  RiShoppingCartLine,
+  RiCodeLine,
+  RiBankCardLine,
+  RiLineChartLine,
+  RiLayoutLine,
+  RiBarChartLine,
+  RiFileList3Line,
+  RiSearchLine,
+} from "react-icons/ri";
 
+const techIconMap = {
+  "Shopify / CMS": RiStore2Line,
+  "E-commerce": RiShoppingCartLine,
+  "JavaScript": RiCodeLine,
+  "Payment Gateway Integration": RiBankCardLine,
+  "Conversion Optimization": RiLineChartLine,
+  "WordPress / CMS": RiLayoutLine,
+  "Frontend Development": RiCodeBoxLine,
+  "Analytics Integration": RiBarChartLine,
+  "Lead Forms": RiFileList3Line,
+  "SEO Optimization": RiSearchLine,
+};
 export const metadata = {
   title: "Custom Software Development Company | AI, Web, Mobile & SaaS Development",
   description:
@@ -207,6 +231,12 @@ export default function Home() {
         <section className="sectionPad" id="solutions-architecture" aria-labelledby="architecture-heading">
           <div className="container">
             <SectionHeader title={architectureContent.title} description={architectureContent.description} id="architecture-heading" />
+            <div className="heroActions">
+              <a className="primaryButton" href="#final-cta">
+                <RiArrowRightLine aria-hidden="true" />
+                Schedule a Consultation
+              </a>
+            </div>
           </div>
         </section>
 
@@ -237,10 +267,26 @@ export default function Home() {
               {portfolioContent.cards.map((card) => (
                 <div className="col-12 col-lg-6" key={card.title}>
                   <article className="portfolioCard h-100">
-                    <p className="cardLabel">{card.name}</p>
+                    <div className="cardLogoWrap">
+                      <Image
+                        src={card.logo}
+                        alt={card.logoAlt || card.name}
+                        className="cardLogo"
+                      />
+                    </div>
                     <h3>{card.title}</h3>
                     <p>{card.description}</p>
-                    <p className="techLine">{card.tech}</p>
+                    <div className="valuePills">
+                        {card.tech.map((item) => {
+                          const Icon = techIconMap[item];
+                          return (
+                            <span key={item} className="valuePill">
+                              {Icon && <Icon aria-hidden="true" />}
+                              {item}
+                            </span>
+                          );
+                        })}
+                    </div>
                     <a href={card.link} className="inlineAction" target="_blank" rel="noreferrer">
                       View Project
                       <RiArrowRightUpLine aria-hidden="true" />
@@ -321,15 +367,7 @@ export default function Home() {
         <section className="sectionPad" id="testimonials" aria-labelledby="testimonials-heading">
           <div className="container">
             <SectionHeader title={testimonialsContent.title} id="testimonials-heading" />
-            <div className="row g-4">
-              {testimonialsContent.quotes.map((quote) => (
-                <div className="col-12 col-md-6" key={quote}>
-                  <article className="quoteCard h-100">
-                    <p>{quote}</p>
-                  </article>
-                </div>
-              ))}
-            </div>
+            <TestimonialsSection quotes={testimonialsContent.quotes} />
           </div>
         </section>
 

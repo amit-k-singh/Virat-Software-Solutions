@@ -5,6 +5,8 @@ import {
   RiArrowRightSLine,
   RiGithubFill,
   RiLinkedinBoxFill,
+  RiMailLine,
+  RiPhoneLine,
   RiShieldCheckLine,
   RiWhatsappLine,
 } from "react-icons/ri";
@@ -14,6 +16,11 @@ const socialIcons = {
   Whatsapp: RiWhatsappLine,
   Linkedin: RiLinkedinBoxFill,
   Github: RiGithubFill,
+};
+
+const contactIcons = {
+  mail: RiMailLine,
+  phone: RiPhoneLine,
 };
 
 function FooterList({ title, items }) {
@@ -99,7 +106,7 @@ export default function Footer() {
               <h3>{footerContent.stayConnected}</h3>
               <ul role="list" className="contactList">
                 {footerContent.contacts.map((contact) => (
-                  <li key={contact.label}>
+                  <li key={contact.href}>
                     <a
                       href={contact.href}
                       target={
@@ -111,7 +118,12 @@ export default function Footer() {
                           : undefined
                       }
                     >
-                      <span className="contactLabel">{contact.label}:</span>
+                      {(() => {
+                        const ContactIcon = contactIcons[contact.icon];
+                        return ContactIcon ? (
+                          <ContactIcon className="footerIcon" aria-hidden="true" />
+                        ) : null;
+                      })()}
                       <span>{contact.value}</span>
                     </a>
                   </li>
