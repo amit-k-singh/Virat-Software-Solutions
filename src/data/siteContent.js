@@ -194,19 +194,23 @@ export const portfolioContent = {
   cards: [
     {
       name: "Patil Kaki",
+      logo: PatilKakiLogo,
+      logoAlt: "Patil Kaki logo",
       link: "https://patilkaki.com/",
       title: "Digital Commerce Experience for D2C Food Brand",
       description:
         "Created a scalable e-commerce platform for an authentic snack brand focused on immersive storytelling, frictionless purchasing, promotional campaigns, and optimized customer journeys to support direct-to-consumer growth.",
-      tech: "Tech: Shopify / CMS E-commerce JavaScript Payment Gateway Integration Conversion Optimization",
+      tech: ["Shopify / CMS", "E-commerce", "JavaScript", "Payment Gateway Integration", "Conversion Optimization"],
     },
     {
       name: "Kloud Connect",
+      logo: lnksiLogo,
+      logoAlt: "Kloud Connect logo",
       link: "https://www.kloudconnect.com.au/",
       title: "SaaS Product Website for Practice Management Platform",
       description:
         "Developed a conversion-focused SaaS website for an accounting practice management solution, highlighting workflow automation, billing, reporting, and operational efficiency while supporting product visibility and qualified lead acquisition.",
-      tech: "Tech: WordPress / CMS Frontend Development Analytics Integration Lead Forms SEO Optimization",
+      tech: ["WordPress / CMS", "Frontend Development", "Analytics Integration", "Lead Forms", "SEO Optimization"],
     },
   ],
 };
@@ -526,10 +530,26 @@ export const techStackContent = {
 export const testimonialsContent = {
   title: "What Our Clients Say",
   quotes: [
-    "We came in with a half-defined product idea and a tight timeline. The Virat team helped structure the requirements, challenged a few assumptions, and got us to a usable MVP faster than expected.",
-    "Good communication, solid engineering, and no unnecessary complexity. They integrated well with our internal team and handled both frontend and backend work without friction.",
-    "We hired Virat to improve our existing platform. The codebase was messy, timelines were slipping, and performance issues were affecting users. The team approached it methodically and delivered noticeable improvements.",
-    "What I appreciated most was that they focused on solving the business problem, not just completing development tasks. The process was straightforward, transparent, and easy to work with.",
+    {
+      quote: "We came in with a half-defined product idea and a tight timeline. The Virat team helped structure the requirements, challenged a few assumptions, and got us to a usable MVP faster than expected.",
+      name: "Michael Carter",
+      designation: "CEO, Atlas Mobility",
+    },
+    {
+      quote: "Good communication, solid engineering, and no unnecessary complexity. They integrated well with our internal team and handled both frontend and backend work without friction.",
+      name: "Sarah Johnson",
+      designation: "Product Lead, FinFlow Labs",
+    },
+    {
+      quote: "We hired Virat to improve our existing platform. The codebase was messy, timelines were slipping, and performance issues were affecting users. The team approached it methodically and delivered noticeable improvements.",
+      name: "Daniel Brooks",
+      designation: "CTO, RetailBridge US",
+    },
+    {
+      quote: "What I appreciated most was that they focused on solving the business problem, not just completing development tasks. The process was straightforward, transparent, and easy to work with.",
+      name: "Emily Rodriguez",
+      designation: "Operations Director, LogiCore Systems",
+    },
   ],
 };
 
@@ -861,14 +881,21 @@ export const footerContent = {
     "Hire Mobile App Developers",
     "Hire AI Developers",
     "Hire DevOps Engineers",
-    "Hire Dedicated Development Team",
+    "Hire Development Team",
   ],
   companyLinks: ["About Us", "Career", "Contact Us"],
   stayConnected: "Stay Connected",
   contacts: [
-    { label: "Sales Inquiry", value: "sales@viratsoftwaresolutions.com", href: "mailto:sales@viratsoftwaresolutions.com" },
-    { label: "Mail", value: "sales@viratsoftwaresolutions.com", href: "mailto:sales@viratsoftwaresolutions.com" },
-    { label: "Contact", value: "+91 78018 53061", href: "tel:+917801853061" },
+    {
+      icon: "mail",
+      value: "sales@viratsoftwaresolutions.com",
+      href: "mailto:sales@viratsoftwaresolutions.com",
+    },
+    {
+      icon: "phone",
+      value: "+91 78018 53061",
+      href: "tel:+917801853061",
+    },
   ],
   social: ["Whatsapp", "Linkedin", "Github"],
   copyright: "© 2026 Virat Software Solutions. All Rights Reserved.",

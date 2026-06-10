@@ -37,8 +37,11 @@ export const metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png", sizes: "any" }],
-    shortcut: ["/icon.png"],
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "any" },
+    ],
+    shortcut: ["/favicon.ico"],
     apple: [{ url: "/icon.png", type: "image/png", sizes: "180x180" }],
   },
   openGraph: {
