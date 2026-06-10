@@ -2352,6 +2352,10 @@ main > section.sectionPad + section.sectionPad::before {
   animation: logoRailScroll 28s linear infinite;
 }
 
+.logoRail:hover .logoRailTrack {
+  animation-play-state: paused;
+}
+
 .logoRailGroup {
   display: flex;
   align-items: center;

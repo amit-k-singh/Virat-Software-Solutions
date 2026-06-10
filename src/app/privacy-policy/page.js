@@ -56,7 +56,7 @@ If you have any questions or concerns about this Privacy Policy or your data, yo
 
 Email: sales@viratsoftwaresolutions.com
 
-Phone: +91 78018 53061
+Phone: +91 99983 47578
 
 **`;
 

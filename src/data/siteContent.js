@@ -893,8 +893,8 @@ export const footerContent = {
     },
     {
       icon: "phone",
-      value: "+91 78018 53061",
-      href: "tel:+917801853061",
+      value: "+91 99983 47578",
+      href: "tel:+919998347578",
     },
   ],
   social: ["Whatsapp", "Linkedin", "Github"],

@@ -62,7 +62,7 @@ If you have any questions about these Terms & Conditions, you can contact us:
 
 Email: sales@viratsoftwaresolutions.com
 
-Phone: +91 78018 53061
+Phone: +91 99983 47578
 
 **`;
 
