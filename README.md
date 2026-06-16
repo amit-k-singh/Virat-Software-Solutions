@@ -16,6 +16,26 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Contact Form Email Setup
+
+The homepage form now sends submissions to `viratsoftwaresolutions@gmail.com` through the API route at `src/app/api/contact/route.js`.
+
+Create a `.env.local` file in the project root with these values:
+
+```bash
+SMTP_HOST=smtp.your-provider.com
+SMTP_PORT=587
+SMTP_USER=your_smtp_user
+SMTP_PASS=your_smtp_password
+CONTACT_FROM_EMAIL=your_verified_from_email
+```
+
+Notes:
+
+- `CONTACT_FROM_EMAIL` is optional; if omitted, `SMTP_USER` is used as the sender.
+- Use port `465` for secure SMTP, or `587` for TLS.
+- Restart the dev server after updating environment variables.
+
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

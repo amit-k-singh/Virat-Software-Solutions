@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import LeadFormShell from "../components/LeadFormShell";
 import TechStackShowcase from "../components/TechStackShowcase";
 import TestimonialsSection from "../components/TestimonialsSection";
 import "../assets/css/industries.css";
@@ -76,59 +77,6 @@ function SectionHeader({ eyebrow, title, description, id }) {
       <h2>{title}</h2>
       {description ? <p>{description}</p> : null}
     </div>
-  );
-}
-
-function FormField({ label, children, className = "" }) {
-  return (
-    <label className={`fieldGroup ${className}`.trim()}>
-      <span>{label}</span>
-      {children}
-    </label>
-  );
-}
-
-function FormShell({ title, description, buttonLabel, fieldLabels, compact = false }) {
-  return (
-    <form className={`leadForm ${compact ? "leadFormCompact" : ""}`}>
-      <div className="leadFormHeading">
-        <p className="leadFormTag">Project Brief</p>
-        {title ? <h3>{title}</h3> : null}
-        {description ? <p>{description}</p> : null}
-      </div>
-      <div className="leadFormGrid">
-        <FormField label={fieldLabels.name}>
-          <input type="text" name="name" placeholder="Your full name" autoComplete="name" required />
-        </FormField>
-        <FormField label={fieldLabels.email}>
-          <input type="email" name="email" placeholder="you@company.com" autoComplete="email" required />
-        </FormField>
-        <FormField label={fieldLabels.phone}>
-          <input type="tel" name="phone" placeholder="+1 555 555 5555" autoComplete="tel" />
-        </FormField>
-        <FormField label={fieldLabels.project}>
-          <select name="project" defaultValue="" required>
-            <option value="" disabled>
-              Select an option
-            </option>
-            {finalCtaContent.options.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </FormField>
-        <FormField label={fieldLabels.message} className="fieldWide">
-          <textarea name="message" rows="5" placeholder="Tell us about your project goals, timeline, and budget range" required />
-        </FormField>
-      </div>
-      <div className="leadFormActions">
-        <button className="primaryButton" type="submit">
-          {buttonLabel}
-          <RiArrowRightLine aria-hidden="true" />
-        </button>
-      </div>
-    </form>
   );
 }
 
@@ -400,11 +348,12 @@ export default function Home() {
               <div className="finalCtaCopy">
                 <SectionHeader title={finalCtaContent.title} description={finalCtaContent.description} id="final-cta-heading" />
               </div>
-              <FormShell
+              <LeadFormShell
                 title=""
                 description=""
                 buttonLabel={finalCtaContent.button}
                 fieldLabels={finalCtaContent.fields}
+                options={finalCtaContent.options}
               />
             </div>
           </div>
