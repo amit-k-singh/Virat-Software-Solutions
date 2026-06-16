@@ -1390,6 +1390,18 @@ main > section.sectionPad + section.sectionPad::before {
   gap: 14px;
 }
 
+.leadFormFieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.leadFormFieldset[disabled] {
+  opacity: 0.75;
+}
+
 .fieldWide {
   grid-column: 1 / -1;
 }
@@ -1442,6 +1454,27 @@ main > section.sectionPad + section.sectionPad::before {
 .leadForm .primaryButton {
   min-height: 48px;
   padding: 0 22px;
+}
+
+.leadForm .primaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+  transform: none;
+  box-shadow: none;
+}
+
+.leadFormStatus {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.leadFormStatusSuccess {
+  color: #0f7a3a;
+}
+
+.leadFormStatusError {
+  color: #b62020;
 }
 
 .leadFormHint {
