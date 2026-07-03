@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import LeadFormShell from "../components/LeadFormShell";
 import TechStackShowcase from "../components/TechStackShowcase";
 import TestimonialsSection from "../components/TestimonialsSection";
+import FaqAccordion from "../components/FaqAccordion";
 import "../assets/css/industries.css";
 import { IndustryCards } from "../components/industries";
 import {
@@ -328,16 +329,8 @@ export default function Home() {
         <section className="sectionPad" id="faq" aria-labelledby="faq-heading">
           <div className="container">
             <SectionHeader title={faqContent.title} id="faq-heading" />
-            <div className="faqList">
-              {faqContent.items.map((item) => (
-                <details className="faqItem" key={item.question}>
-                  <summary>
-                    <span>{item.question}</span>
-                    <RiArrowDownSLine className="faqChevron" aria-hidden="true" />
-                  </summary>
-                  <p>{item.answer}</p>
-                </details>
-              ))}
+            <div className="mt-4">
+              <FaqAccordion items={faqContent.items} />
             </div>
           </div>
         </section>

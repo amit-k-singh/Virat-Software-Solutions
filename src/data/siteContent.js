@@ -13,7 +13,7 @@ export const navigationItems = [
   { label: "Work", href: "/#portfolio" },
   {
     label: "Solutions",
-    href: "/#solutions",
+    href: "/solutions",
     panel: {
       variant: "mega",
       sections: [
@@ -22,12 +22,12 @@ export const navigationItems = [
           groups: [
             {
               links: [
-                { label: "MVP Development", href: "/#solutions" },
-                { label: "SaaS Product Development", href: "/#solutions" },
-                { label: "Digital Transformation", href: "/#solutions" },
-                { label: "AI & Automation Solutions", href: "/#solutions" },
-                { label: "Data & Analytics Solutions", href: "/#solutions" },
-                { label: "Cloud & DevOps Transformation", href: "/#solutions" },
+                { label: "MVP Development", href: "/solutions#mvp-development" },
+                { label: "SaaS Product Development", href: "/solutions#saas-product-development" },
+                { label: "Digital Transformation", href: "/solutions#digital-transformation" },
+                { label: "AI & Automation Solutions", href: "/solutions#ai-automation-solutions" },
+                { label: "Data & Analytics Solutions", href: "/solutions#data-analytics-solutions" },
+                { label: "Cloud & DevOps Transformation", href: "/solutions#cloud-devops-transformation" },
               ],
             },
           ],
