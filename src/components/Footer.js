@@ -42,8 +42,8 @@ function FooterLinks({ items }) {
   return (
     <ul role="list" className="footerLinkList">
       {items.map((item) => (
-        <li key={item}>
-          <Link href="/#contact">{item}</Link>
+        <li key={item.label}>
+          <Link href={item.href}>{item.label}</Link>
         </li>
       ))}
     </ul>

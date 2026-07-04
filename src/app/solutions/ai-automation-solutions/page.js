@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import LeadFormShell from "../../../components/LeadFormShell";
 import TechStackShowcase from "../../../components/TechStackShowcase";
 import FaqAccordion from "../../../components/FaqAccordion";
-import { IndustryCards } from "../../../components/industries";
 import TechAnimation from "../../../components/TechAnimation";
 import "../../../assets/css/industries.css";
 
@@ -14,30 +12,26 @@ import {
   portfolioContent,
   trustContent,
   finalCtaContent,
-  processContent,
 } from "../../../data/siteContent";
 
 import {
   RiArrowRightLine,
   RiArrowRightUpLine,
-  RiArrowDownSLine,
   RiCheckboxCircleLine,
   RiSettings3Line,
-  RiRobot2Line,
-  RiDatabase2Line,
   RiCloudLine,
-  RiLayoutLine,
   RiRocketLine,
   RiUserStarLine,
   RiLineChartLine,
+  RiBankCardLine,
+  RiCodeBoxLine,
+  RiBarChartLine,
   RiStore2Line,
   RiShoppingCartLine,
   RiCodeLine,
-  RiBankCardLine,
-  RiBarChartLine,
+  RiLayoutLine,
   RiFileList3Line,
   RiSearchLine,
-  RiCodeBoxLine,
 } from "react-icons/ri";
 
 const techIconMap = {
@@ -54,11 +48,11 @@ const techIconMap = {
 };
 
 export const metadata = {
-  title: "MVP Development Services for Startups & Founders",
+  title: "AI & Automation Solutions",
   description:
-    "Validate your product idea, launch faster, and reduce development risk with scalable Minimum Viable Product (MVP) development services designed for startups and product teams.",
+    "Leverage artificial intelligence, machine learning, and workflow automation to streamline operations, improve decision-making, and unlock growth with Virat Software Solutions.",
   alternates: {
-    canonical: "/solutions/mvp-development",
+    canonical: "/solutions/ai-automation-solutions",
   },
 };
 
@@ -72,163 +66,163 @@ function SectionHeader({ eyebrow, title, description, id }) {
   );
 }
 
-const mvpBenefits = [
+const aiBenefits = [
   {
-    title: "Faster Time-to-Market",
-    description: "Launch core functionality quickly, gather real-world feedback, and establish an early market presence before competitors.",
-    Icon: RiRocketLine,
+    title: "Increased Operational Efficiency",
+    description: "Automate repetitive tasks and workflows to free teams from manual work and focus on higher-value business activities.",
+    Icon: RiSettings3Line,
   },
   {
-    title: "Reduced Development Risk",
-    description: "Validate assumptions and user demand before committing significant resources to features, infrastructure, and large-scale development.",
-    Icon: RiCheckboxCircleLine,
+    title: "Faster Decision-Making",
+    description: "Leverage AI-driven insights and predictive analytics to make informed decisions based on real-time business data.",
+    Icon: RiLineChartLine,
   },
   {
-    title: "Cost-Efficient Product Validation",
-    description: "Focus investment on essential features that solve real user problems while avoiding unnecessary development costs.",
+    title: "Reduced Operational Costs",
+    description: "Minimize manual effort, improve process consistency, and optimize resource utilization across departments.",
     Icon: RiBankCardLine,
   },
   {
-    title: "Real User Feedback",
-    description: "Collect insights from actual users to refine functionality, improve user experience, and prioritize future product enhancements.",
+    title: "Improved Customer Experiences",
+    description: "Deliver faster responses, personalized experiences, and intelligent support through AI-powered systems and automation.",
     Icon: RiUserStarLine,
   },
   {
-    title: "Investor & Stakeholder Confidence",
-    description: "A working MVP demonstrates product potential, market demand, and execution capability better than concepts, presentations, or prototypes alone.",
+    title: "Better Data Utilization",
+    description: "Transform large volumes of business data into actionable insights that support growth, planning, and strategic initiatives.",
+    Icon: RiBarChartLine,
+  },
+  {
+    title: "Scalable Business Operations",
+    description: "Implement automation frameworks that support growth without requiring proportional increases in workforce or operational costs.",
+    Icon: RiCloudLine,
+  },
+];
+
+const aiAudiences = [
+  {
+    badge: "1. Growing Businesses",
+    title: "Smarter operational workflows",
+    description: "Automate operational processes and reduce administrative workloads to support sustainable business growth.",
+    bullets: [
+      "Improve team productivity",
+      "Reduce manual effort",
+      "Streamline operations",
+      "Scale efficiently",
+    ],
+  },
+  {
+    badge: "2. Product & Technology Companies",
+    title: "AI feature integration",
+    description: "Integrate AI capabilities into digital products, applications, and customer experiences to create innovative solutions.",
+    bullets: [
+      "Enhance product capabilities",
+      "Improve user engagement",
+      "Deliver intelligent features",
+      "Accelerate innovation",
+    ],
+  },
+  {
+    badge: "3. Operations & Business Leaders",
+    title: "Process performance tracking",
+    description: "Use AI-powered insights and automation to improve business performance, visibility, and decision-making.",
+    bullets: [
+      "Optimize business processes",
+      "Improve reporting accuracy",
+      "Increase operational visibility",
+      "Support strategic planning",
+    ],
+  },
+  {
+    badge: "4. Enterprise Organizations",
+    title: "Intelligent enterprise workflows",
+    description: "Implement AI and automation initiatives that improve efficiency, reduce costs, and support digital transformation objectives.",
+    bullets: [
+      "Automate enterprise workflows",
+      "Improve business intelligence",
+      "Increase operational resilience",
+      "Drive innovation initiatives",
+    ],
+  },
+];
+
+const aiWhyVirat = [
+  {
+    title: "Business-Focused AI Strategy",
+    description: "We identify AI opportunities that align with operational goals, customer needs, and measurable business objectives.",
     Icon: RiLineChartLine,
   },
   {
-    title: "Scalable Foundation for Growth",
-    description: "Build on a modern technology architecture that supports future features, user growth, integrations, and business expansion.",
-    Icon: RiCloudLine,
-  },
-];
-
-const mvpAudiences = [
-  {
-    badge: "1. Startups & Founders",
-    title: "Vision to functional validation",
-    description: "Turn your vision into a functional product that helps validate market demand, attract early adopters, and secure stakeholder or investor confidence.",
-    bullets: [
-      "Validate product ideas faster",
-      "Launch with essential features",
-      "Reduce development risk and cost",
-      "Build a foundation for future growth",
-    ],
+    title: "Practical Automation Solutions",
+    description: "Our focus is on implementing automation that delivers immediate value by improving efficiency, reducing manual effort, and optimizing workflows.",
+    Icon: RiSettings3Line,
   },
   {
-    badge: "2. Product Teams & Innovators",
-    title: "Efficient concept validation",
-    description: "Test new concepts, business models, and digital products without committing to large-scale development from day one.",
-    bullets: [
-      "Accelerate product experimentation",
-      "Gather real user insights",
-      "Prioritize features based on demand",
-      "Improve product-market fit",
-    ],
-  },
-  {
-    badge: "3. Growing Businesses",
-    title: "Risk-mitigated product launches",
-    description: "Launch new digital products, customer portals, platforms, or services while minimizing risk and maximizing learning opportunities.",
-    bullets: [
-      "Explore new revenue streams",
-      "Test new business initiatives",
-      "Improve customer engagement",
-      "Scale based on validated demand",
-    ],
-  },
-  {
-    badge: "4. Enterprises & Innovation Teams",
-    title: "Enterprise transformation validation",
-    description: "Validate new solutions, internal platforms, and digital transformation initiatives before investing in enterprise-wide implementation.",
-    bullets: [
-      "Pilot new ideas efficiently",
-      "Reduce project uncertainty",
-      "Validate business outcomes early",
-      "Build scalable technology foundations",
-    ],
-  },
-];
-
-const mvpWhyVirat = [
-  {
-    title: "Product-First Development Approach",
-    description: "We focus on solving real user problems and validating market demand, ensuring your MVP delivers meaningful business value from day one.",
-    Icon: RiUserStarLine,
-  },
-  {
-    title: "Faster Time-to-Market",
-    description: "Our agile development approach helps startups and businesses launch quickly, gather feedback sooner, and accelerate product validation.",
-    Icon: RiRocketLine,
-  },
-  {
-    title: "Scalable Technology Foundations",
-    description: "We build MVPs using modern technologies and cloud-ready architectures that support future enhancements, integrations, and user growth.",
-    Icon: RiCloudLine,
-  },
-  {
-    title: "Experienced Engineering Team",
-    description: "Work directly with skilled software engineers experienced in web applications, mobile apps, SaaS products, AI solutions, and cloud technologies.",
+    title: "Expertise Across Modern AI Technologies",
+    description: "We leverage machine learning, predictive analytics, intelligent automation, natural language processing, and custom AI applications to solve business challenges.",
     Icon: RiCodeBoxLine,
   },
   {
-    title: "Business-Aligned Decision Making",
-    description: "Every feature, technology choice, and development milestone is aligned with your product goals, budget, and growth objectives.",
-    Icon: RiLineChartLine,
+    title: "Data-Driven Decision Support",
+    description: "Our AI solutions help organizations transform raw data into actionable insights that improve business performance and planning.",
+    Icon: RiBarChartLine,
   },
   {
-    title: "Beyond Launch Support",
-    description: "From post-launch improvements to scaling and product evolution, we help transform validated MVPs into long-term digital products.",
+    title: "Scalable & Future-Ready Architecture",
+    description: "We build AI systems that integrate seamlessly with existing business applications while supporting future growth and innovation.",
+    Icon: RiCloudLine,
+  },
+  {
+    title: "End-to-End Implementation Support",
+    description: "From strategy and use-case validation to development, deployment, and optimization, we support businesses throughout their AI journey.",
     Icon: RiCheckboxCircleLine,
   },
 ];
 
-const mvpFaqs = [
+const aiFaqs = [
   {
-    question: "1. What is an MVP in software development?",
-    answer: "A Minimum Viable Product (MVP) is a version of a product built with essential features required to solve a core problem and gather feedback from real users before investing in full-scale development.",
+    question: "1. What are AI and automation solutions?",
+    answer: "AI and automation solutions use technologies such as machine learning, predictive analytics, natural language processing, and workflow automation to improve efficiency, reduce manual effort, and enhance business decision-making.",
   },
   {
-    question: "2. Why should I choose Virat Software Solutions for MVP development?",
-    answer: "Virat Software Solutions helps startups, founders, and businesses transform ideas into scalable digital products through a combination of product strategy, modern engineering, cloud technologies, and agile development practices. Our focus is on building MVPs that validate ideas quickly while creating a strong foundation for future growth.",
+    question: "2. How can AI help my business?",
+    answer: "Artificial intelligence can help businesses automate repetitive tasks, analyze data, improve customer experiences, identify trends, optimize operations, and support faster, data-driven decisions.",
   },
   {
-    question: "3. How long does it take Virat Software Solutions to build an MVP?",
-    answer: "Development timelines depend on product complexity, features, integrations, and business requirements. Most MVP projects can be designed, developed, and launched within a few weeks to a few months.",
+    question: "3. Why should I choose Virat Software Solutions for AI development?",
+    answer: "Virat Software Solutions combines software engineering, data expertise, automation capabilities, and AI technologies to deliver practical solutions that solve real business challenges and create measurable outcomes.",
   },
   {
-    question: "4. How much does MVP development cost?",
-    answer: "MVP development costs vary based on functionality, user experience requirements, integrations, and technology choices. Virat Software Solutions helps businesses prioritize essential features to maximize value while optimizing development investment.",
+    question: "4. What types of AI solutions do you develop?",
+    answer: "We develop AI-powered applications, machine learning models, predictive analytics systems, intelligent automation workflows, recommendation engines, business intelligence solutions, and custom AI integrations.",
   },
   {
-    question: "5. What features should be included in an MVP?",
-    answer: "An MVP should focus on the core functionality needed to solve a specific user problem, validate assumptions, and collect meaningful market feedback before expanding the product roadmap.",
+    question: "5. Can AI be integrated into existing software systems?",
+    answer: "Yes. We help businesses integrate AI capabilities into existing applications, SaaS platforms, business systems, customer portals, and operational workflows.",
   },
   {
-    question: "6. Can Virat Software Solutions help validate my product idea?",
-    answer: "Yes. We work closely with founders and product teams to assess market opportunities, define product goals, prioritize features, and create a practical roadmap before development begins.",
+    question: "6. What industries can benefit from AI and automation?",
+    answer: "AI and automation can benefit industries including healthcare, finance, ecommerce, logistics, manufacturing, education, SaaS, retail, and professional services.",
   },
   {
-    question: "7. Can an MVP be scaled into a full product later?",
-    answer: "Absolutely. Virat Software Solutions builds MVPs using scalable architectures and modern technologies, making it easier to add features, integrations, and advanced functionality as the product grows.",
+    question: "7. Do I need large amounts of data to implement AI?",
+    answer: "Not always. The amount of data required depends on the use case. We help businesses evaluate available data, identify opportunities, and determine the most effective AI implementation strategy.",
   },
   {
-    question: "8. Which technologies does Virat Software Solutions use for MVP development?",
-    answer: "Our MVP development stack includes React, Next.js, .NET, Node.js, Flutter, PostgreSQL, MongoDB, AWS, Azure, Google Cloud Platform, and other technologies selected based on project requirements.",
+    question: "8. Which technologies do you use for AI development?",
+    answer: "Our AI technology stack includes Python, TensorFlow, machine learning frameworks, cloud AI services, .NET, React, Node.js, AWS, Azure, Google Cloud Platform, and modern data platforms.",
   },
   {
-    question: "9. Do I need a technical co-founder to build an MVP?",
-    answer: "Not necessarily. Many startups and businesses partner with Virat Software Solutions to gain access to product strategy, technical expertise, architecture planning, development, testing, and deployment support.",
+    question: "9. Can automation improve operational efficiency?",
+    answer: "Yes. Automation can significantly reduce manual work, improve consistency, accelerate workflows, and allow teams to focus on strategic business activities.",
   },
   {
-    question: "10. What happens after my MVP is launched?",
-    answer: "After launch, Virat Software Solutions can support product enhancements, user feedback analysis, performance optimization, cloud scaling, new feature development, and long-term product growth initiatives.",
+    question: "10. How do you measure the success of AI initiatives?",
+    answer: "We measure AI success through business outcomes such as increased efficiency, reduced costs, improved accuracy, enhanced customer experiences, productivity gains, and measurable return on investment.",
   },
 ];
 
-export default function MvpDevelopmentPage() {
+export default function AiAutomationSolutionsPage() {
   return (
     <>
       <Header />
@@ -237,14 +231,14 @@ export default function MvpDevelopmentPage() {
         <section className="solutionsHero" id="hero">
           <div className="container">
             <div className="heroCenter">
-              <h1>MVP Development Services</h1>
+              <h1>AI & Automation Solutions</h1>
               <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
-                Turn Your Product Idea Into a Market-Ready MVP
+                Transform Business Operations with AI and Intelligent Automation
               </p>
               <p className="leadText">
-                Validate your idea, launch faster, and reduce development risk with MVP development services designed
-                for startups, founders, and product teams. We help businesses build scalable Minimum Viable Products
-                that gather real user feedback, attract early adopters, and create a strong foundation for future growth.
+                Leverage artificial intelligence, machine learning, and workflow automation to streamline operations,
+                improve decision-making, and unlock new growth opportunities. Virat Software Solutions helps businesses
+                implement practical AI solutions that deliver measurable results, increase efficiency, and reduce operational complexity.
               </p>
               <div className="heroActions">
                 <a className="primaryButton" href="#final-cta">
@@ -256,12 +250,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 2: What MVP Development Solves */}
-        <section className="sectionPad sectionAlt" id="what-mvp-solves" aria-labelledby="solves-heading">
+        {/* Section 2: What AI & Automation Solutions Solve */}
+        <section className="sectionPad sectionAlt" id="what-ai-solves" aria-labelledby="solves-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="solves-heading">
               <p className="eyebrow">Problems We Address</p>
-              <h2>What MVP Development Solves</h2>
+              <h2>What AI & Automation Solutions Solve</h2>
             </div>
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
@@ -275,41 +269,40 @@ export default function MvpDevelopmentPage() {
                   }}
                 >
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
-                    Launching a new product comes with uncertainty. Many startups and businesses invest significant time
-                    and resources into building full-featured applications before validating whether the market actually
-                    wants them.
+                    Many businesses struggle with repetitive manual processes, fragmented data, delayed decision-making,
+                    and operational inefficiencies that limit growth. As organizations scale, these challenges often
+                    increase costs, reduce productivity, and impact customer experiences.
                   </p>
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
-                    MVP development helps reduce this risk by focusing on the core features needed to test assumptions,
-                    gather real user feedback, and validate product-market fit before making larger investments.
-                  </p>
-                  <p style={{ fontWeight: "700", color: "var(--color-navy)", marginBottom: "16px" }}>
-                    Whether you're launching a startup, testing a new business model, or introducing a digital product, a well-built MVP helps you:
+                    AI and automation solutions help businesses automate routine tasks, analyze large volumes of data,
+                    improve accuracy, and make faster business decisions. Whether you're exploring AI-powered
+                    applications, workflow automation, predictive analytics, or machine learning solutions, the right
+                    strategy can help you:
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Validate ideas with real users before full-scale development</span>
+                      <span>Eliminate repetitive and time-consuming manual tasks</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Reduce development costs and time-to-market</span>
+                      <span>Improve operational efficiency through intelligent automation</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Gather actionable feedback to improve product direction</span>
+                      <span>Reduce human errors and increase process accuracy</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Attract investors with a working product instead of a concept</span>
+                      <span>Gain actionable insights from business data</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Minimize technical debt through scalable architecture</span>
+                      <span>Enhance customer experiences with AI-powered interactions</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Build a foundation for future growth and feature expansion</span>
+                      <span>Scale operations without increasing operational overhead</span>
                     </li>
                   </ul>
                 </div>
@@ -318,16 +311,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 3: Benefits of MVP Development Services For Startups */}
+        {/* Section 3: Benefits of AI & Automation Solutions */}
         <section className="sectionPad" id="benefits" aria-labelledby="benefits-heading">
           <div className="container">
             <SectionHeader
-              title="Benefits of MVP Development Services For Startups"
-              description="Launching a product successfully requires more than a great idea. MVP development helps businesses validate concepts, reduce risk, and make informed decisions before investing in full-scale product development."
+              title="Benefits of AI & Automation Solutions"
+              description="Artificial intelligence and automation enable businesses to operate smarter, respond faster, and create more value from existing resources. By combining machine intelligence with automated workflows, organizations can improve productivity, reduce costs, and accelerate innovation."
               id="benefits-heading"
             />
             <div className="row g-4">
-              {mvpBenefits.map((item) => {
+              {aiBenefits.map((item) => {
                 const BenefitIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -358,16 +351,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 4: Built for Founders, Innovators, and Product Teams */}
+        {/* Section 4: Built for Businesses Ready to Scale Smarter */}
         <section className="sectionPad sectionAlt" id="audience" aria-labelledby="audience-heading">
           <div className="container">
             <SectionHeader
-              title="Built for Founders, Innovators, and Product Teams"
-              description="Our MVP development services are designed for organizations that need to validate ideas quickly, reduce product risk, and launch with confidence."
+              title="Built for Businesses Ready to Scale Smarter"
+              description="Our AI and automation services are designed for organizations seeking to improve efficiency, automate workflows, and gain a competitive advantage through intelligent technology."
               id="audience-heading"
             />
             <div className="row g-4">
-              {mvpAudiences.map((aud) => (
+              {aiAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
                   <article className="audienceCard h-100" style={{ padding: "28px" }}>
                     <span className="audienceBadge">{aud.badge}</span>
@@ -388,21 +381,21 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 5: Have an Idea but Unsure Where to Start? */}
+        {/* Section 5: Exploring AI but Unsure Where to Start? */}
         <section className="sectionPad" aria-labelledby="idea-cta-heading">
           <div className="container">
             <div className="ctaBanner">
               <div className="ctaCopy">
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
-                  Have an Idea but Unsure Where to Start?
+                  Exploring AI but Unsure Where to Start?
                 </h2>
                 <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
-                  Partner with Virat Software Solutions to refine features, design prototype assets, map engineering architecture, and launch your MVP cleanly.
+                  Partner with Virat Software Solutions to evaluate data strategies, run prototype ML pilots, build custom models, and unlock automation cleanly.
                 </p>
               </div>
               <div className="ctaActions">
                 <a className="secondaryButton" href="#final-cta">
-                  Talk to an MVP Expert
+                  Talk to an AI & Automation Expert
                   <RiArrowRightLine aria-hidden="true" />
                 </a>
               </div>
@@ -410,16 +403,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 6: Why Businesses Choose Virat for MVP Development */}
+        {/* Section 6: Why Businesses Choose Virat for AI & Automation Solutions */}
         <section className="sectionPad sectionAlt" id="why-virat" aria-labelledby="why-heading">
           <div className="container">
             <SectionHeader
-              title="Why Businesses Choose Virat for MVP Development"
-              description="Building an MVP is not just about developing software. It's about validating ideas, minimizing risk, and creating a foundation that supports future growth. At Virat Software Solutions, we combine product thinking, modern engineering, and scalable architecture to help businesses launch with confidence."
+              title="Why Businesses Choose Virat for AI & Automation Solutions"
+              description="Successful AI implementation requires more than technology expertise. It requires a clear understanding of business processes, data, operational challenges, and measurable outcomes. Virat Software Solutions helps businesses implement AI and automation solutions that create real business impact."
               id="why-heading"
             />
             <div className="row g-4">
-              {mvpWhyVirat.map((item) => {
+              {aiWhyVirat.map((item) => {
                 const WhyIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -448,12 +441,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 7: How We Bring MVPs to Market */}
+        {/* Section 7: How We Deliver AI & Automation Solutions */}
         <section className="sectionPad" id="bring-to-market" aria-labelledby="market-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="market-heading">
               <p className="eyebrow">Execution Roadmap</p>
-              <h2>How We Bring MVPs to Market</h2>
+              <h2>How We Deliver AI & Automation Solutions</h2>
             </div>
             
             <div className="row justify-content-center">
@@ -462,19 +455,19 @@ export default function MvpDevelopmentPage() {
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        Successful MVPs are built with a clear focus on validation, speed, and long-term scalability. Our
-                        approach combines product strategy, user-centric design, and modern software engineering to help
-                        businesses launch quickly while reducing development risk and unnecessary complexity.
+                        Effective AI adoption begins with understanding business objectives, operational workflows, and
+                        available data. Our approach focuses on identifying high-impact opportunities where artificial
+                        intelligence and automation can create measurable improvements in efficiency, decision-making, and
+                        customer experiences.
                       </p>
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        From idea validation and feature prioritization to development, testing, and deployment, we work
-                        closely with founders and product teams to create MVPs that deliver real user value. The goal is not
-                        simply to launch faster, but to gather meaningful feedback, validate market demand, and build a
-                        strong foundation for future product growth.
+                        From AI strategy and workflow analysis to model development, automation implementation,
+                        integration, and optimization, we help businesses deploy intelligent solutions that drive
+                        productivity, reduce operational friction, and support long-term growth.
                       </p>
                     </div>
                   </div>
@@ -488,7 +481,7 @@ export default function MvpDevelopmentPage() {
         <section className="sectionPad sectionTrust sectionAlt" aria-labelledby="trust-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="trust-heading">
-              {/* <p className="eyebrow">Our Partners</p> */}
+              <p className="eyebrow">Our Partners</p>
               <h2>Our Amazing Clients</h2>
               <p>Trusted by startups and growing teams worldwide</p>
             </div>
@@ -522,7 +515,7 @@ export default function MvpDevelopmentPage() {
               description="From SaaS platforms and mobile applications to AI solutions and cloud-powered systems, discover how we help businesses build scalable technology, modernize operations, and drive growth."
               id="portfolio-heading"
             />
-            <div className="row g-4 mt-2">
+            <div className="row g-4">
               {portfolioContent.cards.map((card) => (
                 <div className="col-12 col-lg-6" key={card.title}>
                   <article className="portfolioCard h-100">
@@ -559,9 +552,9 @@ export default function MvpDevelopmentPage() {
         {/* Section 11: Frequently Asked Questions */}
         <section className="sectionPad sectionAlt" id="faq" aria-labelledby="faq-heading">
           <div className="container">
-            <SectionHeader title="Frequently Asked Questions About MVP Development Services" id="faq-heading" />
+            <SectionHeader title="Frequently Asked Questions About AI & Automation Solutions" id="faq-heading" />
             <div className="mt-4">
-              <FaqAccordion items={mvpFaqs} />
+              <FaqAccordion items={aiFaqs} />
             </div>
           </div>
         </section>

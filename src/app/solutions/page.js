@@ -6,6 +6,7 @@ import LeadFormShell from "../../components/LeadFormShell";
 import TechStackShowcase from "../../components/TechStackShowcase";
 import { IndustryCards } from "../../components/industries";
 import FaqAccordion from "../../components/FaqAccordion";
+import TechAnimation from "../../components/TechAnimation";
 import "../../assets/css/industries.css";
 import {
   techStackContent,
@@ -250,14 +251,12 @@ export default function SolutionsPage() {
         {/* Section 2: What We Solve */}
         <section className="sectionPad sectionAlt" id="what-we-solve" aria-labelledby="solve-heading">
           <div className="container">
-            <div className="row align-items-center g-5">
-              <div className="col-12 col-lg-5">
-                <div className="sectionIntro mb-0" id="solve-heading">
-                  <p className="eyebrow">Problems We Address</p>
-                  <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", textTransform: "uppercase", margin: 0 }}>What We Solve</h2>
-                </div>
-              </div>
-              <div className="col-12 col-lg-7">
+            <div className="sectionIntro text-center mb-5" id="solve-heading">
+              <p className="eyebrow">Problems We Address</p>
+              <h2>What We Solve</h2>
+            </div>
+            <div className="row justify-content-center">
+              <div className="col-12 col-lg-10">
                 <div 
                   className="contentCard" 
                   style={{ 
@@ -267,7 +266,7 @@ export default function SolutionsPage() {
                     boxShadow: "var(--shadow-1)"
                   }}
                 >
-                  <p className="bodyCopyLarge" style={{ fontSize: "1.12rem", lineHeight: "1.75", color: "var(--color-ink)", margin: "0" }}>
+                  <p className="bodyCopyLarge" style={{ minWidth: "100%", fontSize: "1.12rem", lineHeight: "1.75", color: "var(--color-ink)", margin: "0" }}>
                     Businesses today face challenges that go far beyond development — from legacy systems, scalability
                     bottlenecks, and cloud migration to disconnected applications, technical debt, and operational
                     inefficiencies. Virat Software Solutions helps organizations solve these challenges through scalable
@@ -505,14 +504,15 @@ export default function SolutionsPage() {
         {/* Section 12: Lead Form */}
         <section className="sectionPad" id="final-cta" aria-labelledby="final-cta-heading">
           <div className="container">
+            {/* Title First (Full Width) */}
+            <div className="sectionIntro text-center mb-5">
+              <h2 id="final-cta-heading">Let’s Build Something That Works for Your Business</h2>
+              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+                If you are looking for a software development company that focuses on real results, scalable systems, and long-term support, Virat Software Solutions is ready to work with you.
+              </p>
+            </div>
+
             <div className="finalCtaGrid">
-              <div className="finalCtaCopy">
-                <SectionHeader
-                  title="Let’s Build Something That Works for Your Business"
-                  description="If you are looking for a software development company that focuses on real results, scalable systems, and long-term support, Virat Software Solutions is ready to work with you."
-                  id="final-cta-heading"
-                />
-              </div>
               <LeadFormShell
                 title=""
                 description=""
@@ -520,6 +520,9 @@ export default function SolutionsPage() {
                 fieldLabels={finalCtaContent.fields}
                 options={finalCtaContent.options}
               />
+              <div className="finalCtaImageCol">
+                <TechAnimation />
+              </div>
             </div>
           </div>
         </section>

@@ -23,11 +23,11 @@ export const navigationItems = [
             {
               links: [
                 { label: "MVP Development", href: "/solutions/mvp-development" },
-                { label: "SaaS Product Development", href: "/solutions#saas-product-development" },
-                { label: "Digital Transformation", href: "/solutions#digital-transformation" },
-                { label: "AI & Automation Solutions", href: "/solutions#ai-automation-solutions" },
-                { label: "Data & Analytics Solutions", href: "/solutions#data-analytics-solutions" },
-                { label: "Cloud & DevOps Transformation", href: "/solutions#cloud-devops-transformation" },
+                { label: "SaaS Product Development", href: "/solutions/saas-product-development" },
+                { label: "Digital Transformation", href: "/solutions/digital-transformation" },
+                { label: "AI & Automation Solutions", href: "/solutions/ai-automation-solutions" },
+                { label: "Data & Analytics Solutions", href: "/solutions/data-analytics-solutions" },
+                { label: "Cloud & DevOps Transformation", href: "/solutions/cloud-devops-transformation" },
               ],
             },
           ],
@@ -97,10 +97,10 @@ export const navigationItems = [
           groups: [
             {
               links: [
-                { label: "About Us", href: "/#about" },
-                { label: "Our Team", href: "/#about" },
-                { label: "Our Process", href: "/#process" },
-                { label: "Career", href: "/#contact" },
+                { label: "About Us", href: "/about" },
+                { label: "Our Team", href: "/about#who-we-are" },
+                { label: "Our Process", href: "/process" },
+                { label: "Career", href: "/contact" },
               ],
             },
           ],
@@ -883,7 +883,11 @@ export const footerContent = {
     "Hire DevOps Engineers",
     "Hire Development Team",
   ],
-  companyLinks: ["About Us", "Career", "Contact Us"],
+  companyLinks: [
+    { label: "About Us", href: "/about" },
+    { label: "Career", href: "/contact" },
+    { label: "Contact Us", href: "/contact" },
+  ],
   stayConnected: "Stay Connected",
   contacts: [
     {

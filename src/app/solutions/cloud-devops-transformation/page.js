@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import LeadFormShell from "../../../components/LeadFormShell";
 import TechStackShowcase from "../../../components/TechStackShowcase";
 import FaqAccordion from "../../../components/FaqAccordion";
-import { IndustryCards } from "../../../components/industries";
 import TechAnimation from "../../../components/TechAnimation";
 import "../../../assets/css/industries.css";
 
@@ -14,30 +12,26 @@ import {
   portfolioContent,
   trustContent,
   finalCtaContent,
-  processContent,
 } from "../../../data/siteContent";
 
 import {
   RiArrowRightLine,
   RiArrowRightUpLine,
-  RiArrowDownSLine,
   RiCheckboxCircleLine,
   RiSettings3Line,
-  RiRobot2Line,
-  RiDatabase2Line,
   RiCloudLine,
-  RiLayoutLine,
   RiRocketLine,
   RiUserStarLine,
   RiLineChartLine,
+  RiBankCardLine,
+  RiCodeBoxLine,
+  RiBarChartLine,
   RiStore2Line,
   RiShoppingCartLine,
   RiCodeLine,
-  RiBankCardLine,
-  RiBarChartLine,
+  RiLayoutLine,
   RiFileList3Line,
   RiSearchLine,
-  RiCodeBoxLine,
 } from "react-icons/ri";
 
 const techIconMap = {
@@ -54,11 +48,11 @@ const techIconMap = {
 };
 
 export const metadata = {
-  title: "MVP Development Services for Startups & Founders",
+  title: "Cloud & DevOps Transformation Services",
   description:
-    "Validate your product idea, launch faster, and reduce development risk with scalable Minimum Viable Product (MVP) development services designed for startups and product teams.",
+    "Accelerate innovation, optimize cloud spending, and automate delivery pipelines with cloud and DevOps solutions designed by Virat Software Solutions.",
   alternates: {
-    canonical: "/solutions/mvp-development",
+    canonical: "/solutions/cloud-devops-transformation",
   },
 };
 
@@ -72,163 +66,163 @@ function SectionHeader({ eyebrow, title, description, id }) {
   );
 }
 
-const mvpBenefits = [
+const cloudBenefits = [
   {
-    title: "Faster Time-to-Market",
-    description: "Launch core functionality quickly, gather real-world feedback, and establish an early market presence before competitors.",
+    title: "Faster Software Delivery",
+    description: "Automate development, testing, and deployment processes to release new features and updates more efficiently.",
     Icon: RiRocketLine,
   },
   {
-    title: "Reduced Development Risk",
-    description: "Validate assumptions and user demand before committing significant resources to features, infrastructure, and large-scale development.",
-    Icon: RiCheckboxCircleLine,
+    title: "Improved Scalability",
+    description: "Build cloud-native environments capable of handling increasing workloads, users, and business demands without disruption.",
+    Icon: RiCloudLine,
   },
   {
-    title: "Cost-Efficient Product Validation",
-    description: "Focus investment on essential features that solve real user problems while avoiding unnecessary development costs.",
+    title: "Enhanced System Reliability",
+    description: "Improve uptime, availability, monitoring, and disaster recovery capabilities through modern cloud infrastructure.",
+    Icon: RiSettings3Line,
+  },
+  {
+    title: "Optimized Cloud Costs",
+    description: "Gain better visibility into resource usage while implementing strategies that reduce unnecessary infrastructure spending.",
     Icon: RiBankCardLine,
   },
   {
-    title: "Real User Feedback",
-    description: "Collect insights from actual users to refine functionality, improve user experience, and prioritize future product enhancements.",
+    title: "Stronger Security & Compliance",
+    description: "Implement security best practices, access controls, infrastructure policies, and monitoring frameworks that protect business systems.",
+    Icon: RiCheckboxCircleLine,
+  },
+  {
+    title: "Increased Operational Agility",
+    description: "Enable teams to respond quickly to business requirements through automated, scalable, and flexible technology environments.",
     Icon: RiUserStarLine,
-  },
-  {
-    title: "Investor & Stakeholder Confidence",
-    description: "A working MVP demonstrates product potential, market demand, and execution capability better than concepts, presentations, or prototypes alone.",
-    Icon: RiLineChartLine,
-  },
-  {
-    title: "Scalable Foundation for Growth",
-    description: "Build on a modern technology architecture that supports future features, user growth, integrations, and business expansion.",
-    Icon: RiCloudLine,
   },
 ];
 
-const mvpAudiences = [
+const cloudAudiences = [
   {
-    badge: "1. Startups & Founders",
-    title: "Vision to functional validation",
-    description: "Turn your vision into a functional product that helps validate market demand, attract early adopters, and secure stakeholder or investor confidence.",
+    badge: "1. Growing Technology Companies",
+    title: "Infrastructure scale automation",
+    description: "Modernize infrastructure and delivery processes to support product growth and increasing customer demand.",
     bullets: [
-      "Validate product ideas faster",
-      "Launch with essential features",
-      "Reduce development risk and cost",
-      "Build a foundation for future growth",
+      "Improve deployment speed",
+      "Scale infrastructure efficiently",
+      "Reduce operational complexity",
+      "Support rapid growth initiatives",
     ],
   },
   {
-    badge: "2. Product Teams & Innovators",
-    title: "Efficient concept validation",
-    description: "Test new concepts, business models, and digital products without committing to large-scale development from day one.",
+    badge: "2. SaaS & Product Teams",
+    title: "Platform stability optimization",
+    description: "Build cloud-native platforms and automated delivery pipelines that improve reliability and accelerate innovation.",
     bullets: [
-      "Accelerate product experimentation",
-      "Gather real user insights",
-      "Prioritize features based on demand",
-      "Improve product-market fit",
+      "Increase release frequency",
+      "Improve platform stability",
+      "Enhance developer productivity",
+      "Support continuous delivery",
     ],
   },
   {
-    badge: "3. Growing Businesses",
-    title: "Risk-mitigated product launches",
-    description: "Launch new digital products, customer portals, platforms, or services while minimizing risk and maximizing learning opportunities.",
+    badge: "3. Enterprise Organizations",
+    title: "Cloud environment modernization",
+    description: "Transform legacy infrastructure into modern cloud environments that improve efficiency, visibility, and operational control.",
     bullets: [
-      "Explore new revenue streams",
-      "Test new business initiatives",
-      "Improve customer engagement",
-      "Scale based on validated demand",
+      "Modernize infrastructure",
+      "Improve system resilience",
+      "Strengthen governance",
+      "Enable digital transformation",
     ],
   },
   {
-    badge: "4. Enterprises & Innovation Teams",
-    title: "Enterprise transformation validation",
-    description: "Validate new solutions, internal platforms, and digital transformation initiatives before investing in enterprise-wide implementation.",
+    badge: "4. Engineering & Operations Teams",
+    title: "DevOps pipeline standardization",
+    description: "Adopt DevOps practices that streamline workflows, automate deployments, and improve collaboration across teams.",
     bullets: [
-      "Pilot new ideas efficiently",
-      "Reduce project uncertainty",
-      "Validate business outcomes early",
-      "Build scalable technology foundations",
+      "Reduce deployment risks",
+      "Improve system monitoring",
+      "Enhance operational visibility",
+      "Increase delivery efficiency",
     ],
   },
 ];
 
-const mvpWhyVirat = [
+const cloudWhyVirat = [
   {
-    title: "Product-First Development Approach",
-    description: "We focus on solving real user problems and validating market demand, ensuring your MVP delivers meaningful business value from day one.",
-    Icon: RiUserStarLine,
-  },
-  {
-    title: "Faster Time-to-Market",
-    description: "Our agile development approach helps startups and businesses launch quickly, gather feedback sooner, and accelerate product validation.",
-    Icon: RiRocketLine,
-  },
-  {
-    title: "Scalable Technology Foundations",
-    description: "We build MVPs using modern technologies and cloud-ready architectures that support future enhancements, integrations, and user growth.",
+    title: "Cloud-First Architecture Expertise",
+    description: "We design scalable cloud environments that improve performance, flexibility, and operational efficiency while supporting future business growth.",
     Icon: RiCloudLine,
   },
   {
-    title: "Experienced Engineering Team",
-    description: "Work directly with skilled software engineers experienced in web applications, mobile apps, SaaS products, AI solutions, and cloud technologies.",
+    title: "DevOps Automation & CI/CD Implementation",
+    description: "Our team helps organizations automate development and deployment workflows to improve release speed, consistency, and reliability.",
+    Icon: RiSettings3Line,
+  },
+  {
+    title: "Multi-Cloud & Modern Infrastructure Experience",
+    description: "We work with AWS, Microsoft Azure, and Google Cloud Platform to build solutions tailored to business requirements and technology strategies.",
     Icon: RiCodeBoxLine,
   },
   {
-    title: "Business-Aligned Decision Making",
-    description: "Every feature, technology choice, and development milestone is aligned with your product goals, budget, and growth objectives.",
-    Icon: RiLineChartLine,
-  },
-  {
-    title: "Beyond Launch Support",
-    description: "From post-launch improvements to scaling and product evolution, we help transform validated MVPs into long-term digital products.",
+    title: "Security & Reliability by Design",
+    description: "Infrastructure security, monitoring, disaster recovery, and compliance considerations are built into every cloud transformation initiative.",
     Icon: RiCheckboxCircleLine,
   },
-];
-
-const mvpFaqs = [
   {
-    question: "1. What is an MVP in software development?",
-    answer: "A Minimum Viable Product (MVP) is a version of a product built with essential features required to solve a core problem and gather feedback from real users before investing in full-scale development.",
+    title: "Cost Optimization Focus",
+    description: "We help businesses improve resource utilization, control cloud spending, and maximize the value of cloud investments.",
+    Icon: RiBankCardLine,
   },
   {
-    question: "2. Why should I choose Virat Software Solutions for MVP development?",
-    answer: "Virat Software Solutions helps startups, founders, and businesses transform ideas into scalable digital products through a combination of product strategy, modern engineering, cloud technologies, and agile development practices. Our focus is on building MVPs that validate ideas quickly while creating a strong foundation for future growth.",
-  },
-  {
-    question: "3. How long does it take Virat Software Solutions to build an MVP?",
-    answer: "Development timelines depend on product complexity, features, integrations, and business requirements. Most MVP projects can be designed, developed, and launched within a few weeks to a few months.",
-  },
-  {
-    question: "4. How much does MVP development cost?",
-    answer: "MVP development costs vary based on functionality, user experience requirements, integrations, and technology choices. Virat Software Solutions helps businesses prioritize essential features to maximize value while optimizing development investment.",
-  },
-  {
-    question: "5. What features should be included in an MVP?",
-    answer: "An MVP should focus on the core functionality needed to solve a specific user problem, validate assumptions, and collect meaningful market feedback before expanding the product roadmap.",
-  },
-  {
-    question: "6. Can Virat Software Solutions help validate my product idea?",
-    answer: "Yes. We work closely with founders and product teams to assess market opportunities, define product goals, prioritize features, and create a practical roadmap before development begins.",
-  },
-  {
-    question: "7. Can an MVP be scaled into a full product later?",
-    answer: "Absolutely. Virat Software Solutions builds MVPs using scalable architectures and modern technologies, making it easier to add features, integrations, and advanced functionality as the product grows.",
-  },
-  {
-    question: "8. Which technologies does Virat Software Solutions use for MVP development?",
-    answer: "Our MVP development stack includes React, Next.js, .NET, Node.js, Flutter, PostgreSQL, MongoDB, AWS, Azure, Google Cloud Platform, and other technologies selected based on project requirements.",
-  },
-  {
-    question: "9. Do I need a technical co-founder to build an MVP?",
-    answer: "Not necessarily. Many startups and businesses partner with Virat Software Solutions to gain access to product strategy, technical expertise, architecture planning, development, testing, and deployment support.",
-  },
-  {
-    question: "10. What happens after my MVP is launched?",
-    answer: "After launch, Virat Software Solutions can support product enhancements, user feedback analysis, performance optimization, cloud scaling, new feature development, and long-term product growth initiatives.",
+    title: "End-to-End Cloud Transformation Support",
+    description: "From assessment and migration to automation, optimization, and ongoing management, we support every stage of the transformation journey.",
+    Icon: RiLineChartLine,
   },
 ];
 
-export default function MvpDevelopmentPage() {
+const cloudFaqs = [
+  {
+    question: "1. What is cloud and DevOps transformation?",
+    answer: "Cloud and DevOps transformation is the process of modernizing infrastructure, automating software delivery, and adopting cloud technologies to improve scalability, efficiency, reliability, and operational performance.",
+  },
+  {
+    question: "2. Why should businesses move to the cloud?",
+    answer: "Cloud environments offer greater flexibility, scalability, reliability, and cost efficiency compared to traditional infrastructure. They also enable faster innovation and easier access to modern technologies.",
+  },
+  {
+    question: "3. Why choose Virat Software Solutions for cloud and DevOps services?",
+    answer: "Virat Software Solutions combines cloud architecture expertise, DevOps automation, software engineering, and infrastructure modernization capabilities to help businesses achieve measurable transformation outcomes.",
+  },
+  {
+    question: "4. Which cloud platforms do you support?",
+    answer: "We work with Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP), helping businesses choose and optimize the right cloud environment for their needs.",
+  },
+  {
+    question: "5. What are the benefits of implementing DevOps practices?",
+    answer: "DevOps improves collaboration between teams, accelerates software delivery, reduces deployment risks, increases automation, and enhances system reliability.",
+  },
+  {
+    question: "6. Can you migrate existing applications to the cloud?",
+    answer: "Yes. We help businesses assess, plan, and execute cloud migration strategies while minimizing disruption and ensuring system performance and security.",
+  },
+  {
+    question: "7. How do you optimize cloud infrastructure costs?",
+    answer: "We analyze cloud usage, resource allocation, workloads, and architecture patterns to identify opportunities for cost reduction and improved efficiency.",
+  },
+  {
+    question: "8. Do you implement CI/CD pipelines?",
+    answer: "Yes. We design and implement continuous integration and continuous deployment (CI/CD) pipelines that automate testing, deployment, and release management processes.",
+  },
+  {
+    question: "9. How do you ensure cloud security?",
+    answer: "We implement security best practices including identity and access management, infrastructure hardening, monitoring, encryption, compliance controls, and ongoing security reviews.",
+  },
+  {
+    question: "10. Can cloud and DevOps transformation support digital transformation initiatives?",
+    answer: "Absolutely. Cloud and DevOps serve as foundational technologies that enable digital transformation, improve agility, accelerate innovation, and support modern business operations.",
+  },
+];
+
+export default function CloudDevOpsTransformationPage() {
   return (
     <>
       <Header />
@@ -237,14 +231,14 @@ export default function MvpDevelopmentPage() {
         <section className="solutionsHero" id="hero">
           <div className="container">
             <div className="heroCenter">
-              <h1>MVP Development Services</h1>
+              <h1>Cloud & DevOps Transformation</h1>
               <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
-                Turn Your Product Idea Into a Market-Ready MVP
+                Build Scalable, Secure, and High-Performance Cloud Infrastructure
               </p>
               <p className="leadText">
-                Validate your idea, launch faster, and reduce development risk with MVP development services designed
-                for startups, founders, and product teams. We help businesses build scalable Minimum Viable Products
-                that gather real user feedback, attract early adopters, and create a strong foundation for future growth.
+                Accelerate innovation, improve deployment efficiency, and modernize infrastructure with cloud and DevOps
+                solutions designed for growth. Virat Software Solutions helps businesses optimize cloud environments,
+                automate delivery pipelines, strengthen security, and create resilient technology foundations for the future.
               </p>
               <div className="heroActions">
                 <a className="primaryButton" href="#final-cta">
@@ -256,12 +250,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 2: What MVP Development Solves */}
-        <section className="sectionPad sectionAlt" id="what-mvp-solves" aria-labelledby="solves-heading">
+        {/* Section 2: What Cloud & DevOps Transformation Solves */}
+        <section className="sectionPad sectionAlt" id="what-cloud-solves" aria-labelledby="solves-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="solves-heading">
               <p className="eyebrow">Problems We Address</p>
-              <h2>What MVP Development Solves</h2>
+              <h2>What Cloud & DevOps Transformation Solves</h2>
             </div>
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
@@ -275,41 +269,39 @@ export default function MvpDevelopmentPage() {
                   }}
                 >
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
-                    Launching a new product comes with uncertainty. Many startups and businesses invest significant time
-                    and resources into building full-featured applications before validating whether the market actually
-                    wants them.
+                    Many organizations struggle with outdated infrastructure, slow software releases, manual deployment
+                    processes, scalability limitations, and rising operational costs. These challenges often reduce
+                    agility, increase risk, and slow business growth.
                   </p>
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
-                    MVP development helps reduce this risk by focusing on the core features needed to test assumptions,
-                    gather real user feedback, and validate product-market fit before making larger investments.
-                  </p>
-                  <p style={{ fontWeight: "700", color: "var(--color-navy)", marginBottom: "16px" }}>
-                    Whether you're launching a startup, testing a new business model, or introducing a digital product, a well-built MVP helps you:
+                    Cloud and DevOps transformation helps businesses modernize infrastructure, automate software delivery,
+                    improve system reliability, and optimize cloud operations. Whether you're migrating to the cloud,
+                    implementing DevOps practices, or modernizing existing environments, the right strategy helps you:
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Validate ideas with real users before full-scale development</span>
+                      <span>Eliminate manual deployment and infrastructure management tasks</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Reduce development costs and time-to-market</span>
+                      <span>Improve application performance and system reliability</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Gather actionable feedback to improve product direction</span>
+                      <span>Accelerate software delivery and release cycles</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Attract investors with a working product instead of a concept</span>
+                      <span>Optimize cloud costs and resource utilization</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Minimize technical debt through scalable architecture</span>
+                      <span>Strengthen infrastructure security and compliance</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Build a foundation for future growth and feature expansion</span>
+                      <span>Create scalable environments that support business growth</span>
                     </li>
                   </ul>
                 </div>
@@ -318,16 +310,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 3: Benefits of MVP Development Services For Startups */}
+        {/* Section 3: Benefits of Cloud & DevOps Transformation Services */}
         <section className="sectionPad" id="benefits" aria-labelledby="benefits-heading">
           <div className="container">
             <SectionHeader
-              title="Benefits of MVP Development Services For Startups"
-              description="Launching a product successfully requires more than a great idea. MVP development helps businesses validate concepts, reduce risk, and make informed decisions before investing in full-scale product development."
+              title="Benefits of Cloud & DevOps Transformation Services"
+              description="Cloud and DevOps transformation enables organizations to deliver software faster, improve operational efficiency, and build infrastructure that adapts to changing business demands. By combining cloud technologies with automation and modern engineering practices, businesses gain greater flexibility, resilience, and scalability."
               id="benefits-heading"
             />
             <div className="row g-4">
-              {mvpBenefits.map((item) => {
+              {cloudBenefits.map((item) => {
                 const BenefitIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -358,16 +350,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 4: Built for Founders, Innovators, and Product Teams */}
+        {/* Section 4: Built for Organizations Modernizing Technology Operations */}
         <section className="sectionPad sectionAlt" id="audience" aria-labelledby="audience-heading">
           <div className="container">
             <SectionHeader
-              title="Built for Founders, Innovators, and Product Teams"
-              description="Our MVP development services are designed for organizations that need to validate ideas quickly, reduce product risk, and launch with confidence."
+              title="Built for Organizations Modernizing Technology Operations"
+              description="Our cloud and DevOps transformation services are designed for businesses looking to improve infrastructure performance, deployment efficiency, scalability, and operational resilience."
               id="audience-heading"
             />
             <div className="row g-4">
-              {mvpAudiences.map((aud) => (
+              {cloudAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
                   <article className="audienceCard h-100" style={{ padding: "28px" }}>
                     <span className="audienceBadge">{aud.badge}</span>
@@ -388,21 +380,21 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 5: Have an Idea but Unsure Where to Start? */}
+        {/* Section 5: Planning a Cloud or DevOps Transformation Initiative? */}
         <section className="sectionPad" aria-labelledby="idea-cta-heading">
           <div className="container">
             <div className="ctaBanner">
               <div className="ctaCopy">
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
-                  Have an Idea but Unsure Where to Start?
+                  Planning a Cloud or DevOps Transformation Initiative?
                 </h2>
                 <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
-                  Partner with Virat Software Solutions to refine features, design prototype assets, map engineering architecture, and launch your MVP cleanly.
+                  Partner with Virat Software Solutions to orchestrate deployment runners, configure cloud templates, monitor workloads, and unlock performance cleanly.
                 </p>
               </div>
               <div className="ctaActions">
                 <a className="secondaryButton" href="#final-cta">
-                  Talk to an MVP Expert
+                  Talk to a Cloud & DevOps Expert
                   <RiArrowRightLine aria-hidden="true" />
                 </a>
               </div>
@@ -410,16 +402,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 6: Why Businesses Choose Virat for MVP Development */}
+        {/* Section 6: Why Businesses Choose Virat for Cloud & DevOps Transformation */}
         <section className="sectionPad sectionAlt" id="why-virat" aria-labelledby="why-heading">
           <div className="container">
             <SectionHeader
-              title="Why Businesses Choose Virat for MVP Development"
-              description="Building an MVP is not just about developing software. It's about validating ideas, minimizing risk, and creating a foundation that supports future growth. At Virat Software Solutions, we combine product thinking, modern engineering, and scalable architecture to help businesses launch with confidence."
+              title="Why Businesses Choose Virat for Cloud & DevOps Transformation"
+              description="Successful cloud transformation requires more than infrastructure migration. It requires a strategic approach that aligns cloud technologies, automation, security, and operational processes with business objectives. Virat Software Solutions helps organizations build cloud environments that support performance, reliability, and long-term growth."
               id="why-heading"
             />
             <div className="row g-4">
-              {mvpWhyVirat.map((item) => {
+              {cloudWhyVirat.map((item) => {
                 const WhyIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -448,12 +440,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 7: How We Bring MVPs to Market */}
+        {/* Section 7: How We Deliver Cloud & DevOps Transformation */}
         <section className="sectionPad" id="bring-to-market" aria-labelledby="market-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="market-heading">
               <p className="eyebrow">Execution Roadmap</p>
-              <h2>How We Bring MVPs to Market</h2>
+              <h2>How We Deliver Cloud & DevOps Transformation</h2>
             </div>
             
             <div className="row justify-content-center">
@@ -462,19 +454,19 @@ export default function MvpDevelopmentPage() {
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        Successful MVPs are built with a clear focus on validation, speed, and long-term scalability. Our
-                        approach combines product strategy, user-centric design, and modern software engineering to help
-                        businesses launch quickly while reducing development risk and unnecessary complexity.
+                        Successful cloud and DevOps initiatives begin with understanding current infrastructure, business
+                        requirements, operational challenges, and future growth objectives. Our approach focuses on
+                        creating scalable, secure, and automated environments that improve both business performance and
+                        engineering productivity.
                       </p>
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        From idea validation and feature prioritization to development, testing, and deployment, we work
-                        closely with founders and product teams to create MVPs that deliver real user value. The goal is not
-                        simply to launch faster, but to gather meaningful feedback, validate market demand, and build a
-                        strong foundation for future product growth.
+                        From cloud architecture design and migration planning to CI/CD implementation, infrastructure
+                        automation, monitoring, optimization, and ongoing support, we help businesses modernize technology
+                        operations while reducing complexity and improving reliability.
                       </p>
                     </div>
                   </div>
@@ -488,7 +480,7 @@ export default function MvpDevelopmentPage() {
         <section className="sectionPad sectionTrust sectionAlt" aria-labelledby="trust-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="trust-heading">
-              {/* <p className="eyebrow">Our Partners</p> */}
+              <p className="eyebrow">Our Partners</p>
               <h2>Our Amazing Clients</h2>
               <p>Trusted by startups and growing teams worldwide</p>
             </div>
@@ -522,7 +514,7 @@ export default function MvpDevelopmentPage() {
               description="From SaaS platforms and mobile applications to AI solutions and cloud-powered systems, discover how we help businesses build scalable technology, modernize operations, and drive growth."
               id="portfolio-heading"
             />
-            <div className="row g-4 mt-2">
+            <div className="row g-4">
               {portfolioContent.cards.map((card) => (
                 <div className="col-12 col-lg-6" key={card.title}>
                   <article className="portfolioCard h-100">
@@ -559,9 +551,9 @@ export default function MvpDevelopmentPage() {
         {/* Section 11: Frequently Asked Questions */}
         <section className="sectionPad sectionAlt" id="faq" aria-labelledby="faq-heading">
           <div className="container">
-            <SectionHeader title="Frequently Asked Questions About MVP Development Services" id="faq-heading" />
+            <SectionHeader title="Frequently Asked Questions About Cloud & DevOps Transformation Services" id="faq-heading" />
             <div className="mt-4">
-              <FaqAccordion items={mvpFaqs} />
+              <FaqAccordion items={cloudFaqs} />
             </div>
           </div>
         </section>

@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import LeadFormShell from "../../../components/LeadFormShell";
 import TechStackShowcase from "../../../components/TechStackShowcase";
 import FaqAccordion from "../../../components/FaqAccordion";
-import { IndustryCards } from "../../../components/industries";
 import TechAnimation from "../../../components/TechAnimation";
 import "../../../assets/css/industries.css";
 
@@ -14,30 +12,26 @@ import {
   portfolioContent,
   trustContent,
   finalCtaContent,
-  processContent,
 } from "../../../data/siteContent";
 
 import {
   RiArrowRightLine,
   RiArrowRightUpLine,
-  RiArrowDownSLine,
   RiCheckboxCircleLine,
   RiSettings3Line,
-  RiRobot2Line,
-  RiDatabase2Line,
   RiCloudLine,
-  RiLayoutLine,
   RiRocketLine,
   RiUserStarLine,
   RiLineChartLine,
+  RiBankCardLine,
+  RiCodeBoxLine,
   RiStore2Line,
   RiShoppingCartLine,
   RiCodeLine,
-  RiBankCardLine,
+  RiLayoutLine,
   RiBarChartLine,
   RiFileList3Line,
   RiSearchLine,
-  RiCodeBoxLine,
 } from "react-icons/ri";
 
 const techIconMap = {
@@ -54,11 +48,11 @@ const techIconMap = {
 };
 
 export const metadata = {
-  title: "MVP Development Services for Startups & Founders",
+  title: "SaaS Product Development Services",
   description:
-    "Validate your product idea, launch faster, and reduce development risk with scalable Minimum Viable Product (MVP) development services designed for startups and product teams.",
+    "Build secure, cloud-based software products that support recurring revenue, seamless user experiences, and long-term growth with our expert SaaS development services.",
   alternates: {
-    canonical: "/solutions/mvp-development",
+    canonical: "/solutions/saas-product-development",
   },
 };
 
@@ -72,163 +66,163 @@ function SectionHeader({ eyebrow, title, description, id }) {
   );
 }
 
-const mvpBenefits = [
+const saasBenefits = [
   {
-    title: "Faster Time-to-Market",
-    description: "Launch core functionality quickly, gather real-world feedback, and establish an early market presence before competitors.",
+    title: "Faster Product Launch",
+    description: "Accelerate time-to-market with a structured development approach that enables businesses to launch and validate products quickly.",
     Icon: RiRocketLine,
   },
   {
-    title: "Reduced Development Risk",
-    description: "Validate assumptions and user demand before committing significant resources to features, infrastructure, and large-scale development.",
-    Icon: RiCheckboxCircleLine,
-  },
-  {
-    title: "Cost-Efficient Product Validation",
-    description: "Focus investment on essential features that solve real user problems while avoiding unnecessary development costs.",
+    title: "Recurring Revenue Opportunities",
+    description: "Create subscription-based business models that generate predictable revenue and long-term customer relationships.",
     Icon: RiBankCardLine,
   },
   {
-    title: "Real User Feedback",
-    description: "Collect insights from actual users to refine functionality, improve user experience, and prioritize future product enhancements.",
-    Icon: RiUserStarLine,
-  },
-  {
-    title: "Investor & Stakeholder Confidence",
-    description: "A working MVP demonstrates product potential, market demand, and execution capability better than concepts, presentations, or prototypes alone.",
-    Icon: RiLineChartLine,
-  },
-  {
-    title: "Scalable Foundation for Growth",
-    description: "Build on a modern technology architecture that supports future features, user growth, integrations, and business expansion.",
-    Icon: RiCloudLine,
-  },
-];
-
-const mvpAudiences = [
-  {
-    badge: "1. Startups & Founders",
-    title: "Vision to functional validation",
-    description: "Turn your vision into a functional product that helps validate market demand, attract early adopters, and secure stakeholder or investor confidence.",
-    bullets: [
-      "Validate product ideas faster",
-      "Launch with essential features",
-      "Reduce development risk and cost",
-      "Build a foundation for future growth",
-    ],
-  },
-  {
-    badge: "2. Product Teams & Innovators",
-    title: "Efficient concept validation",
-    description: "Test new concepts, business models, and digital products without committing to large-scale development from day one.",
-    bullets: [
-      "Accelerate product experimentation",
-      "Gather real user insights",
-      "Prioritize features based on demand",
-      "Improve product-market fit",
-    ],
-  },
-  {
-    badge: "3. Growing Businesses",
-    title: "Risk-mitigated product launches",
-    description: "Launch new digital products, customer portals, platforms, or services while minimizing risk and maximizing learning opportunities.",
-    bullets: [
-      "Explore new revenue streams",
-      "Test new business initiatives",
-      "Improve customer engagement",
-      "Scale based on validated demand",
-    ],
-  },
-  {
-    badge: "4. Enterprises & Innovation Teams",
-    title: "Enterprise transformation validation",
-    description: "Validate new solutions, internal platforms, and digital transformation initiatives before investing in enterprise-wide implementation.",
-    bullets: [
-      "Pilot new ideas efficiently",
-      "Reduce project uncertainty",
-      "Validate business outcomes early",
-      "Build scalable technology foundations",
-    ],
-  },
-];
-
-const mvpWhyVirat = [
-  {
-    title: "Product-First Development Approach",
-    description: "We focus on solving real user problems and validating market demand, ensuring your MVP delivers meaningful business value from day one.",
-    Icon: RiUserStarLine,
-  },
-  {
-    title: "Faster Time-to-Market",
-    description: "Our agile development approach helps startups and businesses launch quickly, gather feedback sooner, and accelerate product validation.",
-    Icon: RiRocketLine,
-  },
-  {
-    title: "Scalable Technology Foundations",
-    description: "We build MVPs using modern technologies and cloud-ready architectures that support future enhancements, integrations, and user growth.",
+    title: "Scalable Infrastructure",
+    description: "Support growing user bases, increased workloads, and evolving business requirements without rebuilding core systems.",
     Icon: RiCloudLine,
   },
   {
-    title: "Experienced Engineering Team",
-    description: "Work directly with skilled software engineers experienced in web applications, mobile apps, SaaS products, AI solutions, and cloud technologies.",
-    Icon: RiCodeBoxLine,
+    title: "Lower Operational Complexity",
+    description: "Centralized deployment, updates, and maintenance simplify product management while improving customer experience.",
+    Icon: RiSettings3Line,
   },
   {
-    title: "Business-Aligned Decision Making",
-    description: "Every feature, technology choice, and development milestone is aligned with your product goals, budget, and growth objectives.",
-    Icon: RiLineChartLine,
+    title: "Improved Accessibility",
+    description: "Enable users to access applications securely from anywhere through modern cloud-based environments.",
+    Icon: RiUserStarLine,
   },
   {
-    title: "Beyond Launch Support",
-    description: "From post-launch improvements to scaling and product evolution, we help transform validated MVPs into long-term digital products.",
+    title: "Continuous Product Innovation",
+    description: "Introduce new features, enhancements, and integrations faster while maintaining platform stability and performance.",
     Icon: RiCheckboxCircleLine,
   },
 ];
 
-const mvpFaqs = [
+const saasAudiences = [
   {
-    question: "1. What is an MVP in software development?",
-    answer: "A Minimum Viable Product (MVP) is a version of a product built with essential features required to solve a core problem and gather feedback from real users before investing in full-scale development.",
+    badge: "1. Startups & SaaS Founders",
+    title: "Concept to market validation",
+    description: "Transform innovative ideas into market-ready SaaS products with scalable architecture and efficient product development.",
+    bullets: [
+      "Validate SaaS concepts faster",
+      "Launch subscription-based products",
+      "Build investor-ready platforms",
+      "Create scalable product foundations",
+    ],
   },
   {
-    question: "2. Why should I choose Virat Software Solutions for MVP development?",
-    answer: "Virat Software Solutions helps startups, founders, and businesses transform ideas into scalable digital products through a combination of product strategy, modern engineering, cloud technologies, and agile development practices. Our focus is on building MVPs that validate ideas quickly while creating a strong foundation for future growth.",
+    badge: "2. Product Companies",
+    title: "Cloud product expansion",
+    description: "Expand product portfolios with cloud-based solutions designed to improve customer experiences and business performance.",
+    bullets: [
+      "Accelerate product delivery",
+      "Improve customer retention",
+      "Enhance platform scalability",
+      "Support business growth initiatives",
+    ],
   },
   {
-    question: "3. How long does it take Virat Software Solutions to build an MVP?",
-    answer: "Development timelines depend on product complexity, features, integrations, and business requirements. Most MVP projects can be designed, developed, and launched within a few weeks to a few months.",
+    badge: "3. Scaling Businesses",
+    title: "Legacy-to-SaaS transformation",
+    description: "Modernize traditional software offerings and transition toward cloud-native SaaS solutions that support evolving customer needs.",
+    bullets: [
+      "Enable recurring revenue models",
+      "Improve operational efficiency",
+      "Expand digital capabilities",
+      "Increase market competitiveness",
+    ],
   },
   {
-    question: "4. How much does MVP development cost?",
-    answer: "MVP development costs vary based on functionality, user experience requirements, integrations, and technology choices. Virat Software Solutions helps businesses prioritize essential features to maximize value while optimizing development investment.",
-  },
-  {
-    question: "5. What features should be included in an MVP?",
-    answer: "An MVP should focus on the core functionality needed to solve a specific user problem, validate assumptions, and collect meaningful market feedback before expanding the product roadmap.",
-  },
-  {
-    question: "6. Can Virat Software Solutions help validate my product idea?",
-    answer: "Yes. We work closely with founders and product teams to assess market opportunities, define product goals, prioritize features, and create a practical roadmap before development begins.",
-  },
-  {
-    question: "7. Can an MVP be scaled into a full product later?",
-    answer: "Absolutely. Virat Software Solutions builds MVPs using scalable architectures and modern technologies, making it easier to add features, integrations, and advanced functionality as the product grows.",
-  },
-  {
-    question: "8. Which technologies does Virat Software Solutions use for MVP development?",
-    answer: "Our MVP development stack includes React, Next.js, .NET, Node.js, Flutter, PostgreSQL, MongoDB, AWS, Azure, Google Cloud Platform, and other technologies selected based on project requirements.",
-  },
-  {
-    question: "9. Do I need a technical co-founder to build an MVP?",
-    answer: "Not necessarily. Many startups and businesses partner with Virat Software Solutions to gain access to product strategy, technical expertise, architecture planning, development, testing, and deployment support.",
-  },
-  {
-    question: "10. What happens after my MVP is launched?",
-    answer: "After launch, Virat Software Solutions can support product enhancements, user feedback analysis, performance optimization, cloud scaling, new feature development, and long-term product growth initiatives.",
+    badge: "4. Enterprise Innovation Teams",
+    title: "Internal and external platform scale",
+    description: "Build secure SaaS platforms, customer portals, and business applications that support digital transformation and operational excellence.",
+    bullets: [
+      "Launch enterprise-grade solutions",
+      "Improve user accessibility",
+      "Streamline business processes",
+      "Scale digital initiatives confidently",
+    ],
   },
 ];
 
-export default function MvpDevelopmentPage() {
+const saasWhyVirat = [
+  {
+    title: "Product-Focused Engineering",
+    description: "We align technology decisions with product goals, customer needs, and business outcomes to create software that delivers measurable value.",
+    Icon: RiUserStarLine,
+  },
+  {
+    title: "Scalable SaaS Architecture",
+    description: "Our cloud-native development approach ensures your platform can support growing users, new features, and evolving business requirements.",
+    Icon: RiCloudLine,
+  },
+  {
+    title: "Modern Technology Stack",
+    description: "We leverage technologies such as .NET, React, Node.js, Flutter, PostgreSQL, AWS, Azure, and Google Cloud to build reliable SaaS products.",
+    Icon: RiCodeBoxLine,
+  },
+  {
+    title: "Security & Reliability",
+    description: "From authentication and access control to infrastructure security and compliance considerations, we prioritize platform stability and protection.",
+    Icon: RiCheckboxCircleLine,
+  },
+  {
+    title: "Business-Driven Development",
+    description: "Every feature, workflow, and technical decision is guided by business objectives, customer expectations, and long-term scalability.",
+    Icon: RiLineChartLine,
+  },
+  {
+    title: "Long-Term Product Partnership",
+    description: "Beyond launch, we help businesses optimize performance, introduce new capabilities, and evolve products as market demands change.",
+    Icon: RiRocketLine,
+  },
+];
+
+const saasFaqs = [
+  {
+    question: "1. What makes SaaS product development different from traditional software development?",
+    answer: "SaaS product development focuses on building cloud-based applications that are delivered through the internet, updated centrally, and designed to support multiple users or customers efficiently. Unlike traditional software, SaaS products must prioritize scalability, uptime, security, subscription management, and continuous improvement.",
+  },
+  {
+    question: "2. Why should businesses invest in SaaS product development?",
+    answer: "SaaS product development helps businesses create recurring revenue models, improve customer accessibility, reduce deployment complexity, and launch software products that can grow with market demand. Virat Software Solutions helps businesses turn these advantages into practical, scalable digital products.",
+  },
+  {
+    question: "3. How do you build a SaaS product that can scale over time?",
+    answer: "A scalable SaaS product starts with the right architecture, cloud infrastructure, database design, and performance strategy. At Virat Software Solutions, we plan for growth from the beginning so your platform can handle more users, more data, and more features without major rework.",
+  },
+  {
+    question: "4. Can Virat Software Solutions help with SaaS product strategy as well as development?",
+    answer: "Yes. We support SaaS businesses beyond coding by helping define product direction, feature priorities, technical architecture, and launch strategy. This ensures the product is built around real business goals and customer needs.",
+  },
+  {
+    question: "5. What technologies do you use for SaaS product development?",
+    answer: "Our SaaS development stack includes .NET, React, Next.js, Node.js, Flutter, PostgreSQL, MongoDB, Docker, Kubernetes, AWS, Azure, and Google Cloud Platform. We choose technologies based on product requirements, scalability, and long-term maintainability.",
+  },
+  {
+    question: "6. Do you build multi-tenant SaaS platforms?",
+    answer: "Yes. Virat Software Solutions develops multi-tenant SaaS applications that allow multiple customers to use the same platform securely while keeping their data isolated and performance optimized.",
+  },
+  {
+    question: "7. How do you handle subscriptions, billing, and user access in SaaS products?",
+    answer: "We design SaaS platforms with secure authentication, role-based access, subscription workflows, and billing integrations that support different pricing models and customer tiers. This helps businesses manage users and revenue efficiently.",
+  },
+  {
+    question: "8. Can you modernize an existing SaaS platform?",
+    answer: "Yes. We help businesses improve legacy SaaS products by upgrading architecture, enhancing performance, refining user experience, migrating to modern cloud environments, and adding new capabilities that support growth.",
+  },
+  {
+    question: "9. Do you provide ongoing support after SaaS product launch?",
+    answer: "Yes. Virat Software Solutions offers post-launch support that includes maintenance, feature enhancements, performance optimization, monitoring, and technical improvements to keep your SaaS product reliable and competitive.",
+  },
+  {
+    question: "10. How do you ensure security in SaaS applications?",
+    answer: "We build SaaS applications with security in mind from the start. This includes secure authentication, access control, encrypted communication, infrastructure best practices, and continuous monitoring to help protect user data and business operations.",
+  },
+];
+
+export default function SaasProductDevelopmentPage() {
   return (
     <>
       <Header />
@@ -237,14 +231,14 @@ export default function MvpDevelopmentPage() {
         <section className="solutionsHero" id="hero">
           <div className="container">
             <div className="heroCenter">
-              <h1>MVP Development Services</h1>
+              <h1>SaaS Product Development</h1>
               <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
-                Turn Your Product Idea Into a Market-Ready MVP
+                Turn Your Product Idea Into a Scalable SaaS Platform
               </p>
               <p className="leadText">
-                Validate your idea, launch faster, and reduce development risk with MVP development services designed
-                for startups, founders, and product teams. We help businesses build scalable Minimum Viable Products
-                that gather real user feedback, attract early adopters, and create a strong foundation for future growth.
+                Build secure, cloud-based software products that support recurring revenue, seamless user experiences, and
+                long-term growth. We help startups, founders, and product teams design and develop SaaS solutions that
+                are built to scale, adapt, and deliver measurable business value.
               </p>
               <div className="heroActions">
                 <a className="primaryButton" href="#final-cta">
@@ -256,12 +250,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 2: What MVP Development Solves */}
-        <section className="sectionPad sectionAlt" id="what-mvp-solves" aria-labelledby="solves-heading">
+        {/* Section 2: What SaaS Product Development Solves */}
+        <section className="sectionPad sectionAlt" id="what-saas-solves" aria-labelledby="solves-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="solves-heading">
               <p className="eyebrow">Problems We Address</p>
-              <h2>What MVP Development Solves</h2>
+              <h2>What SaaS Product Development Solves</h2>
             </div>
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
@@ -275,41 +269,40 @@ export default function MvpDevelopmentPage() {
                   }}
                 >
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
-                    Launching a new product comes with uncertainty. Many startups and businesses invest significant time
-                    and resources into building full-featured applications before validating whether the market actually
-                    wants them.
+                    Building a successful SaaS product involves more than writing code. Businesses must solve challenges
+                    related to scalability, multi-user access, subscription management, security, performance, and
+                    continuous product improvement.
                   </p>
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
-                    MVP development helps reduce this risk by focusing on the core features needed to test assumptions,
-                    gather real user feedback, and validate product-market fit before making larger investments.
-                  </p>
-                  <p style={{ fontWeight: "700", color: "var(--color-navy)", marginBottom: "16px" }}>
-                    Whether you're launching a startup, testing a new business model, or introducing a digital product, a well-built MVP helps you:
+                    SaaS product development helps organizations launch cloud-based software platforms that can serve
+                    multiple customers efficiently while maintaining reliability, flexibility, and operational control.
+                    Whether you're building a new SaaS business, modernizing an existing platform, or launching a
+                    digital product, a well-structured SaaS solution helps you:
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Validate ideas with real users before full-scale development</span>
+                      <span>Validate your product idea with real users before scaling further</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Reduce development costs and time-to-market</span>
+                      <span>Build a subscription-ready platform with recurring revenue potential</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Gather actionable feedback to improve product direction</span>
+                      <span>Create a scalable architecture that supports growth and future expansion</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Attract investors with a working product instead of a concept</span>
+                      <span>Improve user management, access control, and customer experience</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Minimize technical debt through scalable architecture</span>
+                      <span>Reduce technical risk through secure and maintainable development</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Build a foundation for future growth and feature expansion</span>
+                      <span>Launch faster with a focused product roadmap and core feature set</span>
                     </li>
                   </ul>
                 </div>
@@ -318,16 +311,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 3: Benefits of MVP Development Services For Startups */}
+        {/* Section 3: Benefits of SaaS Product Development Services */}
         <section className="sectionPad" id="benefits" aria-labelledby="benefits-heading">
           <div className="container">
             <SectionHeader
-              title="Benefits of MVP Development Services For Startups"
-              description="Launching a product successfully requires more than a great idea. MVP development helps businesses validate concepts, reduce risk, and make informed decisions before investing in full-scale product development."
+              title="Benefits of SaaS Product Development Services"
+              description="SaaS product development gives businesses the ability to launch faster, scale efficiently, and deliver a better digital experience to customers. It creates the foundation for recurring revenue, easier product updates, stronger security, and long-term flexibility as business needs evolve."
               id="benefits-heading"
             />
             <div className="row g-4">
-              {mvpBenefits.map((item) => {
+              {saasBenefits.map((item) => {
                 const BenefitIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -358,16 +351,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 4: Built for Founders, Innovators, and Product Teams */}
+        {/* Section 4: Built for Businesses Creating Software Products */}
         <section className="sectionPad sectionAlt" id="audience" aria-labelledby="audience-heading">
           <div className="container">
             <SectionHeader
-              title="Built for Founders, Innovators, and Product Teams"
-              description="Our MVP development services are designed for organizations that need to validate ideas quickly, reduce product risk, and launch with confidence."
+              title="Built for Businesses Creating Software Products"
+              description="Our SaaS product development services are designed for organizations looking to build scalable software platforms, launch digital products, and create recurring revenue models."
               id="audience-heading"
             />
             <div className="row g-4">
-              {mvpAudiences.map((aud) => (
+              {saasAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
                   <article className="audienceCard h-100" style={{ padding: "28px" }}>
                     <span className="audienceBadge">{aud.badge}</span>
@@ -388,21 +381,21 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 5: Have an Idea but Unsure Where to Start? */}
+        {/* Section 5: Planning a SaaS Product but Unsure Where to Begin? */}
         <section className="sectionPad" aria-labelledby="idea-cta-heading">
           <div className="container">
             <div className="ctaBanner">
               <div className="ctaCopy">
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
-                  Have an Idea but Unsure Where to Start?
+                  Planning a SaaS Product but Unsure Where to Begin?
                 </h2>
                 <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
-                  Partner with Virat Software Solutions to refine features, design prototype assets, map engineering architecture, and launch your MVP cleanly.
+                  Partner with Virat Software Solutions to refine features, design prototype assets, map engineering architecture, and launch your SaaS platform cleanly.
                 </p>
               </div>
               <div className="ctaActions">
                 <a className="secondaryButton" href="#final-cta">
-                  Talk to an MVP Expert
+                  Talk to a SaaS Product Expert
                   <RiArrowRightLine aria-hidden="true" />
                 </a>
               </div>
@@ -410,16 +403,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 6: Why Businesses Choose Virat for MVP Development */}
+        {/* Section 6: Why Businesses Choose Virat for SaaS Product Development */}
         <section className="sectionPad sectionAlt" id="why-virat" aria-labelledby="why-heading">
           <div className="container">
             <SectionHeader
-              title="Why Businesses Choose Virat for MVP Development"
-              description="Building an MVP is not just about developing software. It's about validating ideas, minimizing risk, and creating a foundation that supports future growth. At Virat Software Solutions, we combine product thinking, modern engineering, and scalable architecture to help businesses launch with confidence."
+              title="Why Businesses Choose Virat for SaaS Product Development"
+              description="Building a SaaS product requires a balance between business strategy, user experience, cloud architecture, and scalable engineering. Virat Software Solutions helps businesses create SaaS platforms designed to support growth, customer adoption, and long-term product success."
               id="why-heading"
             />
             <div className="row g-4">
-              {mvpWhyVirat.map((item) => {
+              {saasWhyVirat.map((item) => {
                 const WhyIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -448,12 +441,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 7: How We Bring MVPs to Market */}
+        {/* Section 7: How We Build SaaS Products */}
         <section className="sectionPad" id="bring-to-market" aria-labelledby="market-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="market-heading">
               <p className="eyebrow">Execution Roadmap</p>
-              <h2>How We Bring MVPs to Market</h2>
+              <h2>How We Build SaaS Products</h2>
             </div>
             
             <div className="row justify-content-center">
@@ -462,19 +455,20 @@ export default function MvpDevelopmentPage() {
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        Successful MVPs are built with a clear focus on validation, speed, and long-term scalability. Our
-                        approach combines product strategy, user-centric design, and modern software engineering to help
-                        businesses launch quickly while reducing development risk and unnecessary complexity.
+                        Successful SaaS products require more than development expertise. They require strategic planning,
+                        scalable architecture, intuitive user experiences, and a technology foundation that can evolve
+                        alongside business growth. Our approach focuses on building cloud-native software platforms that
+                        balance speed, reliability, and long-term maintainability.
                       </p>
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        From idea validation and feature prioritization to development, testing, and deployment, we work
-                        closely with founders and product teams to create MVPs that deliver real user value. The goal is not
-                        simply to launch faster, but to gather meaningful feedback, validate market demand, and build a
-                        strong foundation for future product growth.
+                        From product discovery and architecture planning to development, testing, deployment, and
+                        optimization, we work closely with stakeholders to deliver SaaS products that support customer
+                        adoption, operational efficiency, and recurring revenue growth. Every solution is designed with
+                        scalability, security, and future expansion in mind.
                       </p>
                     </div>
                   </div>
@@ -488,7 +482,7 @@ export default function MvpDevelopmentPage() {
         <section className="sectionPad sectionTrust sectionAlt" aria-labelledby="trust-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="trust-heading">
-              {/* <p className="eyebrow">Our Partners</p> */}
+              <p className="eyebrow">Our Partners</p>
               <h2>Our Amazing Clients</h2>
               <p>Trusted by startups and growing teams worldwide</p>
             </div>
@@ -522,7 +516,7 @@ export default function MvpDevelopmentPage() {
               description="From SaaS platforms and mobile applications to AI solutions and cloud-powered systems, discover how we help businesses build scalable technology, modernize operations, and drive growth."
               id="portfolio-heading"
             />
-            <div className="row g-4 mt-2">
+            <div className="row g-4">
               {portfolioContent.cards.map((card) => (
                 <div className="col-12 col-lg-6" key={card.title}>
                   <article className="portfolioCard h-100">
@@ -559,9 +553,9 @@ export default function MvpDevelopmentPage() {
         {/* Section 11: Frequently Asked Questions */}
         <section className="sectionPad sectionAlt" id="faq" aria-labelledby="faq-heading">
           <div className="container">
-            <SectionHeader title="Frequently Asked Questions About MVP Development Services" id="faq-heading" />
+            <SectionHeader title="Frequently Asked Questions About SaaS Product Development Services" id="faq-heading" />
             <div className="mt-4">
-              <FaqAccordion items={mvpFaqs} />
+              <FaqAccordion items={saasFaqs} />
             </div>
           </div>
         </section>

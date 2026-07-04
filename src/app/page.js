@@ -5,6 +5,7 @@ import LeadFormShell from "../components/LeadFormShell";
 import TechStackShowcase from "../components/TechStackShowcase";
 import TestimonialsSection from "../components/TestimonialsSection";
 import FaqAccordion from "../components/FaqAccordion";
+import TechAnimation from "../components/TechAnimation";
 import "../assets/css/industries.css";
 import { IndustryCards } from "../components/industries";
 import {
@@ -337,10 +338,15 @@ export default function Home() {
 
         <section className="sectionPad sectionAlt" id="final-cta" aria-labelledby="final-cta-heading">
           <div className="container">
+            {/* Title First (Full Width) */}
+            <div className="sectionIntro text-center mb-5">
+              <h2 id="final-cta-heading">{finalCtaContent.title}</h2>
+              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+                {finalCtaContent.description}
+              </p>
+            </div>
+
             <div className="finalCtaGrid">
-              <div className="finalCtaCopy">
-                <SectionHeader title={finalCtaContent.title} description={finalCtaContent.description} id="final-cta-heading" />
-              </div>
               <LeadFormShell
                 title=""
                 description=""
@@ -348,6 +354,9 @@ export default function Home() {
                 fieldLabels={finalCtaContent.fields}
                 options={finalCtaContent.options}
               />
+              <div className="finalCtaImageCol">
+                <TechAnimation />
+              </div>
             </div>
           </div>
         </section>

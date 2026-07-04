@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import LeadFormShell from "../../../components/LeadFormShell";
 import TechStackShowcase from "../../../components/TechStackShowcase";
 import FaqAccordion from "../../../components/FaqAccordion";
-import { IndustryCards } from "../../../components/industries";
 import TechAnimation from "../../../components/TechAnimation";
 import "../../../assets/css/industries.css";
 
@@ -14,30 +12,26 @@ import {
   portfolioContent,
   trustContent,
   finalCtaContent,
-  processContent,
 } from "../../../data/siteContent";
 
 import {
   RiArrowRightLine,
   RiArrowRightUpLine,
-  RiArrowDownSLine,
   RiCheckboxCircleLine,
   RiSettings3Line,
-  RiRobot2Line,
-  RiDatabase2Line,
   RiCloudLine,
-  RiLayoutLine,
   RiRocketLine,
   RiUserStarLine,
   RiLineChartLine,
+  RiBankCardLine,
+  RiCodeBoxLine,
   RiStore2Line,
   RiShoppingCartLine,
   RiCodeLine,
-  RiBankCardLine,
+  RiLayoutLine,
   RiBarChartLine,
   RiFileList3Line,
   RiSearchLine,
-  RiCodeBoxLine,
 } from "react-icons/ri";
 
 const techIconMap = {
@@ -54,11 +48,11 @@ const techIconMap = {
 };
 
 export const metadata = {
-  title: "MVP Development Services for Startups & Founders",
+  title: "Digital Transformation Services",
   description:
-    "Validate your product idea, launch faster, and reduce development risk with scalable Minimum Viable Product (MVP) development services designed for startups and product teams.",
+    "Modernize systems, streamline workflows, and unlock new growth opportunities through technology-driven transformation services with Virat Software Solutions.",
   alternates: {
-    canonical: "/solutions/mvp-development",
+    canonical: "/solutions/digital-transformation",
   },
 };
 
@@ -72,163 +66,163 @@ function SectionHeader({ eyebrow, title, description, id }) {
   );
 }
 
-const mvpBenefits = [
+const transformBenefits = [
   {
-    title: "Faster Time-to-Market",
-    description: "Launch core functionality quickly, gather real-world feedback, and establish an early market presence before competitors.",
-    Icon: RiRocketLine,
+    title: "Increased Operational Efficiency",
+    description: "Automate repetitive tasks, reduce manual effort, and streamline workflows across departments to improve productivity.",
+    Icon: RiSettings3Line,
   },
   {
-    title: "Reduced Development Risk",
-    description: "Validate assumptions and user demand before committing significant resources to features, infrastructure, and large-scale development.",
-    Icon: RiCheckboxCircleLine,
+    title: "Improved Decision-Making",
+    description: "Access accurate, real-time business data that enables faster, more informed decisions at every level of the organization.",
+    Icon: RiLineChartLine,
   },
   {
-    title: "Cost-Efficient Product Validation",
-    description: "Focus investment on essential features that solve real user problems while avoiding unnecessary development costs.",
+    title: "Better Customer Experiences",
+    description: "Create seamless digital experiences that improve customer engagement, satisfaction, and retention.",
+    Icon: RiUserStarLine,
+  },
+  {
+    title: "Reduced Operational Costs",
+    description: "Optimize resources, eliminate inefficiencies, and reduce maintenance costs associated with outdated systems.",
     Icon: RiBankCardLine,
   },
   {
-    title: "Real User Feedback",
-    description: "Collect insights from actual users to refine functionality, improve user experience, and prioritize future product enhancements.",
-    Icon: RiUserStarLine,
-  },
-  {
-    title: "Investor & Stakeholder Confidence",
-    description: "A working MVP demonstrates product potential, market demand, and execution capability better than concepts, presentations, or prototypes alone.",
-    Icon: RiLineChartLine,
-  },
-  {
-    title: "Scalable Foundation for Growth",
-    description: "Build on a modern technology architecture that supports future features, user growth, integrations, and business expansion.",
-    Icon: RiCloudLine,
-  },
-];
-
-const mvpAudiences = [
-  {
-    badge: "1. Startups & Founders",
-    title: "Vision to functional validation",
-    description: "Turn your vision into a functional product that helps validate market demand, attract early adopters, and secure stakeholder or investor confidence.",
-    bullets: [
-      "Validate product ideas faster",
-      "Launch with essential features",
-      "Reduce development risk and cost",
-      "Build a foundation for future growth",
-    ],
-  },
-  {
-    badge: "2. Product Teams & Innovators",
-    title: "Efficient concept validation",
-    description: "Test new concepts, business models, and digital products without committing to large-scale development from day one.",
-    bullets: [
-      "Accelerate product experimentation",
-      "Gather real user insights",
-      "Prioritize features based on demand",
-      "Improve product-market fit",
-    ],
-  },
-  {
-    badge: "3. Growing Businesses",
-    title: "Risk-mitigated product launches",
-    description: "Launch new digital products, customer portals, platforms, or services while minimizing risk and maximizing learning opportunities.",
-    bullets: [
-      "Explore new revenue streams",
-      "Test new business initiatives",
-      "Improve customer engagement",
-      "Scale based on validated demand",
-    ],
-  },
-  {
-    badge: "4. Enterprises & Innovation Teams",
-    title: "Enterprise transformation validation",
-    description: "Validate new solutions, internal platforms, and digital transformation initiatives before investing in enterprise-wide implementation.",
-    bullets: [
-      "Pilot new ideas efficiently",
-      "Reduce project uncertainty",
-      "Validate business outcomes early",
-      "Build scalable technology foundations",
-    ],
-  },
-];
-
-const mvpWhyVirat = [
-  {
-    title: "Product-First Development Approach",
-    description: "We focus on solving real user problems and validating market demand, ensuring your MVP delivers meaningful business value from day one.",
-    Icon: RiUserStarLine,
-  },
-  {
-    title: "Faster Time-to-Market",
-    description: "Our agile development approach helps startups and businesses launch quickly, gather feedback sooner, and accelerate product validation.",
+    title: "Enhanced Business Agility",
+    description: "Respond faster to market changes, customer expectations, and new business opportunities through flexible digital systems.",
     Icon: RiRocketLine,
   },
   {
-    title: "Scalable Technology Foundations",
-    description: "We build MVPs using modern technologies and cloud-ready architectures that support future enhancements, integrations, and user growth.",
+    title: "Scalable Business Growth",
+    description: "Build a modern technology ecosystem capable of supporting future expansion, innovation, and operational complexity.",
     Icon: RiCloudLine,
   },
+];
+
+const transformAudiences = [
   {
-    title: "Experienced Engineering Team",
-    description: "Work directly with skilled software engineers experienced in web applications, mobile apps, SaaS products, AI solutions, and cloud technologies.",
-    Icon: RiCodeBoxLine,
+    badge: "1. Growing Businesses",
+    title: "Integrated operations growth",
+    description: "Replace manual processes and disconnected systems with integrated digital solutions that support operational growth.",
+    bullets: [
+      "Improve business efficiency",
+      "Standardize processes",
+      "Enhance team productivity",
+      "Support scalable growth",
+    ],
   },
   {
-    title: "Business-Aligned Decision Making",
-    description: "Every feature, technology choice, and development milestone is aligned with your product goals, budget, and growth objectives.",
+    badge: "2. Enterprise Teams",
+    title: "Technical debt modernization",
+    description: "Modernize legacy systems and implement digital initiatives that improve agility, visibility, and performance.",
+    bullets: [
+      "Reduce technical debt",
+      "Improve cross-functional collaboration",
+      "Accelerate innovation initiatives",
+      "Strengthen operational resilience",
+    ],
+  },
+  {
+    badge: "3. Operations & Business Leaders",
+    title: "Control and reporting workflows",
+    description: "Gain better control over workflows, reporting, and business performance through automation and connected systems.",
+    bullets: [
+      "Improve decision-making",
+      "Eliminate operational bottlenecks",
+      "Increase process visibility",
+      "Optimize resource utilization",
+    ],
+  },
+  {
+    badge: "4. Organizations Undergoing Change",
+    title: "Expansion and transformation continuity",
+    description: "Support mergers, expansions, modernization efforts, and digital initiatives with technology solutions built for long-term success.",
+    bullets: [
+      "Modernize legacy environments",
+      "Improve business continuity",
+      "Simplify technology ecosystems",
+      "Enable future-ready operations",
+    ],
+  },
+];
+
+const transformWhyVirat = [
+  {
+    title: "Business-First Transformation Strategy",
+    description: "We start with your business challenges, operational requirements, and growth objectives before recommending technology solutions.",
     Icon: RiLineChartLine,
   },
   {
-    title: "Beyond Launch Support",
-    description: "From post-launch improvements to scaling and product evolution, we help transform validated MVPs into long-term digital products.",
+    title: "Process & Technology Alignment",
+    description: "Our approach connects people, processes, systems, and technology to create sustainable improvements across the organization.",
+    Icon: RiSettings3Line,
+  },
+  {
+    title: "Modern Engineering Expertise",
+    description: "From custom software and cloud platforms to AI and system integrations, we leverage modern technologies to drive transformation.",
+    Icon: RiCodeBoxLine,
+  },
+  {
+    title: "Scalable Digital Foundations",
+    description: "We design solutions that support long-term business growth while remaining flexible enough to adapt to changing requirements.",
+    Icon: RiCloudLine,
+  },
+  {
+    title: "End-to-End Delivery Capability",
+    description: "Our team supports every stage of transformation, from assessment and planning to implementation, optimization, and continuous improvement.",
     Icon: RiCheckboxCircleLine,
   },
-];
-
-const mvpFaqs = [
   {
-    question: "1. What is an MVP in software development?",
-    answer: "A Minimum Viable Product (MVP) is a version of a product built with essential features required to solve a core problem and gather feedback from real users before investing in full-scale development.",
-  },
-  {
-    question: "2. Why should I choose Virat Software Solutions for MVP development?",
-    answer: "Virat Software Solutions helps startups, founders, and businesses transform ideas into scalable digital products through a combination of product strategy, modern engineering, cloud technologies, and agile development practices. Our focus is on building MVPs that validate ideas quickly while creating a strong foundation for future growth.",
-  },
-  {
-    question: "3. How long does it take Virat Software Solutions to build an MVP?",
-    answer: "Development timelines depend on product complexity, features, integrations, and business requirements. Most MVP projects can be designed, developed, and launched within a few weeks to a few months.",
-  },
-  {
-    question: "4. How much does MVP development cost?",
-    answer: "MVP development costs vary based on functionality, user experience requirements, integrations, and technology choices. Virat Software Solutions helps businesses prioritize essential features to maximize value while optimizing development investment.",
-  },
-  {
-    question: "5. What features should be included in an MVP?",
-    answer: "An MVP should focus on the core functionality needed to solve a specific user problem, validate assumptions, and collect meaningful market feedback before expanding the product roadmap.",
-  },
-  {
-    question: "6. Can Virat Software Solutions help validate my product idea?",
-    answer: "Yes. We work closely with founders and product teams to assess market opportunities, define product goals, prioritize features, and create a practical roadmap before development begins.",
-  },
-  {
-    question: "7. Can an MVP be scaled into a full product later?",
-    answer: "Absolutely. Virat Software Solutions builds MVPs using scalable architectures and modern technologies, making it easier to add features, integrations, and advanced functionality as the product grows.",
-  },
-  {
-    question: "8. Which technologies does Virat Software Solutions use for MVP development?",
-    answer: "Our MVP development stack includes React, Next.js, .NET, Node.js, Flutter, PostgreSQL, MongoDB, AWS, Azure, Google Cloud Platform, and other technologies selected based on project requirements.",
-  },
-  {
-    question: "9. Do I need a technical co-founder to build an MVP?",
-    answer: "Not necessarily. Many startups and businesses partner with Virat Software Solutions to gain access to product strategy, technical expertise, architecture planning, development, testing, and deployment support.",
-  },
-  {
-    question: "10. What happens after my MVP is launched?",
-    answer: "After launch, Virat Software Solutions can support product enhancements, user feedback analysis, performance optimization, cloud scaling, new feature development, and long-term product growth initiatives.",
+    title: "Focus on Measurable Outcomes",
+    description: "We prioritize initiatives that improve efficiency, reduce costs, enhance customer experiences, and create lasting business value.",
+    Icon: RiUserStarLine,
   },
 ];
 
-export default function MvpDevelopmentPage() {
+const transformFaqs = [
+  {
+    question: "1. What is digital transformation?",
+    answer: "Digital transformation is the process of using technology to improve business operations, customer experiences, decision-making, and organizational efficiency. It often involves modernizing systems, automating processes, and adopting digital-first workflows.",
+  },
+  {
+    question: "2. Why is digital transformation important for modern businesses?",
+    answer: "Businesses that rely on manual processes and outdated systems often struggle to scale efficiently. Digital transformation helps improve productivity, reduce operational costs, enhance customer experiences, and create a foundation for long-term growth.",
+  },
+  {
+    question: "3. How does Virat Software Solutions approach digital transformation?",
+    answer: "Virat Software Solutions takes a business-first approach by understanding organizational goals, operational challenges, and technology requirements before designing solutions that deliver measurable outcomes.",
+  },
+  {
+    question: "4. What types of digital transformation projects do you support?",
+    answer: "We support process automation, software modernization, cloud migration, workflow optimization, system integration, AI implementation, data transformation, and custom digital platform development.",
+  },
+  {
+    question: "5. Can digital transformation help reduce operational costs?",
+    answer: "Yes. By automating repetitive tasks, improving efficiency, and eliminating outdated processes, businesses can significantly reduce operational overhead and improve resource utilization.",
+  },
+  {
+    question: "6. How do you modernize legacy systems?",
+    answer: "We assess existing systems, identify limitations, and implement modernization strategies that improve performance, scalability, security, and integration capabilities while minimizing business disruption.",
+  },
+  {
+    question: "7. What technologies are commonly used in digital transformation initiatives?",
+    answer: "Our digital transformation projects leverage technologies including .NET, React, Node.js, Flutter, AWS, Azure, Google Cloud Platform, AI solutions, APIs, automation platforms, and modern data systems.",
+  },
+  {
+    question: "8. Can Virat Software Solutions work alongside our internal teams?",
+    answer: "Absolutely. We frequently collaborate with business stakeholders, IT departments, and internal development teams to support transformation initiatives and accelerate delivery.",
+  },
+  {
+    question: "9. How long does a digital transformation project take?",
+    answer: "Project timelines vary based on scope, complexity, business goals, and existing technology environments. Some initiatives can be delivered within months, while enterprise-wide transformations may be phased over a longer period.",
+  },
+  {
+    question: "10. How do you measure the success of digital transformation initiatives?",
+    answer: "Success is typically measured through improvements in operational efficiency, process automation, customer experience, cost reduction, productivity gains, system performance, and overall business outcomes.",
+  },
+];
+
+export default function DigitalTransformationPage() {
   return (
     <>
       <Header />
@@ -237,14 +231,14 @@ export default function MvpDevelopmentPage() {
         <section className="solutionsHero" id="hero">
           <div className="container">
             <div className="heroCenter">
-              <h1>MVP Development Services</h1>
+              <h1>Digital Transformation Services</h1>
               <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
-                Turn Your Product Idea Into a Market-Ready MVP
+                Transform Legacy Processes Into Scalable Digital Operations
               </p>
               <p className="leadText">
-                Validate your idea, launch faster, and reduce development risk with MVP development services designed
-                for startups, founders, and product teams. We help businesses build scalable Minimum Viable Products
-                that gather real user feedback, attract early adopters, and create a strong foundation for future growth.
+                Modernize systems, streamline workflows, and unlock new growth opportunities through technology-driven
+                transformation. Virat Software Solutions helps businesses improve efficiency, automate operations,
+                integrate systems, and build digital capabilities that support long-term business success.
               </p>
               <div className="heroActions">
                 <a className="primaryButton" href="#final-cta">
@@ -256,12 +250,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 2: What MVP Development Solves */}
-        <section className="sectionPad sectionAlt" id="what-mvp-solves" aria-labelledby="solves-heading">
+        {/* Section 2: What Digital Transformation Solves */}
+        <section className="sectionPad sectionAlt" id="what-digital-solves" aria-labelledby="solves-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="solves-heading">
               <p className="eyebrow">Problems We Address</p>
-              <h2>What MVP Development Solves</h2>
+              <h2>What Digital Transformation Solves</h2>
             </div>
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
@@ -275,41 +269,40 @@ export default function MvpDevelopmentPage() {
                   }}
                 >
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
-                    Launching a new product comes with uncertainty. Many startups and businesses invest significant time
-                    and resources into building full-featured applications before validating whether the market actually
-                    wants them.
+                    Many businesses struggle with disconnected systems, manual processes, outdated technology, and
+                    operational inefficiencies that slow growth and increase costs. As organizations scale, these
+                    challenges often create bottlenecks that impact productivity, customer experience, and decision-making.
                   </p>
                   <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
-                    MVP development helps reduce this risk by focusing on the core features needed to test assumptions,
-                    gather real user feedback, and validate product-market fit before making larger investments.
-                  </p>
-                  <p style={{ fontWeight: "700", color: "var(--color-navy)", marginBottom: "16px" }}>
-                    Whether you're launching a startup, testing a new business model, or introducing a digital product, a well-built MVP helps you:
+                    Digital transformation helps businesses modernize operations through automation, cloud technologies,
+                    data-driven processes, and connected digital systems. Whether you're replacing legacy software,
+                    improving internal workflows, or creating new digital experiences, a strategic transformation
+                    initiative helps you:
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Validate ideas with real users before full-scale development</span>
+                      <span>Eliminate manual and repetitive business processes</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Reduce development costs and time-to-market</span>
+                      <span>Improve operational efficiency and productivity</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Gather actionable feedback to improve product direction</span>
+                      <span>Connect fragmented systems and business data</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Attract investors with a working product instead of a concept</span>
+                      <span>Enhance customer and employee experiences</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Minimize technical debt through scalable architecture</span>
+                      <span>Increase visibility through real-time reporting and insights</span>
                     </li>
                     <li>
                       <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
-                      <span>Build a foundation for future growth and feature expansion</span>
+                      <span>Create a technology foundation that supports future growth</span>
                     </li>
                   </ul>
                 </div>
@@ -318,16 +311,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 3: Benefits of MVP Development Services For Startups */}
+        {/* Section 3: Benefits of Digital Transformation Services */}
         <section className="sectionPad" id="benefits" aria-labelledby="benefits-heading">
           <div className="container">
             <SectionHeader
-              title="Benefits of MVP Development Services For Startups"
-              description="Launching a product successfully requires more than a great idea. MVP development helps businesses validate concepts, reduce risk, and make informed decisions before investing in full-scale product development."
+              title="Benefits of Digital Transformation Services"
+              description="Digital transformation helps organizations become more agile, efficient, and competitive. By modernizing processes and leveraging technology effectively, businesses can improve performance, reduce costs, and respond faster to changing market demands."
               id="benefits-heading"
             />
             <div className="row g-4">
-              {mvpBenefits.map((item) => {
+              {transformBenefits.map((item) => {
                 const BenefitIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -358,16 +351,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 4: Built for Founders, Innovators, and Product Teams */}
+        {/* Section 4: Built for Organizations Driving Change */}
         <section className="sectionPad sectionAlt" id="audience" aria-labelledby="audience-heading">
           <div className="container">
             <SectionHeader
-              title="Built for Founders, Innovators, and Product Teams"
-              description="Our MVP development services are designed for organizations that need to validate ideas quickly, reduce product risk, and launch with confidence."
+              title="Built for Organizations Driving Change"
+              description="Our digital transformation services are designed for businesses looking to modernize operations, improve efficiency, and leverage technology as a competitive advantage."
               id="audience-heading"
             />
             <div className="row g-4">
-              {mvpAudiences.map((aud) => (
+              {transformAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
                   <article className="audienceCard h-100" style={{ padding: "28px" }}>
                     <span className="audienceBadge">{aud.badge}</span>
@@ -388,21 +381,21 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 5: Have an Idea but Unsure Where to Start? */}
+        {/* Section 5: Planning a Digital Transformation Initiative? */}
         <section className="sectionPad" aria-labelledby="idea-cta-heading">
           <div className="container">
             <div className="ctaBanner">
               <div className="ctaCopy">
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
-                  Have an Idea but Unsure Where to Start?
+                  Planning a Digital Transformation Initiative?
                 </h2>
                 <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
-                  Partner with Virat Software Solutions to refine features, design prototype assets, map engineering architecture, and launch your MVP cleanly.
+                  Partner with Virat Software Solutions to refine processes, integrate custom modules, migrate server databases, and unlock agility cleanly.
                 </p>
               </div>
               <div className="ctaActions">
                 <a className="secondaryButton" href="#final-cta">
-                  Talk to an MVP Expert
+                  Talk to a Digital Transformation Expert
                   <RiArrowRightLine aria-hidden="true" />
                 </a>
               </div>
@@ -410,16 +403,16 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 6: Why Businesses Choose Virat for MVP Development */}
+        {/* Section 6: Why Businesses Choose Virat for Digital Transformation */}
         <section className="sectionPad sectionAlt" id="why-virat" aria-labelledby="why-heading">
           <div className="container">
             <SectionHeader
-              title="Why Businesses Choose Virat for MVP Development"
-              description="Building an MVP is not just about developing software. It's about validating ideas, minimizing risk, and creating a foundation that supports future growth. At Virat Software Solutions, we combine product thinking, modern engineering, and scalable architecture to help businesses launch with confidence."
+              title="Why Businesses Choose Virat for Digital Transformation"
+              description="Digital transformation initiatives often fail because organizations focus on technology before understanding business objectives. At Virat Software Solutions, we align technology investments with operational goals to ensure transformation delivers measurable business outcomes."
               id="why-heading"
             />
             <div className="row g-4">
-              {mvpWhyVirat.map((item) => {
+              {transformWhyVirat.map((item) => {
                 const WhyIcon = item.Icon;
                 return (
                   <div className="col-12 col-md-6 col-lg-4" key={item.title}>
@@ -448,12 +441,12 @@ export default function MvpDevelopmentPage() {
           </div>
         </section>
 
-        {/* Section 7: How We Bring MVPs to Market */}
+        {/* Section 7: How We Deliver Digital Transformation */}
         <section className="sectionPad" id="bring-to-market" aria-labelledby="market-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="market-heading">
               <p className="eyebrow">Execution Roadmap</p>
-              <h2>How We Bring MVPs to Market</h2>
+              <h2>How We Deliver Digital Transformation</h2>
             </div>
             
             <div className="row justify-content-center">
@@ -462,19 +455,18 @@ export default function MvpDevelopmentPage() {
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        Successful MVPs are built with a clear focus on validation, speed, and long-term scalability. Our
-                        approach combines product strategy, user-centric design, and modern software engineering to help
-                        businesses launch quickly while reducing development risk and unnecessary complexity.
+                        Successful digital transformation requires a balance between business strategy, technology
+                        modernization, and operational execution. Our approach focuses on identifying opportunities where
+                        technology can create measurable improvements while minimizing disruption to day-to-day operations.
                       </p>
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
                     <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
                       <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
-                        From idea validation and feature prioritization to development, testing, and deployment, we work
-                        closely with founders and product teams to create MVPs that deliver real user value. The goal is not
-                        simply to launch faster, but to gather meaningful feedback, validate market demand, and build a
-                        strong foundation for future product growth.
+                        From process assessment and system modernization to automation, integrations, cloud adoption,
+                        and continuous optimization, we help businesses implement practical digital solutions that improve
+                        efficiency, enhance visibility, and support sustainable growth.
                       </p>
                     </div>
                   </div>
@@ -488,7 +480,7 @@ export default function MvpDevelopmentPage() {
         <section className="sectionPad sectionTrust sectionAlt" aria-labelledby="trust-heading">
           <div className="container">
             <div className="sectionIntro text-center mb-5" id="trust-heading">
-              {/* <p className="eyebrow">Our Partners</p> */}
+              <p className="eyebrow">Our Partners</p>
               <h2>Our Amazing Clients</h2>
               <p>Trusted by startups and growing teams worldwide</p>
             </div>
@@ -522,7 +514,7 @@ export default function MvpDevelopmentPage() {
               description="From SaaS platforms and mobile applications to AI solutions and cloud-powered systems, discover how we help businesses build scalable technology, modernize operations, and drive growth."
               id="portfolio-heading"
             />
-            <div className="row g-4 mt-2">
+            <div className="row g-4">
               {portfolioContent.cards.map((card) => (
                 <div className="col-12 col-lg-6" key={card.title}>
                   <article className="portfolioCard h-100">
@@ -559,9 +551,9 @@ export default function MvpDevelopmentPage() {
         {/* Section 11: Frequently Asked Questions */}
         <section className="sectionPad sectionAlt" id="faq" aria-labelledby="faq-heading">
           <div className="container">
-            <SectionHeader title="Frequently Asked Questions About MVP Development Services" id="faq-heading" />
+            <SectionHeader title="Frequently Asked Questions About Digital Transformation Services" id="faq-heading" />
             <div className="mt-4">
-              <FaqAccordion items={mvpFaqs} />
+              <FaqAccordion items={transformFaqs} />
             </div>
           </div>
         </section>
