@@ -22,7 +22,7 @@ export const navigationItems = [
           groups: [
             {
               links: [
-                { label: "MVP Development", href: "/solutions#mvp-development" },
+                { label: "MVP Development", href: "/solutions/mvp-development" },
                 { label: "SaaS Product Development", href: "/solutions#saas-product-development" },
                 { label: "Digital Transformation", href: "/solutions#digital-transformation" },
                 { label: "AI & Automation Solutions", href: "/solutions#ai-automation-solutions" },
