@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import LeadFormShell from "../components/LeadFormShell";
 import TechStackShowcase from "../components/TechStackShowcase";
 import TestimonialsSection from "../components/TestimonialsSection";
+import FaqAccordion from "../components/FaqAccordion";
+import TechAnimation from "../components/TechAnimation";
 import "../assets/css/industries.css";
 import { IndustryCards } from "../components/industries";
 import {
@@ -179,7 +181,7 @@ export default function Home() {
         <section className="sectionPad" id="solutions-architecture" aria-labelledby="architecture-heading">
           <div className="container">
             <SectionHeader title={architectureContent.title} description={architectureContent.description} id="architecture-heading" />
-            <div className="heroActions">
+            <div className="heroActions mb-0">
               <a className="primaryButton" href="#final-cta">
                 <RiArrowRightLine aria-hidden="true" />
                 Schedule a Consultation
@@ -191,12 +193,14 @@ export default function Home() {
         <section className="sectionPad sectionAlt" id="solutions" aria-labelledby="solutions-heading">
           <div className="container">
             <SectionHeader title={solutionsContent.title} description={solutionsContent.description} id="solutions-heading" />
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
               {solutionsContent.cards.map((card) => (
-                <div className="col-12 col-md-6 col-xl-4" key={card.title}>
-                  <article className="contentCard h-100">
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
+                <div className="col" key={card.title}>
+                  <article className="contentCard">
+                    <div>
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                    </div>
                     <a href="#final-cta" className="inlineAction">
                       {card.button}
                       <RiArrowRightUpLine aria-hidden="true" />
@@ -211,29 +215,31 @@ export default function Home() {
         <section className="sectionPad" id="portfolio" aria-labelledby="portfolio-heading">
           <div className="container">
             <SectionHeader title={portfolioContent.title} description={portfolioContent.description} id="portfolio-heading" />
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-lg-2 g-4">
               {portfolioContent.cards.map((card) => (
-                <div className="col-12 col-lg-6" key={card.title}>
-                  <article className="portfolioCard h-100">
-                    <div className="cardLogoWrap">
-                      <Image
-                        src={card.logo}
-                        alt={card.logoAlt || card.name}
-                        className="cardLogo"
-                      />
-                    </div>
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
-                    <div className="valuePills">
-                        {card.tech.map((item) => {
-                          const Icon = techIconMap[item];
-                          return (
-                            <span key={item} className="valuePill">
-                              {Icon && <Icon aria-hidden="true" />}
-                              {item}
-                            </span>
-                          );
-                        })}
+                <div className="col" key={card.title}>
+                  <article className="portfolioCard">
+                    <div>
+                      <div className="cardLogoWrap">
+                        <Image
+                          src={card.logo}
+                          alt={card.logoAlt || card.name}
+                          className="cardLogo"
+                        />
+                      </div>
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                      <div className="valuePills">
+                          {card.tech.map((item) => {
+                            const Icon = techIconMap[item];
+                            return (
+                              <span key={item} className="valuePill">
+                                {Icon && <Icon aria-hidden="true" />}
+                                {item}
+                              </span>
+                            );
+                          })}
+                      </div>
                     </div>
                     <a href={card.link} className="inlineAction" target="_blank" rel="noreferrer">
                       View Project
@@ -249,12 +255,14 @@ export default function Home() {
         <section className="sectionPad sectionAlt" id="services" aria-labelledby="services-heading">
           <div className="container">
             <SectionHeader title={servicesContent.title} description={servicesContent.description} id="services-heading" />
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
               {servicesContent.cards.map((card) => (
-                <div className="col-12 col-md-6 col-xl-4" key={card.title}>
-                  <article className="contentCard serviceCard h-100">
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
+                <div className="col" key={card.title}>
+                  <article className="contentCard serviceCard">
+                    <div>
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                    </div>
                     <a href="#final-cta" className="inlineAction">
                       {card.button}
                       <RiArrowRightUpLine aria-hidden="true" />
@@ -328,26 +336,23 @@ export default function Home() {
         <section className="sectionPad" id="faq" aria-labelledby="faq-heading">
           <div className="container">
             <SectionHeader title={faqContent.title} id="faq-heading" />
-            <div className="faqList">
-              {faqContent.items.map((item) => (
-                <details className="faqItem" key={item.question}>
-                  <summary>
-                    <span>{item.question}</span>
-                    <RiArrowDownSLine className="faqChevron" aria-hidden="true" />
-                  </summary>
-                  <p>{item.answer}</p>
-                </details>
-              ))}
+            <div className="mt-4">
+              <FaqAccordion items={faqContent.items} />
             </div>
           </div>
         </section>
 
         <section className="sectionPad sectionAlt" id="final-cta" aria-labelledby="final-cta-heading">
           <div className="container">
+            {/* Title First (Full Width) */}
+            <div className="sectionIntro text-center mb-5">
+              <h2 id="final-cta-heading">{finalCtaContent.title}</h2>
+              <p className="finalCtaDesc">
+                {finalCtaContent.description}
+              </p>
+            </div>
+
             <div className="finalCtaGrid">
-              <div className="finalCtaCopy">
-                <SectionHeader title={finalCtaContent.title} description={finalCtaContent.description} id="final-cta-heading" />
-              </div>
               <LeadFormShell
                 title=""
                 description=""
@@ -355,6 +360,9 @@ export default function Home() {
                 fieldLabels={finalCtaContent.fields}
                 options={finalCtaContent.options}
               />
+              <div className="finalCtaImageCol">
+                <TechAnimation />
+              </div>
             </div>
           </div>
         </section>

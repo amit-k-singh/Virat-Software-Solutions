@@ -71,10 +71,10 @@ export default function Header() {
           </nav>
 
           <div className="headerActions">
-            <a className="headerGhost" href="/#contact">
+            <a className="headerGhost" href="/contact">
               Contact
             </a>
-            <a className="headerCta" href="/#final-cta">
+            <a className="headerCta" href="/contact">
               <RiArrowRightUpLine aria-hidden="true" />
               Talk Business
             </a>
@@ -123,10 +123,10 @@ export default function Header() {
                 </li>
               ))}
               <li className="mobileNavActions">
-                <a href="/#contact" onClick={() => setIsMobileOpen(false)}>
+                <a href="/contact" onClick={() => setIsMobileOpen(false)}>
                   Contact
                 </a>
-                <a href="/#final-cta" onClick={() => setIsMobileOpen(false)}>
+                <a href="/contact" onClick={() => setIsMobileOpen(false)}>
                   Talk Business
                 </a>
               </li>
