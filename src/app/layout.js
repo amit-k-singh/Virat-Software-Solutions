@@ -2,6 +2,7 @@ import { Manrope, Sora } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "remixicon/fonts/remixicon.css";
 import "./globals.css";
+import BackToTop from "../components/BackToTop";
 
 const bodyFont = Manrope({
   variable: "--font-body",
@@ -63,8 +64,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${bodyFont.variable} ${headingFont.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${bodyFont.variable} ${headingFont.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        {children}
+        <BackToTop />
+      </body>
     </html>
   );
 }
