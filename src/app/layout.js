@@ -65,7 +65,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${bodyFont.variable} ${headingFont.variable}`} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <BackToTop />
       </body>
