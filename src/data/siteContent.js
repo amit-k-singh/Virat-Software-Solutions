@@ -901,7 +901,11 @@ export const footerContent = {
       href: "tel:+919998347578",
     },
   ],
-  social: ["Whatsapp", "Linkedin", "Github"],
+  social: [
+    { label: "Whatsapp", href: "https://wa.me/919998347578" },
+    { label: "Linkedin", href: "https://www.linkedin.com/company/virat-solutions/" },
+    { label: "Github", href: "https://github.com/viratsoftwaresolutions" },
+  ],
   copyright: "© 2026 Virat Software Solutions. All Rights Reserved.",
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
