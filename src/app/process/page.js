@@ -56,7 +56,7 @@ const processSteps = [
     step: "01",
     title: "Discovery & Strategy",
     icon: RiCompass3Line,
-    color: "rgba(111, 212, 212, 0.16)",
+    colorClass: "iconWrapCyan",
     description:
       "We begin by understanding your business goals, target audience, and system requirements. Together, we define project scope, prioritize critical MVP features, and build a strategic technical roadmap.",
   },
@@ -64,7 +64,7 @@ const processSteps = [
     step: "02",
     title: "Solution Design & Architecture",
     icon: RiSlideshowLine,
-    color: "rgba(1, 31, 138, 0.08)",
+    colorClass: "iconWrapNavy",
     description:
       "Our architects design high-performance, modular system blueprints. We select the optimal technology stack, structure secure database schemas, map out API endpoints, and create intuitive UX/UI user flows.",
   },
@@ -72,7 +72,7 @@ const processSteps = [
     step: "03",
     title: "Agile Development & Engineering",
     icon: RiCodeSSlashLine,
-    color: "rgba(111, 212, 212, 0.16)",
+    colorClass: "iconWrapCyan",
     description:
       "Our development team translates specifications into production-grade code. Working in structured agile sprints, we provide functional preview builds, commit cleaner code, and maintain Git repositories.",
   },
@@ -80,7 +80,7 @@ const processSteps = [
     step: "04",
     title: "Quality Assurance & Validation",
     icon: RiShieldCheckLine,
-    color: "rgba(1, 31, 138, 0.08)",
+    colorClass: "iconWrapNavy",
     description:
       "We run extensive QA checks to validate system stability. This includes unit testing backend functions, cross-browser responsiveness tests, API performance profiling, security audits, and user flow checks.",
   },
@@ -88,7 +88,7 @@ const processSteps = [
     step: "05",
     title: "Deployment, Optimization & Growth",
     icon: RiRocket2Line,
-    color: "rgba(111, 212, 212, 0.16)",
+    colorClass: "iconWrapCyan",
     description:
       "We launch your software product using modern CI/CD automation pipelines. After release, we monitor real-time system performance, resolve user feedback, and scale the infrastructure as demand increases.",
   },
@@ -143,9 +143,9 @@ export default function ProcessPage() {
         {/* Section 1: Hero Section */}
         <section className="solutionsHero" id="hero">
           <div className="container">
-            <div className="heroCenter" style={{ maxWidth: "840px" }}>
+            <div className="heroCenter processHeroCenter">
               <h1>Our Software Development Process</h1>
-              <p className="leadText" style={{ margin: "0 auto 32px", maxWidth: "720px" }}>
+              <p className="leadText processHeroDesc">
                 A structured, transparent, and results-focused approach to engineering custom software. We combine product strategy with agile engineering to deliver reliable products.
               </p>
               <div className="heroActions">
@@ -153,7 +153,7 @@ export default function ProcessPage() {
                   <RiArrowRightLine aria-hidden="true" />
                   View 5-Step Process
                 </a>
-                <a className="secondaryButton" href="/contact" style={{ border: "1px solid rgba(1, 31, 138, 0.15)" }}>
+                <a className="secondaryButton" href="/contact">
                   Start a Conversation
                   <RiArrowRightUpLine aria-hidden="true" />
                 </a>
@@ -167,20 +167,20 @@ export default function ProcessPage() {
           <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-12 col-lg-6">
-                <div className="sectionIntro text-start" style={{ marginBottom: "20px" }}>
+                <div className="sectionIntro text-start processIntroHeader">
                   <p className="eyebrow">Philosophy</p>
                   <h2>How We Turn Ideas Into Scalable Solutions</h2>
                 </div>
-                <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "20px" }}>
+                <p className="processIntroText">
                   We believe that successful software development is built on solid product strategy, clean code, and transparent execution. We don't just write code; we help define the right solutions for business problems.
                 </p>
-                <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "0" }}>
+                <p className="processIntroTextLast">
                   By combining architecture blueprints, agile development sprints, and continuous feedback loops, we reduce engineering risk and build systems that scale alongside your user base.
                 </p>
               </div>
               <div className="col-12 col-lg-6">
-                <div className="contentCard" style={{ padding: "40px", borderLeft: "4px solid var(--color-cyan)" }}>
-                  <h3 style={{ fontSize: "1.25rem", fontWeight: "700", marginBottom: "16px" }}>Our Execution Pillars</h3>
+                <div className="contentCard processPillarsCard">
+                  <h3 className="processPillarsTitle">Our Execution Pillars</h3>
                   <ul className="audienceList" role="list">
                     <li>
                       <RiCheckLine size={20} aria-hidden="true" />
@@ -211,7 +211,7 @@ export default function ProcessPage() {
             <div className="sectionIntro text-center mb-5">
               <p className="eyebrow">Framework</p>
               <h2>Our 5-Step Development Process</h2>
-              <p className="leadText" style={{ margin: "16px auto 0", maxWidth: "760px" }}>
+              <p className="leadText processStepsDesc">
                 A reliable product lifecycle process designed to deliver functional software on time and within scope.
               </p>
             </div>
@@ -220,26 +220,16 @@ export default function ProcessPage() {
               {processSteps.map((step) => {
                 const Icon = step.icon;
                 return (
-                  <div className="col-12 col-lg-4" key={step.step} style={{ display: "flex" }}>
-                    <article className="contentCard" style={{ padding: "32px", width: "100%", height: "100%", display: "flex", flexDirection: "column" }}>
+                  <div className="col-12 col-lg-4 d-flex" key={step.step}>
+                    <article className="contentCard processStepCard">
                       <div className="d-flex align-items-center justify-content-between mb-4">
-                        <div
-                          style={{
-                            background: step.color,
-                            padding: "12px",
-                            borderRadius: "10px",
-                            color: "var(--color-navy)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
+                        <div className={`processStepIconWrap ${step.colorClass}`}>
                           <Icon size={24} aria-hidden="true" />
                         </div>
-                        <span style={{ fontSize: "1.6rem", fontWeight: "800", opacity: 0.15 }}>{step.step}</span>
+                        <span className="processStepNumber">{step.step}</span>
                       </div>
-                      <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "12px" }}>{step.title}</h3>
-                      <p style={{ margin: 0, color: "var(--color-muted)", fontSize: "0.95rem", lineHeight: "1.65" }}>
+                      <h3 className="processStepTitle">{step.title}</h3>
+                      <p className="processStepText">
                         {step.description}
                       </p>
                     </article>
@@ -256,7 +246,7 @@ export default function ProcessPage() {
             <div className="sectionIntro text-center mb-5">
               <p className="eyebrow">Communication</p>
               <h2>How We Collaborate With Clients</h2>
-              <p className="leadText" style={{ margin: "16px auto 0", maxWidth: "760px" }}>
+              <p className="leadText processStepsDesc">
                 We prioritize close communication, clear expectations, and regular updates to ensure we remain aligned on goals and delivery timelines.
               </p>
             </div>
@@ -266,24 +256,12 @@ export default function ProcessPage() {
                 const Icon = item.icon;
                 return (
                   <div className="col-12 col-md-4" key={item.title}>
-                    <article className="contentCard text-center" style={{ padding: "30px", height: "100%" }}>
-                      <div
-                        style={{
-                          background: "rgba(111, 212, 212, 0.15)",
-                          width: "56px",
-                          height: "56px",
-                          borderRadius: "50%",
-                          color: "var(--color-navy)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          margin: "0 auto 20px",
-                        }}
-                      >
+                    <article className="contentCard text-center processCollabCard">
+                      <div className="processCollabIconWrap">
                         <Icon size={26} aria-hidden="true" />
                       </div>
-                      <h3 style={{ fontSize: "1.15rem", fontWeight: "700", marginBottom: "8px" }}>{item.title}</h3>
-                      <p style={{ margin: 0, color: "var(--color-muted)", fontSize: "0.95rem", lineHeight: "1.6" }}>
+                      <h3 className="processCollabTitle">{item.title}</h3>
+                      <p className="processCollabText">
                         {item.description}
                       </p>
                     </article>
@@ -299,14 +277,14 @@ export default function ProcessPage() {
           <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-12 col-lg-6">
-                <div className="sectionIntro text-start" style={{ marginBottom: "20px" }}>
+                <div className="sectionIntro text-start processIntroHeader">
                   <p className="eyebrow">Standards</p>
                   <h2>Technologies & Methodologies We Use</h2>
                 </div>
-                <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "20px" }}>
+                <p className="processIntroText">
                   We apply modern engineering best practices to reduce manual intervention, prevent delivery delays, and guarantee system stability in live environments.
                 </p>
-                <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "0" }}>
+                <p className="processIntroTextLast">
                   From automated continuous integration (CI/CD) pipelines to agile Scrum frameworks and Git workflow checkpoints, we build software using the same standards as leading tech companies.
                 </p>
               </div>
@@ -314,11 +292,11 @@ export default function ProcessPage() {
                 <div className="row g-3">
                   {["Agile & Scrum Frameworks", "CI/CD Deployment Automations", "Automated QA & Unit Testing", "Cloud-Native Architectures", "Git Feature Branches", "DevOps Infrastructure as Code"].map((tech) => (
                     <div className="col-12 col-md-6" key={tech}>
-                      <div className="contentCard d-flex align-items-center gap-2" style={{ padding: "18px 24px" }}>
-                        <div style={{ color: "var(--color-cyan)", display: "flex", alignItems: "center" }}>
+                      <div className="contentCard d-flex align-items-center gap-2 processMethodCard">
+                        <div className="processMethodIconWrap">
                           <RiCheckLine size={20} aria-hidden="true" />
                         </div>
-                        <span style={{ fontWeight: "700", fontSize: "0.95rem" }}>{tech}</span>
+                        <span className="processMethodTitle">{tech}</span>
                       </div>
                     </div>
                   ))}
@@ -358,7 +336,7 @@ export default function ProcessPage() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">{finalCtaContent.title}</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 {finalCtaContent.description}
               </p>
             </div>

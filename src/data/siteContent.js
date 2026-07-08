@@ -15,7 +15,7 @@ export const navigationItems = [
     label: "Solutions",
     href: "/solutions",
     panel: {
-      variant: "mega",
+      variant: "compact",
       sections: [
         {
           heading: "Solutions",
@@ -39,7 +39,7 @@ export const navigationItems = [
     label: "Services",
     href: "/#services",
     panel: {
-      variant: "mega",
+      variant: "compact",
       sections: [
         {
           heading: "Services",

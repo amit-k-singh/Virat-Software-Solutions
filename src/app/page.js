@@ -181,7 +181,7 @@ export default function Home() {
         <section className="sectionPad" id="solutions-architecture" aria-labelledby="architecture-heading">
           <div className="container">
             <SectionHeader title={architectureContent.title} description={architectureContent.description} id="architecture-heading" />
-            <div className="heroActions">
+            <div className="heroActions mb-0">
               <a className="primaryButton" href="#final-cta">
                 <RiArrowRightLine aria-hidden="true" />
                 Schedule a Consultation
@@ -193,12 +193,14 @@ export default function Home() {
         <section className="sectionPad sectionAlt" id="solutions" aria-labelledby="solutions-heading">
           <div className="container">
             <SectionHeader title={solutionsContent.title} description={solutionsContent.description} id="solutions-heading" />
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
               {solutionsContent.cards.map((card) => (
-                <div className="col-12 col-md-6 col-xl-4" key={card.title}>
-                  <article className="contentCard h-100">
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
+                <div className="col" key={card.title}>
+                  <article className="contentCard">
+                    <div>
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                    </div>
                     <a href="#final-cta" className="inlineAction">
                       {card.button}
                       <RiArrowRightUpLine aria-hidden="true" />
@@ -213,29 +215,31 @@ export default function Home() {
         <section className="sectionPad" id="portfolio" aria-labelledby="portfolio-heading">
           <div className="container">
             <SectionHeader title={portfolioContent.title} description={portfolioContent.description} id="portfolio-heading" />
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-lg-2 g-4">
               {portfolioContent.cards.map((card) => (
-                <div className="col-12 col-lg-6" key={card.title}>
-                  <article className="portfolioCard h-100">
-                    <div className="cardLogoWrap">
-                      <Image
-                        src={card.logo}
-                        alt={card.logoAlt || card.name}
-                        className="cardLogo"
-                      />
-                    </div>
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
-                    <div className="valuePills">
-                        {card.tech.map((item) => {
-                          const Icon = techIconMap[item];
-                          return (
-                            <span key={item} className="valuePill">
-                              {Icon && <Icon aria-hidden="true" />}
-                              {item}
-                            </span>
-                          );
-                        })}
+                <div className="col" key={card.title}>
+                  <article className="portfolioCard">
+                    <div>
+                      <div className="cardLogoWrap">
+                        <Image
+                          src={card.logo}
+                          alt={card.logoAlt || card.name}
+                          className="cardLogo"
+                        />
+                      </div>
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                      <div className="valuePills">
+                          {card.tech.map((item) => {
+                            const Icon = techIconMap[item];
+                            return (
+                              <span key={item} className="valuePill">
+                                {Icon && <Icon aria-hidden="true" />}
+                                {item}
+                              </span>
+                            );
+                          })}
+                      </div>
                     </div>
                     <a href={card.link} className="inlineAction" target="_blank" rel="noreferrer">
                       View Project
@@ -251,12 +255,14 @@ export default function Home() {
         <section className="sectionPad sectionAlt" id="services" aria-labelledby="services-heading">
           <div className="container">
             <SectionHeader title={servicesContent.title} description={servicesContent.description} id="services-heading" />
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
               {servicesContent.cards.map((card) => (
-                <div className="col-12 col-md-6 col-xl-4" key={card.title}>
-                  <article className="contentCard serviceCard h-100">
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
+                <div className="col" key={card.title}>
+                  <article className="contentCard serviceCard">
+                    <div>
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                    </div>
                     <a href="#final-cta" className="inlineAction">
                       {card.button}
                       <RiArrowRightUpLine aria-hidden="true" />
@@ -341,7 +347,7 @@ export default function Home() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">{finalCtaContent.title}</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 {finalCtaContent.description}
               </p>
             </div>

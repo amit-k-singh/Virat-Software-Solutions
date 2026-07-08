@@ -4,13 +4,12 @@ import React from "react";
 
 export default function TechAnimation() {
   return (
-    <div className="techAnimationContainer" style={{ width: "100%", height: "100%" }}>
+    <div className="techAnimationContainer">
       <svg
         viewBox="0 0 500 350"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="techAnimationSvg"
-        style={{ width: "100%", height: "100%", maxHeight: "460px" }}
       >
         {/* Ambient Glows */}
         <circle cx="250" cy="175" r="120" fill="url(#radialGlow)" opacity="0.15" />

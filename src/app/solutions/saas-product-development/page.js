@@ -232,7 +232,7 @@ export default function SaasProductDevelopmentPage() {
           <div className="container">
             <div className="heroCenter">
               <h1>SaaS Product Development</h1>
-              <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
+              <p className="eyebrow solutionsEyebrowLarge">
                 Turn Your Product Idea Into a Scalable SaaS Platform
               </p>
               <p className="leadText">
@@ -260,20 +260,13 @@ export default function SaasProductDevelopmentPage() {
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
                 <div
-                  className="contentCard"
-                  style={{
-                    padding: "36px",
-                    background: "rgba(255, 255, 255, 0.95)",
-                    borderLeft: "4px solid var(--color-navy)",
-                    boxShadow: "var(--shadow-1)",
-                  }}
-                >
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
+                  className="contentCard solutionsMainWhatWeSolveCard" >
+                  <p className="solutionsIntroText">
                     Building a successful SaaS product involves more than writing code. Businesses must solve challenges
                     related to scalability, multi-user access, subscription management, security, performance, and
                     continuous product improvement.
                   </p>
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
+                  <p className="solutionsIntroTextLast">
                     SaaS product development helps organizations launch cloud-based software platforms that can serve
                     multiple customers efficiently while maintaining reliability, flexibility, and operational control.
                     Whether you're building a new SaaS business, modernizing an existing platform, or launching a
@@ -281,27 +274,27 @@ export default function SaasProductDevelopmentPage() {
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Validate your product idea with real users before scaling further</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Build a subscription-ready platform with recurring revenue potential</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Create a scalable architecture that supports growth and future expansion</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Improve user management, access control, and customer experience</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Reduce technical risk through secure and maintainable development</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Launch faster with a focused product roadmap and core feature set</span>
                     </li>
                   </ul>
@@ -328,8 +321,7 @@ export default function SaasProductDevelopmentPage() {
                       <div>
                         <div className="d-flex align-items-center gap-3 mb-3">
                           <div
-                            className="d-flex align-items-center justify-content-center"
-                            style={{
+                            className="solutionsMainIconWrap" style={{
                               width: "44px",
                               height: "44px",
                               borderRadius: "10px",
@@ -339,9 +331,9 @@ export default function SaasProductDevelopmentPage() {
                           >
                             <BenefitIcon size={22} aria-hidden="true" />
                           </div>
-                          <h3 className="m-0" style={{ fontSize: "1.2rem", fontWeight: "700" }}>{item.title}</h3>
+                          <h3 className="m-0 solutionsBenefitCardTitle">{item.title}</h3>
                         </div>
-                        <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>{item.description}</p>
+                        <p className="solutionsBenefitCardText">{item.description}</p>
                       </div>
                     </article>
                   </div>
@@ -362,9 +354,9 @@ export default function SaasProductDevelopmentPage() {
             <div className="row g-4">
               {saasAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
-                  <article className="audienceCard h-100" style={{ padding: "28px" }}>
+                  <article className="audienceCard h-100 solutionsAudienceCard">
                     <span className="audienceBadge">{aud.badge}</span>
-                    <h3 style={{ fontSize: "1.3rem", fontWeight: "800", color: "#0d1b4b" }}>{aud.title}</h3>
+                    <h3 className="solutionsAudienceCardTitle">{aud.title}</h3>
                     <p className="audienceDesc">{aud.description}</p>
                     <ul className="audienceList" role="list">
                       {aud.bullets.map((bullet) => (
@@ -389,7 +381,7 @@ export default function SaasProductDevelopmentPage() {
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
                   Planning a SaaS Product but Unsure Where to Begin?
                 </h2>
-                <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
+                <p className="solutionsCtaText">
                   Partner with Virat Software Solutions to refine features, design prototype assets, map engineering architecture, and launch your SaaS platform cleanly.
                 </p>
               </div>
@@ -419,8 +411,7 @@ export default function SaasProductDevelopmentPage() {
                     <article className="contentCard h-100">
                       <div className="d-flex align-items-center gap-3 mb-3">
                         <div
-                          className="d-flex align-items-center justify-content-center"
-                          style={{
+                          className="solutionsMainIconWrap" style={{
                             width: "44px",
                             height: "44px",
                             borderRadius: "10px",
@@ -430,9 +421,9 @@ export default function SaasProductDevelopmentPage() {
                         >
                           <WhyIcon size={20} aria-hidden="true" />
                         </div>
-                        <h3 className="m-0" style={{ fontSize: "1.15rem", fontWeight: "700" }}>{item.title}</h3>
+                        <h3 className="m-0 solutionsDifferentiatorTitle">{item.title}</h3>
                       </div>
-                      <p style={{ fontSize: "0.92rem", marginBottom: "0", lineHeight: "1.6" }}>{item.description}</p>
+                      <p className="solutionsDifferentiatorText">{item.description}</p>
                     </article>
                   </div>
                 );
@@ -453,8 +444,8 @@ export default function SaasProductDevelopmentPage() {
               <div className="col-12 col-lg-10">
                 <div className="row g-4 text-start">
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardCyan">
+                      <p className="solutionsDeliverText">
                         Successful SaaS products require more than development expertise. They require strategic planning,
                         scalable architecture, intuitive user experiences, and a technology foundation that can evolve
                         alongside business growth. Our approach focuses on building cloud-native software platforms that
@@ -463,8 +454,8 @@ export default function SaasProductDevelopmentPage() {
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardNavy">
+                      <p className="solutionsDeliverText">
                         From product discovery and architecture planning to development, testing, deployment, and
                         optimization, we work closely with stakeholders to deliver SaaS products that support customer
                         adoption, operational efficiency, and recurring revenue growth. Every solution is designed with
@@ -566,7 +557,7 @@ export default function SaasProductDevelopmentPage() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">Let’s Build Something That Works for Your Business</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 If you are looking for a software development company that focuses on real results, scalable systems, and long-term support, Virat Software Solutions is ready to work with you.
               </p>
             </div>

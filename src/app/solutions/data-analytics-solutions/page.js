@@ -232,7 +232,7 @@ export default function DataAnalyticsSolutionsPage() {
           <div className="container">
             <div className="heroCenter">
               <h1>Data & Analytics Solutions</h1>
-              <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
+              <p className="eyebrow solutionsEyebrowLarge">
                 Turn Business Data Into Actionable Insights
               </p>
               <p className="leadText">
@@ -260,20 +260,13 @@ export default function DataAnalyticsSolutionsPage() {
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
                 <div
-                  className="contentCard"
-                  style={{
-                    padding: "36px",
-                    background: "rgba(255, 255, 255, 0.95)",
-                    borderLeft: "4px solid var(--color-navy)",
-                    boxShadow: "var(--shadow-1)",
-                  }}
-                >
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
+                  className="contentCard solutionsMainWhatWeSolveCard" >
+                  <p className="solutionsIntroText">
                     Many organizations generate large volumes of data but struggle to convert it into actionable business
                     intelligence. Data often exists across multiple systems, departments, and platforms, making it
                     difficult to gain visibility, identify trends, and make informed decisions.
                   </p>
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
+                  <p className="solutionsIntroTextLast">
                     Data and analytics solutions help businesses centralize information, improve reporting accuracy,
                     create real-time visibility, and uncover insights that drive growth. Whether you're building
                     dashboards, integrating data sources, modernizing reporting systems, or creating analytics platforms,
@@ -281,27 +274,27 @@ export default function DataAnalyticsSolutionsPage() {
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Eliminate data silos across systems and departments</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Improve reporting accuracy and business visibility</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Access real-time operational and performance insights</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Support faster, data-driven decision-making</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Identify trends, opportunities, and business risks</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Build a scalable foundation for advanced analytics and AI initiatives</span>
                     </li>
                   </ul>
@@ -328,8 +321,7 @@ export default function DataAnalyticsSolutionsPage() {
                       <div>
                         <div className="d-flex align-items-center gap-3 mb-3">
                           <div
-                            className="d-flex align-items-center justify-content-center"
-                            style={{
+                            className="solutionsMainIconWrap" style={{
                               width: "44px",
                               height: "44px",
                               borderRadius: "10px",
@@ -339,9 +331,9 @@ export default function DataAnalyticsSolutionsPage() {
                           >
                             <BenefitIcon size={22} aria-hidden="true" />
                           </div>
-                          <h3 className="m-0" style={{ fontSize: "1.2rem", fontWeight: "700" }}>{item.title}</h3>
+                          <h3 className="m-0 solutionsBenefitCardTitle">{item.title}</h3>
                         </div>
-                        <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>{item.description}</p>
+                        <p className="solutionsBenefitCardText">{item.description}</p>
                       </div>
                     </article>
                   </div>
@@ -362,9 +354,9 @@ export default function DataAnalyticsSolutionsPage() {
             <div className="row g-4">
               {dataAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
-                  <article className="audienceCard h-100" style={{ padding: "28px" }}>
+                  <article className="audienceCard h-100 solutionsAudienceCard">
                     <span className="audienceBadge">{aud.badge}</span>
-                    <h3 style={{ fontSize: "1.3rem", fontWeight: "800", color: "#0d1b4b" }}>{aud.title}</h3>
+                    <h3 className="solutionsAudienceCardTitle">{aud.title}</h3>
                     <p className="audienceDesc">{aud.description}</p>
                     <ul className="audienceList" role="list">
                       {aud.bullets.map((bullet) => (
@@ -389,7 +381,7 @@ export default function DataAnalyticsSolutionsPage() {
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
                   Struggling to Make Sense of Your Business Data?
                 </h2>
-                <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
+                <p className="solutionsCtaText">
                   Partner with Virat Software Solutions to aggregate pipelines, design analytical views, construct secure repositories, and unlock insight cleanly.
                 </p>
               </div>
@@ -419,8 +411,7 @@ export default function DataAnalyticsSolutionsPage() {
                     <article className="contentCard h-100">
                       <div className="d-flex align-items-center gap-3 mb-3">
                         <div
-                          className="d-flex align-items-center justify-content-center"
-                          style={{
+                          className="solutionsMainIconWrap" style={{
                             width: "44px",
                             height: "44px",
                             borderRadius: "10px",
@@ -430,9 +421,9 @@ export default function DataAnalyticsSolutionsPage() {
                         >
                           <WhyIcon size={20} aria-hidden="true" />
                         </div>
-                        <h3 className="m-0" style={{ fontSize: "1.15rem", fontWeight: "700" }}>{item.title}</h3>
+                        <h3 className="m-0 solutionsDifferentiatorTitle">{item.title}</h3>
                       </div>
-                      <p style={{ fontSize: "0.92rem", marginBottom: "0", lineHeight: "1.6" }}>{item.description}</p>
+                      <p className="solutionsDifferentiatorText">{item.description}</p>
                     </article>
                   </div>
                 );
@@ -453,8 +444,8 @@ export default function DataAnalyticsSolutionsPage() {
               <div className="col-12 col-lg-10">
                 <div className="row g-4 text-start">
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardCyan">
+                      <p className="solutionsDeliverText">
                         Successful analytics initiatives begin with understanding business objectives, data sources,
                         reporting requirements, and operational challenges. Our approach focuses on creating connected data
                         ecosystems that provide accurate, timely, and actionable insights across the organization.
@@ -462,8 +453,8 @@ export default function DataAnalyticsSolutionsPage() {
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardNavy">
+                      <p className="solutionsDeliverText">
                         From data integration and pipeline development to business intelligence, dashboard creation,
                         analytics implementation, and optimization, we help businesses build scalable data solutions that
                         improve visibility, support strategic decisions, and enable sustainable growth.
@@ -564,7 +555,7 @@ export default function DataAnalyticsSolutionsPage() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">Let’s Build Something That Works for Your Business</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 If you are looking for a software development company that focuses on real results, scalable systems, and long-term support, Virat Software Solutions is ready to work with you.
               </p>
             </div>

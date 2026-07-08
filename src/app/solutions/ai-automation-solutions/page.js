@@ -232,7 +232,7 @@ export default function AiAutomationSolutionsPage() {
           <div className="container">
             <div className="heroCenter">
               <h1>AI & Automation Solutions</h1>
-              <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
+              <p className="eyebrow solutionsEyebrowLarge">
                 Transform Business Operations with AI and Intelligent Automation
               </p>
               <p className="leadText">
@@ -260,20 +260,13 @@ export default function AiAutomationSolutionsPage() {
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
                 <div
-                  className="contentCard"
-                  style={{
-                    padding: "36px",
-                    background: "rgba(255, 255, 255, 0.95)",
-                    borderLeft: "4px solid var(--color-navy)",
-                    boxShadow: "var(--shadow-1)",
-                  }}
-                >
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
+                  className="contentCard solutionsMainWhatWeSolveCard" >
+                  <p className="solutionsIntroText">
                     Many businesses struggle with repetitive manual processes, fragmented data, delayed decision-making,
                     and operational inefficiencies that limit growth. As organizations scale, these challenges often
                     increase costs, reduce productivity, and impact customer experiences.
                   </p>
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
+                  <p className="solutionsIntroTextLast">
                     AI and automation solutions help businesses automate routine tasks, analyze large volumes of data,
                     improve accuracy, and make faster business decisions. Whether you're exploring AI-powered
                     applications, workflow automation, predictive analytics, or machine learning solutions, the right
@@ -281,27 +274,27 @@ export default function AiAutomationSolutionsPage() {
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Eliminate repetitive and time-consuming manual tasks</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Improve operational efficiency through intelligent automation</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Reduce human errors and increase process accuracy</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Gain actionable insights from business data</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Enhance customer experiences with AI-powered interactions</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Scale operations without increasing operational overhead</span>
                     </li>
                   </ul>
@@ -328,8 +321,7 @@ export default function AiAutomationSolutionsPage() {
                       <div>
                         <div className="d-flex align-items-center gap-3 mb-3">
                           <div
-                            className="d-flex align-items-center justify-content-center"
-                            style={{
+                            className="solutionsMainIconWrap" style={{
                               width: "44px",
                               height: "44px",
                               borderRadius: "10px",
@@ -339,9 +331,9 @@ export default function AiAutomationSolutionsPage() {
                           >
                             <BenefitIcon size={22} aria-hidden="true" />
                           </div>
-                          <h3 className="m-0" style={{ fontSize: "1.2rem", fontWeight: "700" }}>{item.title}</h3>
+                          <h3 className="m-0 solutionsBenefitCardTitle">{item.title}</h3>
                         </div>
-                        <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>{item.description}</p>
+                        <p className="solutionsBenefitCardText">{item.description}</p>
                       </div>
                     </article>
                   </div>
@@ -362,9 +354,9 @@ export default function AiAutomationSolutionsPage() {
             <div className="row g-4">
               {aiAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
-                  <article className="audienceCard h-100" style={{ padding: "28px" }}>
+                  <article className="audienceCard h-100 solutionsAudienceCard">
                     <span className="audienceBadge">{aud.badge}</span>
-                    <h3 style={{ fontSize: "1.3rem", fontWeight: "800", color: "#0d1b4b" }}>{aud.title}</h3>
+                    <h3 className="solutionsAudienceCardTitle">{aud.title}</h3>
                     <p className="audienceDesc">{aud.description}</p>
                     <ul className="audienceList" role="list">
                       {aud.bullets.map((bullet) => (
@@ -389,7 +381,7 @@ export default function AiAutomationSolutionsPage() {
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
                   Exploring AI but Unsure Where to Start?
                 </h2>
-                <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
+                <p className="solutionsCtaText">
                   Partner with Virat Software Solutions to evaluate data strategies, run prototype ML pilots, build custom models, and unlock automation cleanly.
                 </p>
               </div>
@@ -419,8 +411,7 @@ export default function AiAutomationSolutionsPage() {
                     <article className="contentCard h-100">
                       <div className="d-flex align-items-center gap-3 mb-3">
                         <div
-                          className="d-flex align-items-center justify-content-center"
-                          style={{
+                          className="solutionsMainIconWrap" style={{
                             width: "44px",
                             height: "44px",
                             borderRadius: "10px",
@@ -430,9 +421,9 @@ export default function AiAutomationSolutionsPage() {
                         >
                           <WhyIcon size={20} aria-hidden="true" />
                         </div>
-                        <h3 className="m-0" style={{ fontSize: "1.15rem", fontWeight: "700" }}>{item.title}</h3>
+                        <h3 className="m-0 solutionsDifferentiatorTitle">{item.title}</h3>
                       </div>
-                      <p style={{ fontSize: "0.92rem", marginBottom: "0", lineHeight: "1.6" }}>{item.description}</p>
+                      <p className="solutionsDifferentiatorText">{item.description}</p>
                     </article>
                   </div>
                 );
@@ -453,8 +444,8 @@ export default function AiAutomationSolutionsPage() {
               <div className="col-12 col-lg-10">
                 <div className="row g-4 text-start">
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardCyan">
+                      <p className="solutionsDeliverText">
                         Effective AI adoption begins with understanding business objectives, operational workflows, and
                         available data. Our approach focuses on identifying high-impact opportunities where artificial
                         intelligence and automation can create measurable improvements in efficiency, decision-making, and
@@ -463,8 +454,8 @@ export default function AiAutomationSolutionsPage() {
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardNavy">
+                      <p className="solutionsDeliverText">
                         From AI strategy and workflow analysis to model development, automation implementation,
                         integration, and optimization, we help businesses deploy intelligent solutions that drive
                         productivity, reduce operational friction, and support long-term growth.
@@ -565,7 +556,7 @@ export default function AiAutomationSolutionsPage() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">Let’s Build Something That Works for Your Business</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 If you are looking for a software development company that focuses on real results, scalable systems, and long-term support, Virat Software Solutions is ready to work with you.
               </p>
             </div>

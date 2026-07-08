@@ -11,6 +11,11 @@ import {
   RiFlashlightLine,
   RiRotateLockLine,
   RiFocus3Line,
+  RiRobot2Line,
+  RiCodeBoxLine,
+  RiReactjsLine,
+  RiCloudLine,
+  RiLayoutLine,
 } from "react-icons/ri";
 
 export const metadata = {
@@ -18,7 +23,7 @@ export const metadata = {
   description:
     "Learn about Virat Software Solutions. We help businesses design, build, and scale modern digital products through custom software development, AI solutions, and cloud engineering.",
   alternates: {
-    canonical: "/about",
+    canonical: "https://viratsoftware.com/about",
   },
 };
 
@@ -63,37 +68,51 @@ export default function AboutPage() {
         {/* Section 1: Hero Section */}
         <section className="solutionsHero" id="hero">
           <div className="container">
-            <div className="heroCenter" style={{ maxWidth: "860px" }}>
+            <div className="heroCenter aboutHeroCenter">
               <h1>Technology Built for Business Growth</h1>
-              <p className="leadText" style={{ margin: "0 auto 24px", maxWidth: "760px" }}>
+              <p className="leadText aboutHeroDesc1">
                 Virat Software Solutions helps businesses design, build, and scale modern digital products through
                 custom software development, AI solutions, cloud engineering, and intelligent automation.
               </p>
-              <p className="leadText" style={{ margin: "0 auto 32px", maxWidth: "760px", opacity: 0.85 }}>
+              <p className="leadText aboutHeroDesc2">
                 From startups validating ideas to organizations modernizing systems, we create scalable technology
                 designed for performance, adaptability, and long-term growth.
-              </p>
-              <p
-                style={{
-                  fontSize: "0.95rem",
-                  fontWeight: "700",
-                  color: "var(--color-navy)",
-                  letterSpacing: "0.05em",
-                  marginBottom: "32px",
-                  opacity: 0.9,
-                }}
-              >
-                AI / ML &nbsp;|&nbsp; .NET &nbsp;|&nbsp; React &nbsp;|&nbsp; Cloud & DevOps &nbsp;|&nbsp; SaaS &nbsp;|&nbsp; API Integrations
               </p>
               <div className="heroActions">
                 <a className="primaryButton" href="/contact">
                   <RiArrowRightLine aria-hidden="true" />
                   Talk to an Engineer
                 </a>
-                <a className="secondaryButton" href="/solutions" style={{ border: "1px solid rgba(1, 31, 138, 0.15)" }}>
+                <a className="secondaryButton" href="/solutions">
                   View Our Work
                   <RiArrowRightUpLine aria-hidden="true" />
                 </a>
+              </div>
+              <div className="valuePills">
+                <span className="valuePill">
+                  <RiRobot2Line aria-hidden="true" />
+                  AI / ML
+                </span>
+                <span className="valuePill">
+                  <RiCodeBoxLine aria-hidden="true" />
+                  .NET
+                </span>
+                <span className="valuePill">
+                  <RiReactjsLine aria-hidden="true" />
+                  React
+                </span>
+                <span className="valuePill">
+                  <RiCloudLine aria-hidden="true" />
+                  Cloud & DevOps
+                </span>
+                <span className="valuePill">
+                  <RiLayoutLine aria-hidden="true" />
+                  SaaS
+                </span>
+                <span className="valuePill">
+                  <RiCodeBoxLine aria-hidden="true" />
+                  API Integrations
+                </span>
               </div>
             </div>
           </div>
@@ -104,89 +123,59 @@ export default function AboutPage() {
           <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-12 col-lg-6">
-                <div className="sectionIntro text-start" style={{ marginBottom: "24px" }}>
+                <div className="sectionIntro text-start aboutIntroHeader">
                   <p className="eyebrow">Who We Are</p>
                   <h2>Engineering Solutions With Purpose</h2>
                 </div>
-                <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "20px" }}>
+                <p className="aboutIntroText">
                   At Virat Software Solutions, we believe technology delivers the most value when it solves real
                   business problems.
                 </p>
-                <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "20px" }}>
+                <p className="aboutIntroText">
                   We combine software engineering, product thinking, and modern technologies to build web
                   applications, mobile apps, SaaS platforms, cloud solutions, and AI-driven systems that help
                   businesses move faster and scale smarter.
                 </p>
-                <p style={{ fontSize: "1.08rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "0" }}>
+                <p className="aboutIntroTextLast">
                   Our focus is simple — practical execution, scalable architecture, and long-term technology partnerships.
                 </p>
               </div>
               <div className="col-12 col-lg-6">
                 <div className="row g-4">
                   <div className="col-12">
-                    <article className="contentCard d-flex gap-4 align-items-start" style={{ padding: "28px" }}>
-                      <div
-                        style={{
-                          background: "rgba(111, 212, 212, 0.15)",
-                          padding: "14px",
-                          borderRadius: "12px",
-                          color: "var(--color-navy)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
+                    <article className="contentCard d-flex gap-4 align-items-start aboutDiffCard">
+                      <div className="aboutDiffIconWrap diffIconWrapCyan">
                         <RiFlashlightLine size={28} aria-hidden="true" />
                       </div>
                       <div>
-                        <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "8px" }}>Efficient</h3>
-                        <p style={{ margin: 0, color: "var(--color-muted)" }}>
+                        <h3 className="aboutDiffCardTitle">Efficient</h3>
+                        <p className="aboutDiffCardDesc">
                           Eliminating technical waste and bloat. We build code that runs performantly, launches rapidly, and runs cost-effectively in production.
                         </p>
                       </div>
                     </article>
                   </div>
                   <div className="col-12">
-                    <article className="contentCard d-flex gap-4 align-items-start" style={{ padding: "28px" }}>
-                      <div
-                        style={{
-                          background: "rgba(1, 31, 138, 0.08)",
-                          padding: "14px",
-                          borderRadius: "12px",
-                          color: "var(--color-navy)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
+                    <article className="contentCard d-flex gap-4 align-items-start aboutDiffCard">
+                      <div className="aboutDiffIconWrap diffIconWrapNavy">
                         <RiRotateLockLine size={28} aria-hidden="true" />
                       </div>
                       <div>
-                        <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "8px" }}>Adaptable</h3>
-                        <p style={{ margin: 0, color: "var(--color-muted)" }}>
+                        <h3 className="aboutDiffCardTitle">Adaptable</h3>
+                        <p className="aboutDiffCardDesc">
                           Our modular architectural decisions ensure your applications are flexible, easy to modify, and ready for future integrations.
                         </p>
                       </div>
                     </article>
                   </div>
                   <div className="col-12">
-                    <article className="contentCard d-flex gap-4 align-items-start" style={{ padding: "28px" }}>
-                      <div
-                        style={{
-                          background: "rgba(111, 212, 212, 0.15)",
-                          padding: "14px",
-                          borderRadius: "12px",
-                          color: "var(--color-navy)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
+                    <article className="contentCard d-flex gap-4 align-items-start aboutDiffCard">
+                      <div className="aboutDiffIconWrap diffIconWrapCyan">
                         <RiFocus3Line size={28} aria-hidden="true" />
                       </div>
                       <div>
-                        <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "8px" }}>Innovative</h3>
-                        <p style={{ margin: 0, color: "var(--color-muted)" }}>
+                        <h3 className="aboutDiffCardTitle">Innovative</h3>
+                        <p className="aboutDiffCardDesc">
                           Incorporating modern machine learning models, cloud automation pipelines, and advanced UI/UX to keep your systems ahead of competitors.
                         </p>
                       </div>
@@ -204,7 +193,7 @@ export default function AboutPage() {
             <div className="sectionIntro text-center mb-5">
               <p className="eyebrow">Services</p>
               <h2>Solutions Built Around Modern Business Needs</h2>
-              <p className="leadText" style={{ margin: "16px auto 0", maxWidth: "800px" }}>
+              <p className="leadText aboutBuildDesc">
                 Businesses today require more than development alone. They need scalable applications, connected systems,
                 cloud infrastructure, and intelligent automation that support evolving operations and growth.
               </p>
@@ -213,24 +202,12 @@ export default function AboutPage() {
             <div className="row g-4 mt-3">
               {builtItems.map((item) => (
                 <div className="col-12 col-md-6 col-lg-4" key={item}>
-                  <article className="contentCard" style={{ padding: "24px", height: "100%" }}>
+                  <article className="contentCard aboutBuildCard">
                     <div className="d-flex align-items-center gap-3">
-                      <div
-                        style={{
-                          background: "rgba(111, 212, 212, 0.16)",
-                          width: "28px",
-                          height: "28px",
-                          borderRadius: "50%",
-                          color: "var(--color-navy)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          flexShrink: 0,
-                        }}
-                      >
+                      <div className="aboutBuildIconWrap">
                         <RiCheckLine size={18} aria-hidden="true" />
                       </div>
-                      <h3 style={{ fontSize: "1.1rem", fontWeight: "700", margin: 0 }}>{item}</h3>
+                      <h3 className="aboutBuildCardTitle">{item}</h3>
                     </div>
                   </article>
                 </div>
@@ -238,7 +215,7 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center mt-5">
-              <a className="secondaryButton" href="/solutions" style={{ border: "1px solid rgba(1, 31, 138, 0.15)" }}>
+              <a className="secondaryButton" href="/solutions">
                 Explore Services
                 <RiArrowRightUpLine aria-hidden="true" />
               </a>
@@ -249,22 +226,22 @@ export default function AboutPage() {
         {/* Section 4: Our Approach */}
         <section className="sectionPad" id="our-approach">
           <div className="container">
-            <div className="contentCard" style={{ padding: "50px", borderLeft: "4px solid var(--color-cyan)" }}>
+            <div className="contentCard aboutApproachCard">
               <div className="row g-4 align-items-center">
                 <div className="col-12 col-lg-8">
-                  <div className="sectionIntro text-start" style={{ marginBottom: "20px" }}>
+                  <div className="sectionIntro text-start aboutApproachIntro">
                     <p className="eyebrow">Our Philosophy</p>
                     <h2>Built for Long-Term Technology Partnerships</h2>
                   </div>
-                  <p style={{ fontSize: "1.06rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "16px" }}>
+                  <p className="aboutApproachText">
                     Every project starts with understanding the business problem, technical requirements, and growth
                     objectives before development begins.
                   </p>
-                  <p style={{ fontSize: "1.06rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: "16px" }}>
+                  <p className="aboutApproachText">
                     Our delivery approach combines strategy, architecture, agile engineering, testing, and continuous
                     optimization to create software that is reliable, scalable, and ready for real-world use.
                   </p>
-                  <p style={{ fontSize: "1.06rem", lineHeight: "1.7", color: "var(--color-muted)", marginBottom: 0 }}>
+                  <p className="aboutApproachTextLast">
                     Whether launching an MVP, modernizing an existing platform, or building enterprise-grade solutions,
                     we focus on outcomes that support sustainable business growth.
                   </p>
@@ -286,7 +263,7 @@ export default function AboutPage() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">{finalCtaContent.title}</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 {finalCtaContent.description}
               </p>
             </div>

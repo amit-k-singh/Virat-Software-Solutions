@@ -95,7 +95,7 @@ export default function ContactPage() {
           <div className="container">
             <div className="heroCenter">
               <h1>Let’s Talk About Your Business</h1>
-              <p className="leadText" style={{ margin: "0 auto 32px", maxWidth: "760px" }}>
+              <p className="leadText contactHeroDesc">
                 Whether you're building a new product, modernizing existing systems, or exploring AI, cloud, and
                 software solutions, we're ready to understand your goals and help shape the right approach.
               </p>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                   <RiArrowRightLine aria-hidden="true" />
                   Schedule a Call
                 </a>
-                <a className="secondaryButton" href="/solutions" style={{ border: "1px solid rgba(1, 31, 138, 0.15)" }}>
+                <a className="secondaryButton" href="/solutions">
                   View Our Work
                   <RiArrowRightUpLine aria-hidden="true" />
                 </a>
@@ -118,119 +118,48 @@ export default function ContactPage() {
           <div className="container">
             <div className="contactGrid">
               {/* Left Column: Contact Information */}
-              <div
-                className="contactPanel"
-                style={{
-                  background: "transparent",
-                  border: "none",
-                  boxShadow: "none",
-                  padding: 0,
-                }}
-              >
-                <div className="sectionIntro text-start" style={{ marginBottom: "28px" }}>
+              <div className="contactPanel contactPanelClean">
+                <div className="sectionIntro text-start contactIntroHeader">
                   <p className="eyebrow">Get in Touch</p>
                   <h2>Connect With Our Team</h2>
-                  <p style={{ fontSize: "1.05rem", lineHeight: "1.65" }}>
+                  <p className="contactIntroDesc">
                     We're here to help turn ideas into scalable digital solutions. Connect with our team through the
                     channel that works best for you.
                   </p>
                 </div>
 
                 <div className="d-flex flex-column gap-3 mt-2">
-                  <article
-                    className="contentCard"
-                    style={{
-                      padding: "20px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "16px",
-                      boxShadow: "var(--shadow-1)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        background: "rgba(111, 212, 212, 0.16)",
-                        padding: "12px",
-                        borderRadius: "10px",
-                        color: "var(--color-navy)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
+                  <article className="contentCard contactInfoCard">
+                    <div className="contactIconWrap iconWrapCyan">
                       <RiMailLine size={24} aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: "1.05rem", fontWeight: "700", margin: "0 0 4px 0" }}>Email</h3>
-                      <a
-                        href="mailto:sales@viratsoftwaresolutions.com"
-                        style={{ color: "var(--color-ink)", fontWeight: "600", fontSize: "0.95rem" }}
-                      >
+                      <h3 className="contactCardTitle">Email</h3>
+                      <a href="mailto:sales@viratsoftwaresolutions.com" className="contactCardValLink">
                         sales@viratsoftwaresolutions.com
                       </a>
                     </div>
                   </article>
 
-                  <article
-                    className="contentCard"
-                    style={{
-                      padding: "20px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "16px",
-                      boxShadow: "var(--shadow-1)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        background: "rgba(1, 31, 138, 0.08)",
-                        padding: "12px",
-                        borderRadius: "10px",
-                        color: "var(--color-navy)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
+                  <article className="contentCard contactInfoCard">
+                    <div className="contactIconWrap iconWrapNavy">
                       <RiPhoneLine size={24} aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: "1.05rem", fontWeight: "700", margin: "0 0 4px 0" }}>Phone</h3>
-                      <a
-                        href="tel:+919998347578"
-                        style={{ color: "var(--color-ink)", fontWeight: "600", fontSize: "0.95rem" }}
-                      >
+                      <h3 className="contactCardTitle">Phone</h3>
+                      <a href="tel:+919998347578" className="contactCardValLink">
                         +91 99983 47578
                       </a>
                     </div>
                   </article>
 
-                  <article
-                    className="contentCard"
-                    style={{
-                      padding: "20px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "16px",
-                      boxShadow: "var(--shadow-1)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        background: "rgba(111, 212, 212, 0.16)",
-                        padding: "12px",
-                        borderRadius: "10px",
-                        color: "var(--color-navy)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
+                  <article className="contentCard contactInfoCard">
+                    <div className="contactIconWrap iconWrapCyan">
                       <RiMapPinLine size={24} aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: "1.05rem", fontWeight: "700", margin: "0 0 4px 0" }}>Location</h3>
-                      <span style={{ color: "var(--color-muted)", fontWeight: "600", fontSize: "0.85rem", lineHeight: "1.4", display: "block" }}>
+                      <h3 className="contactCardTitle">Location</h3>
+                      <span className="contactCardValText">
                         Shop No 20, First Floor, Charbhuja Arcade, Amroli, Surat, Gujarat 394107
                       </span>
                     </div>
@@ -253,16 +182,10 @@ export default function ContactPage() {
         {/* Section 4: Map Section */}
         <section className="sectionPad" aria-label="Our Location Map">
           <div className="container">
-            <div className="contentCard" style={{ padding: "10px", overflow: "hidden", height: "420px" }}>
+            <div className="contentCard contactMapCard">
               <iframe
                 src="https://maps.google.com/maps?q=Shop%20No%2020,%20First%20Floor,%20Charbhuja%20arcade,%20Amroli,%20Surat,%20Surat,%20Gujarat%20394107&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{
-                  border: 0,
-                  borderRadius: "8px",
-                  filter: "grayscale(1) invert(0.9) contrast(1.15) opacity(0.85)",
-                }}
+                className="contactMapIframe"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

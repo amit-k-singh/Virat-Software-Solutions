@@ -238,7 +238,7 @@ export default function MvpDevelopmentPage() {
           <div className="container">
             <div className="heroCenter">
               <h1>MVP Development Services</h1>
-              <p className="eyebrow" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--color-navy)", marginBottom: "18px" }}>
+              <p className="eyebrow solutionsEyebrowLarge">
                 Turn Your Product Idea Into a Market-Ready MVP
               </p>
               <p className="leadText">
@@ -266,49 +266,42 @@ export default function MvpDevelopmentPage() {
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
                 <div
-                  className="contentCard"
-                  style={{
-                    padding: "36px",
-                    background: "rgba(255, 255, 255, 0.95)",
-                    borderLeft: "4px solid var(--color-navy)",
-                    boxShadow: "var(--shadow-1)",
-                  }}
-                >
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "20px" }}>
+                  className="contentCard solutionsMainWhatWeSolveCard" >
+                  <p className="solutionsIntroText">
                     Launching a new product comes with uncertainty. Many startups and businesses invest significant time
                     and resources into building full-featured applications before validating whether the market actually
                     wants them.
                   </p>
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "var(--color-ink)", marginBottom: "24px" }}>
+                  <p className="solutionsIntroTextLast">
                     MVP development helps reduce this risk by focusing on the core features needed to test assumptions,
                     gather real user feedback, and validate product-market fit before making larger investments.
                   </p>
-                  <p style={{ fontWeight: "700", color: "var(--color-navy)", marginBottom: "16px" }}>
+                  <p className="solutionsPillarsIntro">
                     Whether you're launching a startup, testing a new business model, or introducing a digital product, a well-built MVP helps you:
                   </p>
                   <ul className="audienceList" role="list">
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Validate ideas with real users before full-scale development</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Reduce development costs and time-to-market</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Gather actionable feedback to improve product direction</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Attract investors with a working product instead of a concept</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Minimize technical debt through scalable architecture</span>
                     </li>
                     <li>
-                      <RiCheckboxCircleLine aria-hidden="true" style={{ color: "var(--color-cyan)" }} />
+                      <RiCheckboxCircleLine aria-hidden="true" className="solutionsCheckIcon" />
                       <span>Build a foundation for future growth and feature expansion</span>
                     </li>
                   </ul>
@@ -335,8 +328,7 @@ export default function MvpDevelopmentPage() {
                       <div>
                         <div className="d-flex align-items-center gap-3 mb-3">
                           <div
-                            className="d-flex align-items-center justify-content-center"
-                            style={{
+                            className="solutionsMainIconWrap" style={{
                               width: "44px",
                               height: "44px",
                               borderRadius: "10px",
@@ -346,9 +338,9 @@ export default function MvpDevelopmentPage() {
                           >
                             <BenefitIcon size={22} aria-hidden="true" />
                           </div>
-                          <h3 className="m-0" style={{ fontSize: "1.2rem", fontWeight: "700" }}>{item.title}</h3>
+                          <h3 className="m-0 solutionsBenefitCardTitle">{item.title}</h3>
                         </div>
-                        <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>{item.description}</p>
+                        <p className="solutionsBenefitCardText">{item.description}</p>
                       </div>
                     </article>
                   </div>
@@ -369,9 +361,9 @@ export default function MvpDevelopmentPage() {
             <div className="row g-4">
               {mvpAudiences.map((aud) => (
                 <div className="col-12 col-md-6" key={aud.badge}>
-                  <article className="audienceCard h-100" style={{ padding: "28px" }}>
+                  <article className="audienceCard h-100 solutionsAudienceCard">
                     <span className="audienceBadge">{aud.badge}</span>
-                    <h3 style={{ fontSize: "1.3rem", fontWeight: "800", color: "#0d1b4b" }}>{aud.title}</h3>
+                    <h3 className="solutionsAudienceCardTitle">{aud.title}</h3>
                     <p className="audienceDesc">{aud.description}</p>
                     <ul className="audienceList" role="list">
                       {aud.bullets.map((bullet) => (
@@ -396,7 +388,7 @@ export default function MvpDevelopmentPage() {
                 <h2 id="idea-cta-heading" className="ctaBannerTitle">
                   Have an Idea but Unsure Where to Start?
                 </h2>
-                <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px", marginTop: "12px" }}>
+                <p className="solutionsCtaText">
                   Partner with Virat Software Solutions to refine features, design prototype assets, map engineering architecture, and launch your MVP cleanly.
                 </p>
               </div>
@@ -426,8 +418,7 @@ export default function MvpDevelopmentPage() {
                     <article className="contentCard h-100">
                       <div className="d-flex align-items-center gap-3 mb-3">
                         <div
-                          className="d-flex align-items-center justify-content-center"
-                          style={{
+                          className="solutionsMainIconWrap" style={{
                             width: "44px",
                             height: "44px",
                             borderRadius: "10px",
@@ -437,9 +428,9 @@ export default function MvpDevelopmentPage() {
                         >
                           <WhyIcon size={20} aria-hidden="true" />
                         </div>
-                        <h3 className="m-0" style={{ fontSize: "1.15rem", fontWeight: "700" }}>{item.title}</h3>
+                        <h3 className="m-0 solutionsDifferentiatorTitle">{item.title}</h3>
                       </div>
-                      <p style={{ fontSize: "0.92rem", marginBottom: "0", lineHeight: "1.6" }}>{item.description}</p>
+                      <p className="solutionsDifferentiatorText">{item.description}</p>
                     </article>
                   </div>
                 );
@@ -460,8 +451,8 @@ export default function MvpDevelopmentPage() {
               <div className="col-12 col-lg-10">
                 <div className="row g-4 text-start">
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-cyan)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardCyan">
+                      <p className="solutionsDeliverText">
                         Successful MVPs are built with a clear focus on validation, speed, and long-term scalability. Our
                         approach combines product strategy, user-centric design, and modern software engineering to help
                         businesses launch quickly while reducing development risk and unnecessary complexity.
@@ -469,8 +460,8 @@ export default function MvpDevelopmentPage() {
                     </div>
                   </div>
                   <div className="col-12 col-md-6 d-flex">
-                    <div className="contentCard h-100" style={{ padding: "32px", borderLeft: "4px solid var(--color-navy)" }}>
-                      <p style={{ fontSize: "1.1rem", lineHeight: "1.75", margin: 0, color: "var(--color-ink)" }}>
+                    <div className="contentCard h-100 solutionsDeliverCard solutionsDeliverCardNavy">
+                      <p className="solutionsDeliverText">
                         From idea validation and feature prioritization to development, testing, and deployment, we work
                         closely with founders and product teams to create MVPs that deliver real user value. The goal is not
                         simply to launch faster, but to gather meaningful feedback, validate market demand, and build a
@@ -572,7 +563,7 @@ export default function MvpDevelopmentPage() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">Let’s Build Something That Works for Your Business</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 If you are looking for a software development company that focuses on real results, scalable systems, and long-term support, Virat Software Solutions is ready to work with you.
               </p>
             </div>

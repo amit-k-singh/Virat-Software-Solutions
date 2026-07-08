@@ -257,16 +257,8 @@ export default function SolutionsPage() {
             </div>
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
-                <div 
-                  className="contentCard" 
-                  style={{ 
-                    padding: "36px", 
-                    background: "rgba(255, 255, 255, 0.95)",
-                    borderLeft: "4px solid var(--color-navy)",
-                    boxShadow: "var(--shadow-1)"
-                  }}
-                >
-                  <p className="bodyCopyLarge" style={{ minWidth: "100%", fontSize: "1.12rem", lineHeight: "1.75", color: "var(--color-ink)", margin: "0" }}>
+                <div className="contentCard solutionsMainWhatWeSolveCard">
+                  <p className="bodyCopyLarge solutionsMainCopylarge">
                     Businesses today face challenges that go far beyond development — from legacy systems, scalability
                     bottlenecks, and cloud migration to disconnected applications, technical debt, and operational
                     inefficiencies. Virat Software Solutions helps organizations solve these challenges through scalable
@@ -287,36 +279,25 @@ export default function SolutionsPage() {
               description="From product launches to enterprise modernization, our solutions help businesses innovate faster, automate operations, and scale with confidence."
               id="solutions-list-heading"
             />
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
               {solutionsList.map((sol) => {
                 const CardIcon = sol.Icon;
                 return (
-                  <div className="col-12 col-md-6 col-xl-4 solutionAnchor" id={sol.id} key={sol.id}>
+                  <div className="col solutionAnchor" id={sol.id} key={sol.id}>
                     <article className="contentCard h-100 d-flex flex-column justify-content-between">
                       <div>
                         <div className="d-flex align-items-center gap-3 mb-3">
-                          <div
-                            className="d-flex align-items-center justify-content-center"
-                            style={{
-                              width: "48px",
-                              height: "48px",
-                              borderRadius: "12px",
-                              background: "rgba(111, 212, 212, 0.16)",
-                              color: "var(--color-navy)",
-                            }}
-                          >
+                          <div className="solutionsMainIconWrap">
                             <CardIcon size={24} aria-hidden="true" />
                           </div>
-                          <h3 className="m-0" style={{ fontSize: "1.25rem", fontWeight: "700" }}>{sol.title}</h3>
+                          <h3 className="m-0 solutionsMainCardTitle">{sol.title}</h3>
                         </div>
                         <p>{sol.description}</p>
                       </div>
-                      <div className="mt-4">
-                        <a href="#final-cta" className="inlineAction">
-                          {sol.button}
-                          <RiArrowRightUpLine aria-hidden="true" />
-                        </a>
-                      </div>
+                      <a href="#final-cta" className="inlineAction">
+                        {sol.button}
+                        <RiArrowRightUpLine aria-hidden="true" />
+                      </a>
                     </article>
                   </div>
                 );
@@ -390,7 +371,7 @@ export default function SolutionsPage() {
             <div className="ctaBanner">
               <div className="ctaCopy">
                 <h2 id="ready-heading" className="ctaBannerTitle">Ready to Build, Modernize, or Scale?</h2>
-                <p style={{ color: "rgba(255, 255, 255, 0.85)", maxWidth: "600px".ctaBannerTitle }}>
+                <p className="solutionsCtaText">
                   Whether you're launching a new product, modernizing legacy systems, adopting AI, or optimizing cloud
                   infrastructure, Virat Software Solutions delivers technology solutions engineered for performance,
                   agility, and measurable business outcomes.
@@ -507,7 +488,7 @@ export default function SolutionsPage() {
             {/* Title First (Full Width) */}
             <div className="sectionIntro text-center mb-5">
               <h2 id="final-cta-heading">Let’s Build Something That Works for Your Business</h2>
-              <p style={{ maxWidth: "800px", margin: "16px auto 0", fontSize: "1.1rem", color: "var(--color-muted)" }}>
+              <p className="finalCtaDesc">
                 If you are looking for a software development company that focuses on real results, scalable systems, and long-term support, Virat Software Solutions is ready to work with you.
               </p>
             </div>
