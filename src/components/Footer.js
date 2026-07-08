@@ -138,16 +138,18 @@ export default function Footer() {
                   aria-label="Social media links"
                 >
                   {footerContent.social.map((social) => {
-                    const Icon = socialIcons[social] || RiArrowRightSLine;
+                    const Icon = socialIcons[social.label] || RiArrowRightSLine;
                     return (
-                      <li key={social}>
-                        <Link
-                          href="/#contact"
+                      <li key={social.label}>
+                        <a
+                          href={social.href}
                           className="socialLink"
-                          aria-label={social}
+                          aria-label={social.label}
+                          target="_blank"
+                          rel="noreferrer"
                         >
                           <Icon aria-hidden="true" />
-                        </Link>
+                        </a>
                       </li>
                     );
                   })}
