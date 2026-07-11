@@ -1,4 +1,5 @@
 import { Manrope, Sora } from "next/font/google";
+import Script from "next/script";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "remixicon/fonts/remixicon.css";
 import "./globals.css";
@@ -65,6 +66,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${bodyFont.variable} ${headingFont.variable}`} suppressHydrationWarning>
+      <Script
+        src="https://vsupport-bot.viratsoftwaresolutions.com/widget.js"
+        data-workspace="8b60307a-03d8-43d8-b564-440984c98d98"
+        async
+      ></Script>
       <body suppressHydrationWarning>
         {children}
         <BackToTop />
