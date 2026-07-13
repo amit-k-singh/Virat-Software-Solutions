@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import PortfolioSlider from "../../components/PortfolioSlider";
 import LeadFormShell from "../../components/LeadFormShell";
 import TechStackShowcase from "../../components/TechStackShowcase";
 import { IndustryCards } from "../../components/industries";
@@ -436,34 +437,7 @@ export default function SolutionsPage() {
               description="See how our custom engineered solutions helped businesses streamline, validate, and scale."
               id="portfolio-heading"
             />
-            <div className="row g-4 mt-2">
-              {portfolioContent.cards.map((card) => (
-                <div className="col-12 col-lg-6" key={card.title}>
-                  <article className="portfolioCard h-100">
-                    <div className="cardLogoWrap">
-                      <Image src={card.logo} alt={card.logoAlt || card.name} className="cardLogo" />
-                    </div>
-                    <h3>{card.title}</h3>
-                    <p>{card.description}</p>
-                    <div className="valuePills">
-                      {card.tech.map((item) => {
-                        const Icon = techIconMap[item];
-                        return (
-                          <span key={item} className="valuePill">
-                            {Icon && <Icon aria-hidden="true" />}
-                            {item}
-                          </span>
-                        );
-                      })}
-                    </div>
-                    <a href={card.link} className="inlineAction" target="_blank" rel="noreferrer">
-                      View Project
-                      <RiArrowRightUpLine aria-hidden="true" />
-                    </a>
-                  </article>
-                </div>
-              ))}
-            </div>
+            <PortfolioSlider cards={portfolioContent.cards} />
             <div className="text-center mt-5">
               <Link href="/#portfolio" className="secondaryButton">
                 View All Projects

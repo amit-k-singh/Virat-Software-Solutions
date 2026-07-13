@@ -3606,3 +3606,45 @@ main>section.sectionPad+section.sectionPad::before {
 .processHeroCenter {
   max-width: 840px !important;
 }
+
+/* Portfolio Slider Swiper Styles */
+.portfolio-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.swiper-nav-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid rgba(1, 31, 138, 0.12);
+  color: var(--color-navy);
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: all 0.25s ease;
+}
+
+.swiper-nav-buttons button:hover {
+  background: var(--color-navy);
+  color: white;
+  border-color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.swiper-nav-buttons button:active {
+  transform: translateY(0);
+}
+
+.portfolioSwiper .swiper-slide {
+  height: auto !important;
+}
+
+.portfolioSwiper .portfolioCard {
+  height: 100%;
+  margin-bottom: 0 !important;
+}

@@ -212,6 +212,26 @@ export const portfolioContent = {
         "Developed a conversion-focused SaaS website for an accounting practice management solution, highlighting workflow automation, billing, reporting, and operational efficiency while supporting product visibility and qualified lead acquisition.",
       tech: ["WordPress / CMS", "Frontend Development", "Analytics Integration", "Lead Forms", "SEO Optimization"],
     },
+    {
+      name: "FineSkin",
+      logo: fineSkinLogo,
+      logoAlt: "FineSkin Clinic logo",
+      link: "https://fineskin.com/",
+      title: "Digital Booking & Skincare Commerce Platform",
+      description:
+        "Launched a premium appointment scheduler and online store for a cosmetic surgery clinic, boosting bookings by 35% through calendar syncing and unified checkout.",
+      tech: ["E-commerce", "Frontend Development", "Analytics Integration", "SEO Optimization"],
+    },
+    {
+      name: "Flextron",
+      logo: flextronLogo,
+      logoAlt: "Flextron Technologies logo",
+      link: "https://www.flextron.com/",
+      title: "Custom ERP & Automation for Manufacturing Plant",
+      description:
+        "Designed and engineered an automated ERP solution managing inventory tracking, real-time machine telemetry, and predictive maintenance schedules for a multi-facility manufacturer.",
+      tech: ["JavaScript", "Frontend Development", "Analytics Integration", "Lead Forms"],
+    },
   ],
 };
 
