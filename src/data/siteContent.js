@@ -206,7 +206,7 @@ export const portfolioContent = {
       name: "Kloud Connect",
       logo: lnksiLogo,
       logoAlt: "Kloud Connect logo",
-      link: "https://www.kloudconnect.com.au/",
+      link: "https://lnksi.com/",
       title: "SaaS Product Website for Practice Management Platform",
       description:
         "Developed a conversion-focused SaaS website for an accounting practice management solution, highlighting workflow automation, billing, reporting, and operational efficiency while supporting product visibility and qualified lead acquisition.",

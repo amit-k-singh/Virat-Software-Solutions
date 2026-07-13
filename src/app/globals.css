@@ -834,7 +834,6 @@ main>section.sectionPad+section.sectionPad::before {
 }
 
 .contentCard,
-.portfolioCard,
 .timelineCard,
 .quoteCard,
 .contactPanel,
@@ -846,6 +845,12 @@ main>section.sectionPad+section.sectionPad::before {
   border: 1px solid rgba(1, 31, 138, 0.1);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-1);
+}
+
+.portfolioCard {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(1, 31, 138, 0.1);
+  border-radius: var(--radius-md);
 }
 
 .contentCard,
@@ -866,8 +871,8 @@ main>section.sectionPad+section.sectionPad::before {
   align-items: baseline;
 }
 
-.contentCard > div,
-.portfolioCard > div {
+.contentCard>div,
+.portfolioCard>div {
   width: 100%;
 }
 
@@ -2039,6 +2044,7 @@ main>section.sectionPad+section.sectionPad::before {
 }
 
 @media (max-width: 767.98px) {
+
   .sectionPad,
   .heroSection,
   .solutionsHero,
