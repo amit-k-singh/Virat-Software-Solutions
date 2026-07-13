@@ -45,17 +45,6 @@ export default function PortfolioSlider({ cards = [] }) {
 
   return (
     <div className="portfolio-slider-wrapper">
-      <div className="d-flex justify-content-center justify-content-md-end mb-4">
-        <div className="swiper-nav-buttons d-flex gap-2">
-          <button ref={prevRef} className="swiper-nav-prev-btn" aria-label="Previous Project">
-            <RiArrowLeftSLine size={24} aria-hidden="true" />
-          </button>
-          <button ref={nextRef} className="swiper-nav-next-btn" aria-label="Next Project">
-            <RiArrowRightSLine size={24} aria-hidden="true" />
-          </button>
-        </div>
-      </div>
-
       <Swiper
         modules={[Navigation, Autoplay]}
         onInit={(swiper) => {
@@ -115,6 +104,17 @@ export default function PortfolioSlider({ cards = [] }) {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="d-flex justify-content-center mt-4">
+        <div className="swiper-nav-buttons d-flex gap-2">
+          <button ref={prevRef} className="swiper-nav-prev-btn" aria-label="Previous Project">
+            <RiArrowLeftSLine size={24} aria-hidden="true" />
+          </button>
+          <button ref={nextRef} className="swiper-nav-next-btn" aria-label="Next Project">
+            <RiArrowRightSLine size={24} aria-hidden="true" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
