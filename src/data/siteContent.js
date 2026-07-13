@@ -8,6 +8,7 @@ import GCCLogo from "../assets/images/TrustedClient/logo-1.png";
 import JSTSLogo from "../assets/images/TrustedClient/Logo-JST-01.jpg";
 import UCLogo from "../assets/images/TrustedClient/logo4_New.jpg";
 import PatilKakiLogo from "../assets/images/TrustedClient/Patil-kaki.png";
+import sardharLogo from "../assets/images/TrustedClient/sardhar-logo.jpg";
 
 export const navigationItems = [
   { label: "Work", href: "/#portfolio" },
@@ -213,24 +214,64 @@ export const portfolioContent = {
       tech: ["WordPress / CMS", "Frontend Development", "Analytics Integration", "Lead Forms", "SEO Optimization"],
     },
     {
-      name: "FineSkin",
-      logo: fineSkinLogo,
-      logoAlt: "FineSkin Clinic logo",
-      link: "https://fineskin.com/",
-      title: "Digital Booking & Skincare Commerce Platform",
+      name: "VSupportBot",
+      logo: "vsupportbot",
+      logoAlt: "VSupportBot logo",
+      link: "https://vsupport-bot.viratsoftwaresolutions.com/",
+      title: "AI-Powered Customer Support & Knowledge Platform",
       description:
-        "Launched a premium appointment scheduler and online store for a cosmetic surgery clinic, boosting bookings by 35% through calendar syncing and unified checkout.",
-      tech: ["E-commerce", "Frontend Development", "Analytics Integration", "SEO Optimization"],
+        "Designed and built an AI-powered business support and knowledge assistant platform that automates customer queries, manages custom knowledge bases, and delivers smart answers to enhance operational efficiency.",
+      tech: ["Next.js", "AI Integration", "Vector Database", "OpenAI / LLMs"],
     },
     {
-      name: "Flextron",
-      logo: flextronLogo,
-      logoAlt: "Flextron Technologies logo",
-      link: "https://www.flextron.com/",
-      title: "Custom ERP & Automation for Manufacturing Plant",
+      name: "IronPulse Workspace",
+      logo: "ironpulse",
+      logoAlt: "IronPulse Workspace logo",
+      link: "https://gym.viratsoftwaresolutions.com/",
+      title: "Gym Management Workspace & Member Portal",
       description:
-        "Designed and engineered an automated ERP solution managing inventory tracking, real-time machine telemetry, and predictive maintenance schedules for a multi-facility manufacturer.",
-      tech: ["JavaScript", "Frontend Development", "Analytics Integration", "Lead Forms"],
+        "Designed and built a comprehensive operations dashboard and member portal for gyms to streamline member registrations, subscription renewals, trainer assignments, payment tracking, and financial analytics.",
+      tech: ["Next.js", "Elysia JS", "Drizzle ORM", "Database Systems"],
+    },
+    {
+      name: "Virat API Studio",
+      logo: brotekLogo,
+      logoAlt: "Virat API Studio logo",
+      link: "https://vpostman.viratsoftwaresolutions.com/",
+      title: "Professional API Workbench & Testing Client",
+      description:
+        "Created a browser-based developer client supporting REST, SOAP, WebSocket, and Socket.IO protocol testing, featuring request customization, environment variables, and visual response parsing.",
+      tech: ["Web Application", "Developer Utility", "JavaScript", "API Development"],
+    },
+    {
+      name: "Base64 Studio",
+      logo: "base64",
+      logoAlt: "Base64 Studio logo",
+      link: "https://base64.viratsoftwaresolutions.com/",
+      title: "Local-First Base64 Conversion Workbench",
+      description:
+        "Developed a local-first, secure data conversion workbench in the browser for encoding files and text to Base64, or decoding Base64 back into downloadable files, featuring live preview, metadata extraction, hex dump visualization, and checksum calculations.",
+      tech: ["JavaScript", "HTML5", "CSS3", "Developer Utility"],
+    },
+    {
+      name: "Sardhar Tent Management",
+      logo: "sardhar",
+      logoAlt: "Sardhar Tent Management logo",
+      link: "https://sardhar.viratsoftwaresolutions.com/",
+      title: "Sardhar Tent Management",
+      description:
+        "Engineered a centralized dashboard for event tent rental management, optimizing booking schedules, dispatch tracking, inventory allocation, and logistics planning.",
+      tech: ["Web Application", "Database Systems", "Lead Forms", "SEO Optimization"],
+    },
+    {
+      name: "DermaTech",
+      logo: "dermatech",
+      logoAlt: "DermaTech logo",
+      link: "https://derma-tech.viratsoftwaresolutions.com/",
+      title: "AI-Powered Skincare Analysis & Consultation Portal",
+      description:
+        "Developed an interactive skin health application that leverages smart analysis to assess skincare concerns and deliver personalized dermatological product recommendations.",
+      tech: ["AI Integration", "Web Application", "Frontend Development", "Analytics Integration"],
     },
   ],
 };

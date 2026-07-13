@@ -3654,3 +3654,38 @@ main>section.sectionPad+section.sectionPad::before {
   height: 100%;
   margin-bottom: 0 !important;
 }
+
+/* Top Right View Project Link */
+.viewProjectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-navy);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: rgba(1, 31, 138, 0.04);
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(1, 31, 138, 0.08);
+}
+
+.viewProjectLink:hover {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  border-color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 31, 138, 0.15);
+  text-decoration: none;
+}
+
+.viewProjectLink .arrowIcon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.viewProjectLink:hover .arrowIcon {
+  transform: translate(2px, -2px);
+}
