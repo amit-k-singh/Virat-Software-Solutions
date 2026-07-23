@@ -3138,13 +3138,16 @@ main>section.sectionPad+section.sectionPad::before {
 .contactInfoCard {
   padding: 20px !important;
   display: flex !important;
+  flex-direction: row !important;
   align-items: center !important;
   gap: 16px !important;
   box-shadow: var(--shadow-1) !important;
 }
 
 .contactIconWrap {
-  padding: 12px;
+  width: 48px !important;
+  height: 48px !important;
+  flex-shrink: 0 !important;
   border-radius: 10px;
   display: flex;
   align-items: center;
